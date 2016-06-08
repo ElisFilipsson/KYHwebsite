@@ -1,4 +1,4 @@
-Story: Ångra
+## Story: Ändra vald utbildning
 
 För att kunna ångra mitt val av vilken kalender jag vill visa
 som student
@@ -7,6 +7,5 @@ vill jag ha möjligheten att se vilken utbildning jag är inne på och kunna välja 
 
 Scenario: 
 När användaren klickar och väljer att de är en aktiv student och väljer vilken kalender de vill se 
-ska de skickas till sidan för kalendern och där visas i menyn vilken kalender de har valt
-om de trycker på vald kalender så kan de ändra/ångra sitt val
-och då laddas de ny information
+ska de skickas till sidan för kalendern.
+Om de ånfrar sig kan de ändra utbldning i dropdown meny och vyn uppdateras med den nya utbildningen.
