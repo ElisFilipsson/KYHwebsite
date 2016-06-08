@@ -1,0 +1,4 @@
+Kalender
+roll: student
+scenario:
+Klickar på kurs i kalendern visas schemat samt mer information.
