@@ -1,0 +1,2 @@
+Scenario Ångra
+När jag väljer vilken kalender jag vill se på landingpage råkar jag klicka fel och vill kunna ångra mig genom att göra ett nytt val.
