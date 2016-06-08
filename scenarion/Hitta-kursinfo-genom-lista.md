@@ -1,7 +1,9 @@
-# Hitta kursinfo genom lista
+## Story: Hitta kursinfo genom lista
 
-Roll: Student
+Som student att se kursinformation eller schema
+Vilj jag välja kurs i lista
 
+#### Scenario
 * Om (Inloggad) som student
 * För att se info/schema om kurs
 * Klicka på vald kurs i lista
