@@ -1,4 +1,4 @@
-# Story: Scenario apply
+# Story: Subscribe interest
 
 In order to receive updates,
 I want to subscribe to notifications
