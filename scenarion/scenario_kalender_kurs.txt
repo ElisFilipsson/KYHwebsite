@@ -1,4 +1,6 @@
-Kalender
-roll: student
+Story: Kalender kurs
+Enkelt se schemat och mer info när jag klickar på kursen i kalendern
+som student
+
 scenario:
-Klickar på kurs i kalendern visas schemat samt mer information.
+När man klickar på en kurs i kalendern visas schemat samt mer information under kalendern.
