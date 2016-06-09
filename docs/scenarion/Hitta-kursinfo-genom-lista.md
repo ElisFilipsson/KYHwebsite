@@ -1,4 +1,4 @@
-## Story: Hitta kursinfo genom lista
+# Story: Hitta kursinfo genom lista
 
 Som student att se kursinformation eller schema
 Vilj jag välja kurs i lista
