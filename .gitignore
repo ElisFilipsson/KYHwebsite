@@ -1,1 +1,3 @@
 .DS_Store
+projekt/desktop-app/node_modules
+projekt/desktop-app/src/assets/libs
