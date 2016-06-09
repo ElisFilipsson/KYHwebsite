@@ -13,7 +13,7 @@ var gulp        = require('gulp'),
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-        server: "./"
+      server: "./"
     });
 
     gulp.watch("src/assets/sass/*.scss", ['sass']);
