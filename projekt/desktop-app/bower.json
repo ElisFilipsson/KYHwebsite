@@ -1,0 +1,17 @@
+{
+  "name": "desktop-app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Rasmus <hallstrom.rasmus@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ElisFilipsson/kyh-website",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
