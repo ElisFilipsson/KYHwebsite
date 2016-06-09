@@ -2,6 +2,6 @@
 
 angular.module('app', []);
 
-angular.controller('TestController', ['$scope', function($scope) {
+angular.module('app').controller('TestController', ['$scope', function($scope) {
   $scope.test = 'Alive';
 }]);
