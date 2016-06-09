@@ -1,8 +1,0 @@
-##Story: Kalender kurs
-Enkelt se schemat och mer info när jag klickar på kursen i kalendern
-som student
-vill direkt vid besök på sidan se månaden på nästkommande kurs.
-
-####scenario:
-När man klickar på en kurs i kalendern visas schemat samt mer information under kalendern.
-när jag besöker sidan visas månaden för nästkommande kurs om det ej finns kurs denna månaden.
