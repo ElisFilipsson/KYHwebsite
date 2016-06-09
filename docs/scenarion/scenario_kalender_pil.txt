@@ -1,0 +1,7 @@
+Story: Kalender navigering
+För att lätt finna nästa kurs i kalendern
+Som student.
+
+Scenario:
+När jag klickar på höger eller vänster pil vid kalendern
+går kalendern till nästa eller föregående månad som har en kurs.
