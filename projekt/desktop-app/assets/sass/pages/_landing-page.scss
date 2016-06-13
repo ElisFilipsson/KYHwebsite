@@ -3,7 +3,7 @@
   width: 100vw;
   background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: bottom center;
   background-size: cover;
 }
 
@@ -17,11 +17,11 @@
 
 .login-container {
   display: flex;
-  width: 400px;
+  width: 300px;
   flex-flow: column;
 
   .padding {
-    height: 30px;
+    height: 10px;
   }
 }
 
@@ -53,3 +53,28 @@
 .select-style select:focus {
   outline: none;
 }
+
+.buttons {
+  display: flex;
+  width: 100%;
+}
+
+.padding {
+  width: 20px;
+}
+
+.fw {
+  width: 100%;
+}
+
+.login-group {
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+}
+

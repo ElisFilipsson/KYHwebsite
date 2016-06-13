@@ -23,8 +23,6 @@ $calendar.getSchedule(id).then(function (result) {
     } 
     $scope.events.push(val);
   });
-
-
   $timeout(function () {
     colorizeCalendar();
   });
