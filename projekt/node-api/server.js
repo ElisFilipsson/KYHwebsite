@@ -3,7 +3,7 @@ var express = require('express'),
     cors = require('cors'),
     moment = require('moment'),
     // Server listening port
-    port = process.env.PORT || 3001,
+    port = process.env.PORT || 4000,
     bodyParser = require('body-parser'),
     app = express();
 
