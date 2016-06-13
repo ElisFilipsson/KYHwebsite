@@ -522,7 +522,8 @@ button, .fc-state-default,
 footer {
   background-color: #443049;
   height: 200px;
-  color: white; }
+  color: white;
+  padding-top: 30px; }
   footer h4 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -535,7 +536,7 @@ footer {
   width: 100vw;
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: bottom center;
   background-size: cover; }
 
 .landing {
@@ -547,10 +548,10 @@ footer {
 
 .login-container {
   display: flex;
-  width: 400px;
+  width: 300px;
   flex-flow: column; }
   .login-container .padding {
-    height: 30px; }
+    height: 10px; }
 
 .select-style {
   height: 55px;
@@ -577,6 +578,25 @@ footer {
 
 .select-style select:focus {
   outline: none; }
+
+.buttons {
+  display: flex;
+  width: 100%; }
+
+.padding {
+  width: 20px; }
+
+.fw {
+  width: 100%; }
+
+.login-group {
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px; }
+
+form {
+  display: flex;
+  flex-flow: column; }
 
 .centered {
   align-content: center;

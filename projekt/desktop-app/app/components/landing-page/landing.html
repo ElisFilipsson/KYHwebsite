@@ -1,14 +1,26 @@
 <div class="background">
   <div class="container landing">
     <div class="login-container">
-      <div class="select-style">
-        <select ng-change="getParam(selected.content.name)" ng-model="selected.content.name">
-          <option ng-repeat="course in courses">{{course.content.name}}</option>
-        </select>
-      </div>
-      <a ui-sref="/student({id: paramId})"><button type="button" name="button">Student</button></a>
+      <div class="login-group">
+        <form ng-submit="submitStudent(course.content.name)">
+          <div class="select-style">
+            <select ng-change="getParam(course.content.name)" ng-model="course.content.name">
+              <option value="" selected>-- Välj utbildning --</option>
+              <option ng-repeat="course in courses">{{course.content.name}}</option>
+            </select>
+          </div>
+          <span class="padding"></span>
+          <div class="buttons">
+            <button class="fw" type="submit" name="button">Student</button>
+            <span class="padding"></span>
+            <a class="fw" ui-sref="/student({id: paramId})"><button class="fw" type="button" name="button">Lärare</button></a>
+          </div>
+        </form>
+      </div>   
       <span class="padding"></span>
-      <button type="button" name="button">Ansökande</button>
+      <div class="login-group">
+        <a ui-sref="/visitor"><button class="fw" type="button" name="button">Ansökande</button></a>
+      </div>
     </div>
   </div>
 </div>
