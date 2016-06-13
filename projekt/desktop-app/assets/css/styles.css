@@ -580,54 +580,120 @@ footer {
 
 .centered {
   margin-top: 100px;
-  align-content: center;
-  margin-left: 10vw;
-  margin-right: 10vw; }
-  .centered .message {
-    margin-top: 120px; }
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
   .centered .list-item {
     display: flex;
+    padding: 30px;
+    flex-flow: column;
     color: #fff;
-    width: 60vw;
-    padding: 20px;
-    margin: 30px;
-    margin-bottom: 50px;
+    width: 80%;
+    margin: 10%;
+    margin-bottom: 20px;
     background: #fa6400; }
+    @media screen and (min-width: 700px) {
+      .centered .list-item {
+        width: 90%;
+        margin: 5%;
+        flex-flow: row; } }
     .centered .list-item img {
-      margin-left: -80px;
-      width: 50%;
-      height: 50%;
-      display: block; }
+      margin-left: 10%;
+      width: 80%;
+      height: 80%; }
+      @media screen and (min-width: 700px) {
+        .centered .list-item img {
+          margin-left: -80px;
+          width: 50%;
+          height: 50%; } }
     .centered .list-item .list-container {
-      margin-top: 0px;
-      margin-left: -70px;
-      max-width: 70%;
+      margin-top: -50px;
+      margin-left: 0px;
+      max-width: 100%;
       padding: 10px; }
+      @media screen and (min-width: 700px) {
+        .centered .list-item .list-container {
+          margin-left: -70px;
+          margin-top: 0px;
+          max-width: 70%; } }
       .centered .list-item .list-container div:nth-child(1) {
+        margin-top: -30px;
         font-weight: 600;
-        max-height: 50px; }
-  .centered .fixed-header {
-    position: fixed;
-    background: white;
-    top: 0px;
-    width: 100%; }
-    .centered .fixed-header form {
-      padding: 20px;
-      width: 40vw;
-      display: flex;
-      align-items: center; }
-      .centered .fixed-header form input {
-        margin: 10px;
-        width: 250px;
-        height: 50px; }
-      .centered .fixed-header form input:nth-child(2) {
-        margin: 10px;
-        width: 250px;
-        height: 50px; }
-      .centered .fixed-header form select {
-        min-width: 150px !important;
-        margin: 10px;
-        height: 50px; }
+        max-height: 50px;
+        padding-top: 30px;
+        border-top: 1px dotted white; }
+        @media screen and (min-width: 700px) {
+          .centered .list-item .list-container div:nth-child(1) {
+            border-top: none; } }
+      .centered .list-item .list-container div:nth-child(2) {
+        padding-top: 30px; }
+
+.fixed-header {
+  position: fixed;
+  background: white;
+  top: 0px;
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  border-bottom: 1px dotted #fa6400; }
+  .fixed-header form {
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap; }
+    .fixed-header form input {
+      margin: 1%;
+      width: 40%;
+      height: 40px; }
+      @media screen and (min-width: 500px) {
+        .fixed-header form input {
+          width: 20%; } }
+      @media screen and (min-width: 700px) {
+        .fixed-header form input {
+          width: 22%; } }
+      @media screen and (min-width: 1000px) {
+        .fixed-header form input {
+          width: 25%;
+          height: 50px; } }
+    .fixed-header form input[type="submit"] {
+      width: 30%; }
+      @media screen and (min-width: 500px) {
+        .fixed-header form input[type="submit"] {
+          width: 20%; } }
+      @media screen and (min-width: 700px) {
+        .fixed-header form input[type="submit"] {
+          width: 15%; } }
+      @media screen and (min-width: 1000px) {
+        .fixed-header form input[type="submit"] {
+          width: 10%; } }
+    .fixed-header form input:nth-child(2) {
+      width: 50%;
+      height: 40px; }
+      @media screen and (min-width: 500px) {
+        .fixed-header form input:nth-child(2) {
+          width: 25%; } }
+      @media screen and (min-width: 700px) {
+        .fixed-header form input:nth-child(2) {
+          width: 22%; } }
+      @media screen and (min-width: 1000px) {
+        .fixed-header form input:nth-child(2) {
+          width: 25%;
+          height: 50px; } }
+    .fixed-header form select {
+      width: 40%;
+      margin: 1%;
+      height: 40px; }
+      @media screen and (min-width: 500px) {
+        .fixed-header form select {
+          width: 20%; } }
+      @media screen and (min-width: 700px) {
+        .fixed-header form select {
+          width: 15%; } }
+      @media screen and (min-width: 1000px) {
+        .fixed-header form select {
+          width: 10%;
+          height: 50px; } }
 
 .courseCal {
   display: flex;
