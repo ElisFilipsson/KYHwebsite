@@ -1,22 +1,22 @@
-<div class="centered">
-    
-        <div class="list-item" ng-repeat="utb in utbildningslista">
-            <div>
-                <div>{{utb.name}}</div>
-                <div>{{utb.info}}</div>
-            </div>
-            <div>
-                <img src="{{utb.img}}"/>
-            </div>
-        </div>
+<div class="centered">   
 
-    <form ng-submit="submit()">
-        <input type="text" ng-model="text" name="text" />
-        <input type="text" ng-model="text" name="text" />
-        <select name="utbildningar">
-            <option ng-repeat="utb in utbildningslista" value="{{utb.name}}">{{utb.name}}</option>
-        </select>
-        <input type="submit" id="submit" value="Submit" />
-    </form>
-    
+    <div class="fixed-header">
+        <form ng-submit="submit()">
+                <input type="text" ng-model="text" name="text" />
+                <input type="email" ng-model="email" name="email" />
+                <select name="utbildningar" ng-model="education">
+                    <option ng-repeat="(key, value) in utbildningslista" value="{{key}}">{{key}}</option>
+                </select>
+                <input type="submit" id="submit" value="Submit" />
+        </form>
+    </div>
+    <div ng-show="showMessage" class="message">{{emailMessage}}</div>
+
+    <div class="list-item" ng-repeat="utb in utbildningslista">
+        <img src="{{utb.img}}"></img>
+        <div class="list-container">
+            <div>{{utb.name}}</div>
+            <div>{{utb.info}}</div>
+        </div>
+    </div>    
 </div>
