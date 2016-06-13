@@ -2,11 +2,11 @@
   <div class="container landing">
     <div class="login-container">
       <div class="select-style">
-        <select>
-          <option ng-repeat="course in courses">{{ course.name }}</option>
+        <select ng-change="getParam(selected.content.name)" ng-model="selected.content.name">
+          <option ng-repeat="course in courses">{{course.content.name}}</option>
         </select>
       </div>
-      <button type="button" name="button">Student</button>
+      <a ui-sref="/student({id: paramId})"><button type="button" name="button">Student</button></a>
       <span class="padding"></span>
       <button type="button" name="button">Ansökande</button>
     </div>

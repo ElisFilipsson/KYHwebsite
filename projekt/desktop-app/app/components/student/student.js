@@ -1,4 +1,4 @@
-app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($scope, $state, $stateParams, $calendar, uiCalendarConfig) {
+app.controller('student', ['$timeout', '$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($timeout, $scope, $state, $stateParams, $calendar, uiCalendarConfig) {
 var date = new Date();
 var d = date.getDate();
 var m = date.getMonth();
@@ -12,8 +12,9 @@ $calendar.getSchedule('MWD').then(function (result) {
     $scope.events.push(val);
     console.log($scope.events);
   });
-}).then(function() {
-  colorizeCalendar();
+  $timeout(function () {
+    colorizeCalendar();
+  });
 });
 
 $scope.changeView = function(view,calendar) {
