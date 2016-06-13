@@ -219,7 +219,7 @@ button, .fc-state-default,
 .fc .fc-button-group > *,
 .fc-state-default.fc-corner-right,
 .fc .fc-button-group > :first-child,
-.fc-toolbar button,
+.fc-toolbar button, .fc-toolbar .fc-right button,
 .fc-toolbar .fc-state-default,
 .fc button,
 .fc .fc-state-default,
@@ -241,7 +241,7 @@ button, .fc-state-default,
 .fc .fc-button-group > *,
 .fc-state-default.fc-corner-right,
 .fc .fc-button-group > :first-child,
-.fc-toolbar button,
+.fc-toolbar button, .fc-toolbar .fc-right button,
 .fc-toolbar .fc-state-default,
 .fc button,
 .fc .fc-state-default {
@@ -257,7 +257,7 @@ button, .fc-state-default,
 .fc .fc-button-group > *,
 .fc-state-default.fc-corner-right,
 .fc .fc-button-group > :first-child,
-.fc-toolbar button,
+.fc-toolbar button, .fc-toolbar .fc-right button,
 .fc-toolbar .fc-state-default,
 .fc button,
 .fc .fc-state-default,
@@ -277,7 +277,7 @@ button, .fc-state-default,
 .fc .fc-button-group > *,
 .fc-state-default.fc-corner-right,
 .fc .fc-button-group > :first-child,
-.fc-toolbar button,
+.fc-toolbar button, .fc-toolbar .fc-right button,
 .fc-toolbar .fc-state-default,
 .fc button,
 .fc .fc-state-default,
@@ -304,7 +304,7 @@ button::-moz-focus-inner, .fc-state-default::-moz-focus-inner,
 .fc .fc-button-group > ::-moz-focus-inner,
 .fc-state-default.fc-corner-right::-moz-focus-inner,
 .fc .fc-button-group > :first-child::-moz-focus-inner,
-.fc-toolbar button::-moz-focus-inner,
+.fc-toolbar button::-moz-focus-inner, .fc-toolbar .fc-right button::-moz-focus-inner,
 .fc button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -450,19 +450,42 @@ h1, h2, h3, h4 {
   font-weight: 600;
   letter-spacing: -0.03rem; }
 
-.container, .banner > *:not(.splash) {
+.container, .banner > *:not(.splash), .courseList {
   padding-left: 1rem;
   padding-right: 1rem;
   margin: auto;
   width: 100vw;
-  max-width: 40rem;
+  max-width: 50rem;
   margin-left: auto;
   margin-right: auto; }
 
 /**
  * Buttons
  */
-.fc-toolbar {
+.fc-state-default,
+.fc .fc-button-group > *,
+.fc-state-default.fc-corner-right,
+.fc .fc-button-group > :first-child,
+.fc-toolbar
+.fc .fc-button-group > *,
+.fc
+.fc-toolbar .fc-button-group > *,
+.fc .fc-toolbar .fc-right .fc-button-group > *,
+.fc-toolbar
+.fc .fc-button-group > :first-child,
+.fc
+.fc-toolbar .fc-button-group > :first-child,
+.fc .fc-toolbar .fc-right .fc-button-group > :first-child, .fc-toolbar button, .fc-toolbar .fc-right button, .fc-toolbar .fc-state-default, .fc .fc-button-group > *, .fc .fc-button-group > :first-child,
+.fc .fc-toolbar .fc-right button, .fc-toolbar .fc-right
+.fc button, .fc button, .fc .fc-state-default,
+.fc-state-default {
+  float: unset; }
+
+.fc .fc-toolbar > * > *, .fc .fc-toolbar .fc-right > * > *, .fc-toolbar .fc .fc-right > * > * {
+  float: unset;
+  margin: unset; }
+
+.fc-toolbar, .fc-toolbar .fc-right {
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -471,19 +494,22 @@ h1, h2, h3, h4 {
 .fc-toolbar .fc-clear {
   display: none; }
 
+.fc-toolbar .fc-right {
+  width: 40%; }
+
 button, .fc-state-default,
 .fc .fc-button-group > *,
 .fc-state-default.fc-corner-right,
 .fc .fc-button-group > :first-child,
-.fc-toolbar button,
+.fc-toolbar button, .fc-toolbar .fc-right button,
 .fc-toolbar .fc-state-default,
 .fc button,
 .fc .fc-state-default, input[type="submit"], [role="button"] {
   background: #fa6400;
   color: #ececec;
-  border-radius: 3px;
-  padding: 0 1rem;
-  height: 3rem;
+  border-radius: 0.1em;
+  padding: 0 1em;
+  height: 3em;
   border: none;
   text-align: center;
   font-weight: 400;
@@ -491,6 +517,22 @@ button, .fc-state-default,
   button:hover, .fc-state-default:hover,
   .fc .fc-button-group > :hover, input[type="submit"]:hover, [role="button"]:hover {
     background: #ff822e; }
+
+[class*="button-group"] > button, [class*="button-group"] > .fc-state-default,
+.fc .fc-button-group[class*="button-group"] > *,
+.fc .fc-button-group[class*="button-group"] > :first-child,
+.fc-toolbar [class*="button-group"] > button, .fc-toolbar .fc-right [class*="button-group"] > button,
+.fc-toolbar [class*="button-group"] > .fc-state-default,
+.fc [class*="button-group"] > button,
+.fc [class*="button-group"] > .fc-state-default {
+  background: #004a7b; }
+  [class*="button-group"] > button:hover, [class*="button-group"] > .fc-state-default:hover,
+  .fc .fc-button-group[class*="button-group"] > :hover,
+  .fc-toolbar [class*="button-group"] > button:hover,
+  .fc-toolbar [class*="button-group"] > .fc-state-default:hover,
+  .fc [class*="button-group"] > button:hover,
+  .fc [class*="button-group"] > .fc-state-default:hover {
+    background: #0068ae; }
 
 [class*="button-group"] > button:not(:last-of-type), [class*="button-group"] > .fc-state-default:not(:last-of-type),
 .fc .fc-button-group[class*="button-group"] > :not(:last-of-type),
@@ -629,32 +671,22 @@ footer {
         margin: 10px;
         height: 50px; }
 
-.courseCal {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-  .courseCal .container, .courseCal .banner > *:not(.splash) {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px; }
-  .courseCal .courseList {
-    margin-bottom: 40px; }
-    .courseCal .courseList ul {
-      list-style: none;
-      margin-top: 10vh; }
-      .courseCal .courseList ul li:hover {
-        background: #ffa500;
-        border-radius: 3px; }
-      .courseCal .courseList ul li:active {
-        background: #fa6400; }
-      .courseCal .courseList ul a {
-        color: black;
-        text-decoration: none;
-        font-size: 13px;
-        padding: 15px; }
-
-@media screen and (min-width: 600px) {
-  .courseList {
-    flex-direction: column;
-    max-width: 26vw;
-    min-width: 270px; } }
+.courseList {
+  margin-bottom: 40px; }
+  .courseList ul {
+    list-style: none;
+    margin-top: 10vh; }
+    .courseList ul li:hover {
+      background: #ffa500;
+      border-radius: 3px; }
+    .courseList ul li:active {
+      background: #fa6400; }
+    .courseList ul a {
+      color: black;
+      text-decoration: none;
+      font-size: 13px;
+      padding: 15px; }
+  @media screen and (min-width: 600px) {
+    .courseList {
+      max-width: 26vw;
+      min-width: 270px; } }

@@ -8,7 +8,7 @@
 .fc-toolbar button,
 .fc button,
 .fc-state-default {
-  // float: unset;
+  float: unset;
   // border: unset;
   // margin: unset;
   // margin-left: unset;
@@ -30,6 +30,11 @@
   @extend button;
 }
 
+.fc .fc-toolbar > * > * {
+  float: unset;
+  margin: unset;
+}
+
 .fc-toolbar {
   display: flex;
   justify-content: space-between;
@@ -40,5 +45,10 @@
   .fc-center,
   .fc-clear {
     display: none;
+  }
+
+  .fc-right {
+    @extend .fc-toolbar;
+    width: 40%;
   }
 }
