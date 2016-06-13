@@ -61,7 +61,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
           defaultDate: '2015-05-05'
 
         },
-      }; 
+      };
 
 $scope.eventSources = [$scope.events, $scope.eventsF];
 
