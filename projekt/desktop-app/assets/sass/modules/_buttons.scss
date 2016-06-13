@@ -1,5 +1,13 @@
 button, input[type="submit"], [role="button"] {
   background: $button-color;
+  color: $button-text-color;
   border-radius: 3px;
-  padding: 2em 1em;
+  padding: 1em 2em;
+  border: none;
+  text-align: center;
+  font-weight: 400;
+
+  &:hover {
+    background: lighten(desaturate($button-color, 10%), 10%);
+  }
 }

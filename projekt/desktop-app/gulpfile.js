@@ -11,16 +11,16 @@ gulp.task('serve', ['sass'], function() {
       server: "./"
     });
 
-    gulp.watch("assets/sass/*.scss", ['sass']);
+    gulp.watch("assets/sass/**/*.scss", ['sass']);
     gulp.watch("app/**/*.js").on('change', browserSync.reload);
     gulp.watch("*.html").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("src/assets/sass/*.scss")
+    return gulp.src("assets/sass/*.scss")
         .pipe(sass())
-        .pipe(gulp.dest("build/assets/css"))
+        .pipe(gulp.dest("assets/css"))
         .pipe(browserSync.stream());
 });
 

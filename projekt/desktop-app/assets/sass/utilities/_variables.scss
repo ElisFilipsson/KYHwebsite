@@ -2,11 +2,19 @@
  * Colors
  */
 $main-color: #fa6400;
+$accent-color: darken(complement($main-color), 25%);
+
+/**
+ * Layout
+ */
+$width: 40rem;
 
 /**
  * Typography
  */
 $root-font-size: 17px;
+$font-family-body: 'Work Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+$default-font-weight: 300;
 
 $text-color: rgba(0,0,0,.85);
 
@@ -14,3 +22,4 @@ $text-color: rgba(0,0,0,.85);
  * Elements
  */
 $button-color: $main-color;
+$button-text-color: #ececec;
