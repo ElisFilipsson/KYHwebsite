@@ -454,21 +454,15 @@ button, input[type="submit"], [role="button"] {
   background-position: center center;
   background-size: cover; }
 
-.width-300 {
-  border-radius: 10px;
-  width: 300px;
-  padding: 10px;
-  margin: 10px;
-  background: #000; }
-
-.width-500 {
-  border-radius: 10px;
-  width: 300px;
-  padding: 10px;
-  margin: 10px;
-  background: #000; }
-
 .centered {
   align-content: center;
-  margin-left: 20vw;
-  margin-right: 20vw; }
+  margin-left: 10vw;
+  margin-right: 10vw; }
+  .centered .list-item {
+    color: #fff;
+    width: 40vw;
+    padding: 20px;
+    margin: 20px;
+    background: #fa6400; }
+    .centered .list-item div {
+      border: 1px solid #000; }

@@ -8,7 +8,6 @@ app.controller('visitorCtrl', ['$scope', '$calendar', function($scope, $calendar
         }
      };
      
-     
     $calendar.getSchedule().then(function (result) {
         $scope.utbildningslista = result.data;
         console.log(result.data);
