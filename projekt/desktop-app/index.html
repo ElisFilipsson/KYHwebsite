@@ -10,6 +10,17 @@
 <body>
   <!-- This is where stuff will get injected -->
     <div ui-view></div>
+    <footer>
+      <div class="container">
+        <div class="contact-container">
+          <h4>KYH MALMÖ</h4>
+          <p class="small">Postadress: Östra Kanalgatan 3<br/>
+          211 41 Malmö
+          </p>
+          <p class="small">Besöksadress: Östra Kanalgatan 5</p>
+        </div>
+      </div>
+    </footer>
   <!-- Angular must come first-->
   <script src="assets/libs/angular/angular.min.js"></script>
   <!-- Angular ui routes -->
@@ -19,6 +30,7 @@
   <script src="app/module.js"></script>
   <script src="app/shared/factory.js"></script>
   <script src="app/components/student/student.js"></script>
+  <script src="app/components/landing-page/landing.js"></script>
   <script src="app/routes.js"></script>
 
 </body>

@@ -1,7 +1,14 @@
 <div class="background">
-  <div class="container">
+  <div class="container landing">
     <div class="login-container">
-      
+      <div class="select-style">
+        <select>
+          <option ng-repeat="course in courses">{{ course.name }}</option>
+        </select>
+      </div>
+      <button type="button" name="button">Student</button>
+      <span class="padding"></span>
+      <button type="button" name="button">Ansökande</button>
     </div>
   </div>
 </div>

@@ -6,7 +6,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($s
   .state('/', {
     url: '/',
     templateUrl: 'app/components/landing-page/landing.html',
-    pageTitle: 'KYH'
+    pageTitle: 'KYH',
+    controller: 'landing'
     // onEnter: ['$state', '$localstorage', function($state, $localstorage) {
     //
     //   /**

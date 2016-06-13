@@ -444,6 +444,17 @@ button, input[type="submit"], [role="button"] {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
+footer {
+  background-color: #443049;
+  height: 200px;
+  color: white; }
+  footer h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px; }
+  footer .small {
+    font-size: 14px; }
+
 .background {
   height: 100vh;
   width: 100vw;
@@ -451,3 +462,43 @@ button, input[type="submit"], [role="button"] {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw; }
+
+.login-container {
+  display: flex;
+  width: 400px;
+  flex-flow: column; }
+  .login-container .padding {
+    height: 30px; }
+
+.select-style {
+  height: 55px;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  border: 0px;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #fff;
+  background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 97% 50%; }
+
+.select-style select {
+  padding: 18px 0 0 18px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.select-style select:focus {
+  outline: none; }
