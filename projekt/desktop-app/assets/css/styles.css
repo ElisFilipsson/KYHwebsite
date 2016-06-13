@@ -578,24 +578,29 @@ footer {
 .select-style select:focus {
   outline: none; }
 
-.width-300 {
-  border-radius: 10px;
-  width: 300px;
-  padding: 10px;
-  margin: 10px;
-  background: #000; }
-
-.width-500 {
-  border-radius: 10px;
-  width: 300px;
-  padding: 10px;
-  margin: 10px;
-  background: #000; }
-
 .centered {
   align-content: center;
-  margin-left: 20vw;
-  margin-right: 20vw; }
+  margin-left: 10vw;
+  margin-right: 10vw; }
+  .centered form {
+    padding: 20px;
+    width: 40vw; }
+    .centered form select, .centered form input {
+      margin: 10px;
+      width: 200px; }
+
+.list-item {
+  color: #fff;
+  width: 60vw;
+  padding: 20px;
+  margin: 30px;
+  margin-bottom: 50px;
+  background: #fa6400; }
+  .list-item div {
+    padding: 10px; }
+  .list-item div:nth-child(1) {
+    padding: 10px;
+    font-weight: 600; }
 
 .courseCal {
   display: flex;
@@ -620,7 +625,3 @@ footer {
       text-decoration: none;
       font-size: 13px;
       padding: 15px; }
-
-.calDisplay {
-  flex-grow: 4;
-  justify-content: flex-start; }
