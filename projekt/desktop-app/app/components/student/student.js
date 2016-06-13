@@ -1,4 +1,4 @@
-app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($scope, $state, $stateParams, $calendar, uiCalendarConfig) {
+app.controller('student', ['$timeout', '$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($timeout, $scope, $state, $stateParams, $calendar, uiCalendarConfig) {
 
 var id = $stateParams.id;
 
@@ -6,9 +6,6 @@ var date = new Date(),
     d = date.getDate(),
     m = date.getMonth(),
     y = date.getFullYear();
-
-
-
 
 $scope.events = [];
 $scope.firstCourse = '';
@@ -26,7 +23,12 @@ $calendar.getSchedule(id).then(function (result) {
     } 
     $scope.events.push(val);
   });
-});   
+
+
+  $timeout(function () {
+    colorizeCalendar();
+  });
+});
 
 
 $scope.changeView = function(view,calendar) {
@@ -68,7 +70,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
           defaultDate: $scope.selectStartDate
 
         },
-      }; 
+      };
 
 
 
