@@ -2,16 +2,31 @@
   align-content: center;
   margin-left: 10vw;
   margin-right: 10vw;
+    
+form { 
+  padding: 20px;
+  width: 40vw;
+  
+  select, input {
+      margin: 10px;
+      width: 200px;
+  }
+}
 
 .list-item {
     color:#fff;
-    width: 40vw;
+    width: 60vw;
     padding: 20px;
-    margin: 20px;
+    margin: 30px;
+    margin-bottom: 50px;
     background: $main-color;
     
     div {
-       border: 1px solid #000; 
+       padding: 10px;
+    }
+    div:nth-child(1) {
+       padding: 10px;
+       font-weight: 600;
     }
 }
 
