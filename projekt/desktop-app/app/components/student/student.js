@@ -9,17 +9,25 @@ var date = new Date(),
 
 $scope.events = [];
 $scope.firstCourse = '';
+$scope.selectStartDate = '1499-09-09';
 
-$calendar.getSchedule('MWD').then(function (result) {
+$calendar.getSchedule(id).then(function (result) {
   $scope.course = result.data;
   angular.forEach(result.data.content, function(val, index) {
+    
+    
+    if ($scope.selectStartDate === '1499-09-09'){
+      if(val.start <= moment().format('YYYY-MM-DD')){
+        $scope.selectStartDate = angular.copy(val.start);
+      }
+    } 
     $scope.events.push(val);
-    console.log($scope.events);
   });
   $timeout(function () {
     colorizeCalendar();
   });
 });
+
 
 $scope.changeView = function(view,calendar) {
   uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
@@ -45,22 +53,31 @@ $scope.eventsF = function (start, end, timezone, callback) {
         }
     }
 
+    
+
     $scope.uiConfig = {
         calendar: {
           defaultView: "month",
           editable: true,
           header: {
-            left: '',
-            center: 'title',
+            left: 'title',
+            center: '',
             right: viewflag+' today prev,next',
           },
           dayClick: $scope.goToRootScopeDate,
-          defaultDate: '2015-05-05'
+          defaultDate: $scope.selectStartDate
 
         },
       };
 
-$scope.eventSources = [$scope.events, $scope.eventsF];
+
+
+
+   
+
+  $scope.eventSources = [$scope.events, $scope.eventsF];
+
+
 
 $scope.courses = [];
 $calendar.getSchedule()

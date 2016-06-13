@@ -1,32 +1,65 @@
 .centered {
+  margin-top: 100px;
   align-content: center;
   margin-left: 10vw;
   margin-right: 10vw;
 
-  form {
-    padding: 20px;
-    width: 40vw;
-
-    select, input {
-      margin: 10px;
-      width: 200px;
-    }
-  }
+.message{
+  margin-top: 120px;
 }
 
 .list-item {
+    display: flex;
     color:#fff;
     width: 60vw;
     padding: 20px;
     margin: 30px;
     margin-bottom: 50px;
     background: $main-color;
-
-    div {
-       padding: 10px;
+    img {
+      margin-left: -80px;
+      width: 50%;
+      height: 50%;
+      display: block;
     }
-    div:nth-child(1) {
+    .list-container { 
+       margin-top: 0px; 
+       margin-left: -70px; 
+       max-width: 70%;
        padding: 10px;
+       
+       div:nth-child(1) { 
        font-weight: 600;
+       max-height: 50px;
+      }
     }
+  }
+.fixed-header {
+  position: fixed;
+  background: white;
+  top: 0px;
+  width: 100%;
+form {
+    padding: 20px;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+
+    input {
+      margin: 10px;
+      width: 250px;
+      height: 50px;
+    }
+    input:nth-child(2) {
+      margin: 10px;
+      width: 250px;
+      height: 50px;
+    }
+    select {
+      min-width: 150px !important;
+      margin: 10px;
+      height: 50px;
+    }
+  }
+}
 }
