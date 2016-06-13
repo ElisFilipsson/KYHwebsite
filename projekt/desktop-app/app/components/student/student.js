@@ -1,6 +1,12 @@
 app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', function($scope, $state, $stateParams, $calendar) {
-
-  $calendar.getSchedule().then(function (result) {
+  
+  
+$scope.events = [{titel: '213', start: moment('2016-06-13')}];
+  $calendar.getSchedule('MWD').then(function (result) {
     $scope.course = result.data;
+    console.log(result.data);
+    $scope.events = result.data.content;
+    console.log(result.data.content);
   });
+  
 }]);
