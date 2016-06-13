@@ -2,5 +2,6 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', func
 
   $calendar.getSchedule().then(function (result) {
     $scope.course = result.data;
+    console.log(result.data);
   });
 }]);

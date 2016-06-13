@@ -453,3 +453,22 @@ button, input[type="submit"], [role="button"] {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
+
+.width-300 {
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  background: #000; }
+
+.width-500 {
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  background: #000; }
+
+.centered {
+  align-content: center;
+  margin-left: 20vw;
+  margin-right: 20vw; }

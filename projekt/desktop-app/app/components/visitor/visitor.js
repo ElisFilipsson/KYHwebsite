@@ -1,4 +1,4 @@
-app.controller('ExampleController', ['$scope', function($scope) {
+app.controller('visitorCtrl', ['$scope', '$calendar', function($scope, $calendar) {
       $scope.list = [];
       $scope.text = 'hello';
       $scope.submit = function() {
@@ -7,4 +7,11 @@ app.controller('ExampleController', ['$scope', function($scope) {
           $scope.text = '';
         }
      };
+     
+     
+    $calendar.getSchedule().then(function (result) {
+        $scope.utbildningslista = result.data;
+        console.log(result.data);
+    });
+     
 }]);
