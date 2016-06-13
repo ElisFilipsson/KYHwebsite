@@ -3,13 +3,14 @@
   margin-left: 10vw;
   margin-right: 10vw;
 
-form {
-  padding: 20px;
-  width: 40vw;
+  form {
+    padding: 20px;
+    width: 40vw;
 
-  select, input {
+    select, input {
       margin: 10px;
       width: 200px;
+    }
   }
 }
 
@@ -28,6 +29,4 @@ form {
        padding: 10px;
        font-weight: 600;
     }
-}
-
 }
