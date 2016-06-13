@@ -12,6 +12,8 @@ $calendar.getSchedule('MWD').then(function (result) {
     $scope.events.push(val);
     console.log($scope.events);
   });
+}).then(function() {
+  colorizeCalendar();
 });
 
 $scope.changeView = function(view,calendar) {
