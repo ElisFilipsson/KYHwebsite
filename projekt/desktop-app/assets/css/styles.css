@@ -15,6 +15,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700,500,600);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -428,7 +429,8 @@ button, input[type="submit"], [role="button"] {
   background: #fa6400;
   color: #ececec;
   border-radius: 3px;
-  padding: 1em 2em;
+  padding: 0 1rem;
+  height: 3rem;
   border: none;
   text-align: center;
   font-weight: 400; }
