@@ -1,5 +1,18 @@
-<main>
-  <section ng-repeat="data in course">
-    {{ data.name }}
+<main class="courseCal">
+
+  <aside class='courseList'>
+    <ul>
+      <li><a href="#">Teknisk Fastighetsförvaltare</a></li>
+      <li><a href="#">Affärsutvecklare Digital Handel</a></li>
+      <li><a href="#">Energispecialist</a></li>
+      <li><a href="#">Mobile Web Developer</a></li>
+      <li><a href="#">Lönekonsult</a></li>
+      <li><a href="#">Frontend Web Developer</a></li>
+    </ul>
+  </aside>
+
+  <section class="container">
+      <div ui-calendar ng-model="eventSources"></div>
+
   </section>
 </main>

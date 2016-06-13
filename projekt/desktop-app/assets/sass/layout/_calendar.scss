@@ -1,0 +1,44 @@
+/**
+ * Buttons
+ */
+.fc-state-default,
+.fc .fc-button-group > *,
+.fc-state-default.fc-corner-right,
+.fc .fc-button-group > :first-child,
+.fc-toolbar button,
+.fc button,
+.fc-state-default {
+  // float: unset;
+  // border: unset;
+  // margin: unset;
+  // margin-left: unset;
+  // border-top-right-radius: unset;
+  // border-bottom-right-radius: unset;
+  // border-top-left-radius: unset;
+  // border-bottom-left-radius: unset;
+  // position: unset;
+  // -moz-box-sizing: unset;
+  // -webkit-box-sizing: unset;
+  // box-sizing: unset;
+  // height: unset;
+  // padding: unset;
+  // font-size: unset;
+  // white-space: unset;
+  // cursor: unset;
+  // background: unset;
+  // color: unset;
+  @extend button;
+}
+
+.fc-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fc-toolbar {
+  .fc-center,
+  .fc-clear {
+    display: none;
+  }
+}
