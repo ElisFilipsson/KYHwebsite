@@ -26,10 +26,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($s
 
   .state('/visitor', {
     url: '/visitor',
+    controller: 'visitorCtrl',
     templateUrl: 'app/components/visitor/visitor.html',
     pageTitle: 'KYH - Hej och välkommen'
-    /**
-     * CONTROLLER GOES HERE
-     */
   });
+  
+  
 }]);
