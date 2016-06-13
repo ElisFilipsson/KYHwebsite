@@ -588,18 +588,19 @@ footer {
     .centered form select, .centered form input {
       margin: 10px;
       width: 200px; }
-  .centered .list-item {
-    color: #fff;
-    width: 60vw;
-    padding: 20px;
-    margin: 30px;
-    margin-bottom: 50px;
-    background: #fa6400; }
-    .centered .list-item div {
-      padding: 10px; }
-    .centered .list-item div:nth-child(1) {
-      padding: 10px;
-      font-weight: 600; }
+
+.list-item {
+  color: #fff;
+  width: 60vw;
+  padding: 20px;
+  margin: 30px;
+  margin-bottom: 50px;
+  background: #fa6400; }
+  .list-item div {
+    padding: 10px; }
+  .list-item div:nth-child(1) {
+    padding: 10px;
+    font-weight: 600; }
 
 .courseCal {
   display: flex;

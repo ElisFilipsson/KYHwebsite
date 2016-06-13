@@ -29,17 +29,14 @@ $scope.changeView = function(view,calendar) {
 
 $scope.eventSources = [$scope.events, $scope.eventsF];
 
+$scope.courses = [];
+$calendar.getSchedule()
+  .then(function(res) {
+    var data = res.data;
+    angular.forEach(data, function(val, key) {
+      $scope.courses.push({name: key, content: val});
+    });
+  });
 
 
-
-
-
-
-
-
-
-
-
-
-  
 }]);
