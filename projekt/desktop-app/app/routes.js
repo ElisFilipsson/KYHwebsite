@@ -19,7 +19,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($s
   })
 
   .state('/student', {
-    url: '/student',
+    url: '/student/{id}',
     templateUrl: 'app/components/student/student.html',
     pageTitle: 'KYH - studerande',
     controller: 'student'

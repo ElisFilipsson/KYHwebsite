@@ -1,20 +1,25 @@
 app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($scope, $state, $stateParams, $calendar, uiCalendarConfig) {
-var date = new Date();
-    var d = date.getDate();
-    var m = date.getMonth();
-    var y = date.getFullYear();
+
+var id = $stateParams.id;
+
+var date = new Date(),
+    d = date.getDate(),
+    m = date.getMonth(),
+    y = date.getFullYear();
 
 
 
 
 $scope.events = [];
-
-$calendar.getSchedule('MWD').then(function (result) {
+$scope.firstCourse = '';
+$calendar.getSchedule(id).then(function (result) {
     $scope.course = result.data;
     angular.forEach(result.data.content, function(val, index) {
         $scope.events.push(val);
-        console.log($scope.events)
     });
+
+
+
 });
 $scope.changeView = function(view,calendar) {
       uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
@@ -26,6 +31,34 @@ $scope.changeView = function(view,calendar) {
       var m = new Date(start).getMonth();
       callback($scope.events);
     };
+
+    var viewflag = 'agendaWeek';
+    $('.fc-right:nth-child(0) ').on('click', function() {
+        console.log(this);
+    });
+
+    function changeView() {
+        if(viewflag === 'month') {
+            viewflag = 'agendaWeek';
+        } else {
+            viewflag = 'month';
+        }
+    }
+
+    $scope.uiConfig = {
+        calendar: {
+          defaultView: "month",
+          editable: true,
+          header: {
+            left: '',
+            center: 'title',
+            right: viewflag+' today prev,next',
+          },
+          dayClick: $scope.goToRootScopeDate,
+          defaultDate: '2015-05-05'
+
+        },
+      }; 
 
 $scope.eventSources = [$scope.events, $scope.eventsF];
 
