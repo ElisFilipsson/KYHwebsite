@@ -2,8 +2,8 @@ button, input[type="submit"], [role="button"] {
   background: $button-color;
   color: $button-text-color;
   border-radius: $button-border-radius;
-  padding: 0 1rem;
-  height: 3rem;
+  padding: 0 1em;
+  height: 3em;
   border: none;
   text-align: center;
   font-weight: 400;
@@ -15,6 +15,13 @@ button, input[type="submit"], [role="button"] {
 }
 
 [class*="button-group"] {
+  > button {
+    background: $accent-color;
+
+    &:hover {
+      background: lighten(saturate($accent-color, 10%), 10%);
+    }
+  }
   > button:not(:last-of-type) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
