@@ -215,7 +215,14 @@ samp {
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  * 4. Improves appearance and consistency in all browsers.
  */
-button,
+button, .fc-state-default,
+.fc .fc-button-group > *,
+.fc-state-default.fc-corner-right,
+.fc .fc-button-group > :first-child,
+.fc-toolbar button,
+.fc-toolbar .fc-state-default,
+.fc button,
+.fc .fc-state-default,
 input,
 optgroup,
 select,
@@ -230,7 +237,14 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-button {
+button, .fc-state-default,
+.fc .fc-button-group > *,
+.fc-state-default.fc-corner-right,
+.fc .fc-button-group > :first-child,
+.fc-toolbar button,
+.fc-toolbar .fc-state-default,
+.fc button,
+.fc .fc-state-default {
   overflow: visible; }
 
 /**
@@ -239,7 +253,14 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button,
+button, .fc-state-default,
+.fc .fc-button-group > *,
+.fc-state-default.fc-corner-right,
+.fc .fc-button-group > :first-child,
+.fc-toolbar button,
+.fc-toolbar .fc-state-default,
+.fc button,
+.fc .fc-state-default,
 select {
   text-transform: none; }
 
@@ -252,7 +273,14 @@ select {
  * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
  *  Known issue: inner spacing remains in IE 6.
  */
-button,
+button, .fc-state-default,
+.fc .fc-button-group > *,
+.fc-state-default.fc-corner-right,
+.fc .fc-button-group > :first-child,
+.fc-toolbar button,
+.fc-toolbar .fc-state-default,
+.fc button,
+.fc .fc-state-default,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -264,14 +292,20 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled],
+button[disabled], [disabled].fc-state-default,
+.fc .fc-button-group > [disabled],
 html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner,
+button::-moz-focus-inner, .fc-state-default::-moz-focus-inner,
+.fc .fc-button-group > ::-moz-focus-inner,
+.fc-state-default.fc-corner-right::-moz-focus-inner,
+.fc .fc-button-group > :first-child::-moz-focus-inner,
+.fc-toolbar button::-moz-focus-inner,
+.fc button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -425,7 +459,26 @@ h1, h2, h3, h4 {
   margin-left: auto;
   margin-right: auto; }
 
-button, input[type="submit"], [role="button"] {
+/**
+ * Buttons
+ */
+.fc-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.fc-toolbar .fc-center,
+.fc-toolbar .fc-clear {
+  display: none; }
+
+button, .fc-state-default,
+.fc .fc-button-group > *,
+.fc-state-default.fc-corner-right,
+.fc .fc-button-group > :first-child,
+.fc-toolbar button,
+.fc-toolbar .fc-state-default,
+.fc button,
+.fc .fc-state-default, input[type="submit"], [role="button"] {
   background: #fa6400;
   color: #ececec;
   border-radius: 3px;
@@ -433,9 +486,29 @@ button, input[type="submit"], [role="button"] {
   height: 3rem;
   border: none;
   text-align: center;
-  font-weight: 400; }
-  button:hover, input[type="submit"]:hover, [role="button"]:hover {
-    background: #f58438; }
+  font-weight: 400;
+  transition: background 100ms ease-in-out; }
+  button:hover, .fc-state-default:hover,
+  .fc .fc-button-group > :hover, input[type="submit"]:hover, [role="button"]:hover {
+    background: #ff822e; }
+
+[class*="button-group"] > button:not(:last-of-type), [class*="button-group"] > .fc-state-default:not(:last-of-type),
+.fc .fc-button-group[class*="button-group"] > :not(:last-of-type),
+.fc-toolbar [class*="button-group"] > button:not(:last-of-type),
+.fc-toolbar [class*="button-group"] > .fc-state-default:not(:last-of-type),
+.fc [class*="button-group"] > button:not(:last-of-type),
+.fc [class*="button-group"] > .fc-state-default:not(:last-of-type) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+[class*="button-group"] > button:not(:first-of-type), [class*="button-group"] > .fc-state-default:not(:first-of-type),
+.fc .fc-button-group[class*="button-group"] > :not(:first-of-type),
+.fc-toolbar [class*="button-group"] > button:not(:first-of-type),
+.fc-toolbar [class*="button-group"] > .fc-state-default:not(:first-of-type),
+.fc [class*="button-group"] > button:not(:first-of-type),
+.fc [class*="button-group"] > .fc-state-default:not(:first-of-type) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
 
 .banner {
   margin: 2rem;
