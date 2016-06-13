@@ -406,12 +406,14 @@ body {
 html {
   color: rgba(0, 0, 0, 0.85);
   font-size: 17px;
-  line-height: 1.4;
+  line-height: 1.38;
   font-family: "Work Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
 
-h1 {
-  font-weight: 600; }
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.03rem; }
 
 .container, .banner > *:not(.splash) {
   padding-left: 1rem;
