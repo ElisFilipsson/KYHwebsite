@@ -3,6 +3,7 @@
 .courseCal {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
 
   .container {
@@ -38,8 +39,11 @@
 }
 
 @media screen and (min-width: 600px) {
+  .courseCal {
+    flex-direction: row;
+  }
+  
   .courseList {
-    flex-direction: column;
     max-width: 26vw;
     min-width: 270px;
   }
