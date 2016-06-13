@@ -600,3 +600,27 @@ footer {
     .centered .list-item div:nth-child(1) {
       padding: 10px;
       font-weight: 600; }
+
+.courseCal {
+  display: flex;
+  justify-content: center; }
+
+.courseList {
+  flex-direction: column;
+  flex-grow: 1;
+  border-right: 1px solid black;
+  max-width: 26vw;
+  min-width: 270px; }
+  .courseList ul {
+    list-style: none;
+    margin-top: 10vh; }
+    .courseList ul li:hover {
+      background: #ffa500;
+      border-radius: 3px; }
+    .courseList ul li:active {
+      background: #fa6400; }
+    .courseList ul a {
+      color: black;
+      text-decoration: none;
+      font-size: 13px;
+      padding: 15px; }

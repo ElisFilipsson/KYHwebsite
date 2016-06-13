@@ -2,14 +2,15 @@
   align-content: center;
   margin-left: 10vw;
   margin-right: 10vw;
-    
-form { 
-  padding: 20px;
-  width: 40vw;
-  
-  select, input {
+
+  form {
+    padding: 20px;
+    width: 40vw;
+
+    select, input {
       margin: 10px;
       width: 200px;
+    }
   }
 }
 .list-item {
@@ -19,7 +20,7 @@ form {
     margin: 30px;
     margin-bottom: 50px;
     background: $main-color;
-    
+
     div {
        padding: 10px;
     }
@@ -28,6 +29,3 @@ form {
        font-weight: 600;
     }
 }
-
-}
-
