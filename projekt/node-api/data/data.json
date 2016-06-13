@@ -1,7 +1,7 @@
 {
     "MWD":{ 
             "name": "Frontend Web Developer (tidigare Mobile Web Developer)",
-            "img": "node-api/data/images/frontend_icon_neg.png",
+            "img": "images/frontend_icon_neg.png",
             "info": "Har du någon gång funderat på hur alla webbtjänser du använder fungerar? Hur skulle man egentligen bygga ett eget Facebook, en internetbank eller Gmail? Vi lever ett otroligt digitalt liv idag och det är webben som står i centrum. Idag jobbar hundra tusentals människor med just webben på olika sätt och fler kommer det bli de kommande åren. Inom hela EU förutspår man att det redan om fyra år kommer saknas en miljon programmerare. Så om du vill vara en del av framtiden och skapa nästa Facebook eller en bättre internetbank då ska du söka till vår utbildning som för att du redan om två år kan ha en anställning som webbutvecklare!",
             "start-year": 2016,
             "length": 2,

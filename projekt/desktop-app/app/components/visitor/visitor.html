@@ -1,8 +1,13 @@
 <div class="centered">
     
         <div class="list-item" ng-repeat="utb in utbildningslista">
-            <div>{{utb.name}}</div>
-            <div>{{utb.info}}</div>
+            <div>
+                <div>{{utb.name}}</div>
+                <div>{{utb.info}}</div>
+            </div>
+            <div>
+                <img src="{{utb.img}}"/>
+            </div>
         </div>
 
     <form ng-submit="submit()">
