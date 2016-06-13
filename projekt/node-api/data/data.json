@@ -1,6 +1,8 @@
 {
     "MWD":{ 
+
             "name": "Mobile Web Developer",
+            "img": "node-api/data/images/frontend_icon_neg.png",
             "info": "Har du någon gång funderat på hur alla webbtjänser du använder fungerar? Hur skulle man egentligen bygga ett eget Facebook, en internetbank eller Gmail? Vi lever ett otroligt digitalt liv idag och det är webben som står i centrum. Idag jobbar hundra tusentals människor med just webben på olika sätt och fler kommer det bli de kommande åren. Inom hela EU förutspår man att det redan om fyra år kommer saknas en miljon programmerare. Så om du vill vara en del av framtiden och skapa nästa Facebook eller en bättre internetbank då ska du söka till vår utbildning som för att du redan om två år kan ha en anställning som webbutvecklare!",
             "start-year": 2016,
             "length": 2,
@@ -25,6 +27,7 @@
           },
     "FWD":{
             "name": "Mobile Web Developer",
+            "img": "node-api/data/images/frontend_icon_neg.png",
             "info": "Har du någon gång funderat på hur alla webbtjänser du använder fungerar? Hur skulle man egentligen bygga ett eget Facebook, en internetbank eller Gmail? Vi lever ett otroligt digitalt liv idag och det är webben som står i centrum. Idag jobbar hundra tusentals människor med just webben på olika sätt och fler kommer det bli de kommande åren. Inom hela EU förutspår man att det redan om fyra år kommer saknas en miljon programmerare. Så om du vill vara en del av framtiden och skapa nästa Facebook eller en bättre internetbank då ska du söka till vår utbildning som gör att du redan om två år kan ha en anställning som webbutvecklare!",
             "start-year": 2015,
             "length": 2,
@@ -49,6 +52,7 @@
             },
     "ADH":{
             "name": "Affärsutvecklare Digital Handel",
+            "img": "node-api/data/images/Ikon_Affarsutvecklare_Dig_Handel_BLUE_neg.png",
             "info": "E-handeln växer kraftigt och den svenska detaljhandelns försäljning över internet ökade med 16 procent per år. E-handeln börjar ta andelar av den totala detaljhandeln och kundernas förändrade konsumtionsmönster innebär att handeln behöver anpassa sig. Behovet av kompete personal inom digital handel är därför mycket stort.",
             "start-year": 2016,
             "length": 2,
@@ -70,6 +74,7 @@
           },
     "TFF":{
             "name": "Teknisk Fastighetsförvaltare",
+            "img": "node-api/data/images/drift_icon_neg.png",
             "info": "Behovet av kvalificerade fastighetstekniker är stort. Storstadsregionerna växer och både nya och gamla hus ska underhållas, samtidigt som många äldre tekniker går i pension. Det är ett yrke för dig som gillar energifrågor, problemlösning och att se till att saker fungerar som de ska. En kvalificerad drift- och fastighetstekniker medverkar i energieffektivisering, säkerställer inomhusklimatet och ansvarar för fastighetens tekniska system. Du kan också vara med och upphandla och arbetsleda underkonsulter och hantverkare.",
             "start-year": 2016,
             "length": 2,
@@ -97,6 +102,7 @@
           },
     "ESB":{
             "name": "Energispecialist Byggnader",
+            "img": "node-api/data/images/icon_energi_BLUE_neg.png",
             "info": "Utbildningen Energispecialist Byggnader tillgodoser behovet! KYH har sedan år 2007 utbildat ett 100-tal studenter till Energispecialist Byggnader. EU:s och Sveriges krav på att samtliga bostäder fram till 2020 i princip skall vara s.k. lågenergihus, tillsammans med den tidigare lagen om energideklarationer, ställer helt nya krav på den kompetens som blivande energispecialister behöver.",
             "start-year": 2016,
             "length": 2,
@@ -124,6 +130,7 @@
           },
     "LK":{
         "name": "Lönekonsult",
+        "img": "node-api/data/images/lonekonsult_icon_neg.png",
         "info": "Löneadministratören har utvecklats från mycket administrationsarbete med inslag av rådgivning till ett alltmer konsultativt arbetssätt. Den moderna löneprocessen i kombination med allt mer komplexa lagar och regler, self-service och ökad globalisering ställer ökade krav på löneyrket, vilket även tydliggör rollens mångsidighet. Den framtida lönekonsulten arbetar processinriktat och tar en nyckelroll i företagen, då lönesystemen innehåller viktig information om de flesta företags största resurs, de anställda.",
         "start-year": 2016,
         "length": 1.5,

@@ -12,25 +12,28 @@ var date = new Date(),
 
 $scope.events = [];
 $scope.firstCourse = '';
-$calendar.getSchedule(id).then(function (result) {
-    $scope.course = result.data;
-    angular.forEach(result.data.content, function(val, index) {
-        $scope.events.push(val);
-    });
 
-
+$calendar.getSchedule('MWD').then(function (result) {
+  $scope.course = result.data;
+  angular.forEach(result.data.content, function(val, index) {
+    $scope.events.push(val);
+    console.log($scope.events);
+  });
+}).then(function() {
+  colorizeCalendar();
 
 });
+
 $scope.changeView = function(view,calendar) {
-      uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
+  uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
 };
 
- $scope.eventsF = function (start, end, timezone, callback) {
-      var s = new Date(start).getTime() / 1000;
-      var e = new Date(end).getTime() / 1000;
-      var m = new Date(start).getMonth();
-      callback($scope.events);
-    };
+$scope.eventsF = function (start, end, timezone, callback) {
+  var s = new Date(start).getTime() / 1000;
+  var e = new Date(end).getTime() / 1000;
+  var m = new Date(start).getMonth();
+  callback($scope.events);
+};
 
     var viewflag = 'agendaWeek';
     $('.fc-right:nth-child(0) ').on('click', function() {
@@ -62,17 +65,14 @@ $scope.changeView = function(view,calendar) {
 
 $scope.eventSources = [$scope.events, $scope.eventsF];
 
+$scope.courses = [];
+$calendar.getSchedule()
+  .then(function(res) {
+    var data = res.data;
+    angular.forEach(data, function(val, key) {
+      $scope.courses.push({name: key, content: val});
+    });
+    console.log($scope.courses);
+  });
 
-
-
-
-
-
-
-
-
-
-
-
-  
 }]);
