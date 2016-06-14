@@ -6,8 +6,8 @@ branches:
     - development
 install:
   - npm --prefix ./projekt/desktop-app install ./projekt/desktop-app
-  - bower install
 before_script:
+  - bower install
   - npm install -g nodemon
   - nodemon projekt/node-api/
 script:
