@@ -1,8 +1,8 @@
 'use strict';
 
-var gulp         = require('gulp'),
-    browserSync  = require('browser-sync').create(),
-    sass         = require('gulp-sass'),
+var gulp        = require('gulp'),
+    browserSync = require('browser-sync').create(),
+    sass        = require('gulp-sass'),
     postcss      = require('gulp-postcss'),
     sourcemaps   = require('gulp-sourcemaps'),
     autoprefixer = require('autoprefixer');
