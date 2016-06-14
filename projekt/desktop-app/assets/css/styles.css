@@ -818,7 +818,8 @@ form {
 
 .course-list ul {
   list-style: none;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  padding: 0; }
   .course-list ul li:hover {
     background: #ffa500;
     border-radius: 3px; }
@@ -829,5 +830,8 @@ form {
     text-decoration: none;
     font-size: 13px;
     padding: 15px; }
+
+.course-list .drpdwn-student-cal {
+  margin: 15px; }
 
 /*# sourceMappingURL=styles.css.map */
