@@ -4,15 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.13.0",
+    "chai": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
-    "gulp-sass": "^2.3.1"
+    "gulp-sass": "^2.3.1",
+    "karma": "^0.13.22",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.0.1",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-verbose-reporter": "0.0.3",
+    "mocha": "^2.5.3",
+    "phantomjs-prebuilt": "^2.1.7"
   }
 }
