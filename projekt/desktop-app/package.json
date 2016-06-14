@@ -10,10 +10,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "browser-sync": "^2.13.0",
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
+<<<<<<< HEAD
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0"
+=======
     "gulp-sass": "^2.3.1",
     "karma": "^0.13.22",
     "karma-chai": "^0.1.0",
@@ -22,5 +28,6 @@
     "karma-verbose-reporter": "0.0.3",
     "mocha": "^2.5.3",
     "phantomjs-prebuilt": "^2.1.7"
+>>>>>>> db0e999b8df4fb4b3e348457e767f22067cac303
   }
 }
