@@ -486,12 +486,9 @@ h1, h2, h3, h4 {
   margin: unset; }
 
 .fc-toolbar, .fc-toolbar .fc-right {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center; }
+  justify-content: space-between;
+  align-items: center; }
 
 .fc-toolbar .fc-center,
 .fc-toolbar .fc-clear {
@@ -586,9 +583,11 @@ button, .fc-state-default,
 
 footer {
   background-color: #443049;
-  height: 200px;
-  color: white;
-  padding-top: 30px; }
+  height: 300px;
+  color: white; }
+  footer .contact-container {
+    padding-top: 30px;
+    padding-bottom: 30px; }
   footer a {
     color: currentColor;
     text-decoration: none; }
@@ -608,21 +607,16 @@ footer {
   background-size: cover; }
 
 .landing {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw; }
 
 .login-container {
-  display: -ms-flexbox;
   display: flex;
   width: 300px;
-  -ms-flex-flow: column;
-      flex-flow: column; }
+  flex-flow: column; }
   .login-container .padding {
     height: 10px; }
 
@@ -653,7 +647,6 @@ footer {
   outline: none; }
 
 .buttons {
-  display: -ms-flexbox;
   display: flex;
   width: 100%; }
 
@@ -669,17 +662,13 @@ footer {
   padding: 10px; }
 
 form {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column;
-      flex-flow: column; }
+  flex-flow: column; }
 
 .centered .list-item {
-  display: -ms-flexbox;
   display: flex;
   padding: 30px;
-  -ms-flex-flow: column;
-      flex-flow: column;
+  flex-flow: column;
   color: #fff;
   width: 80%;
   margin: 10% 0;
@@ -689,8 +678,7 @@ form {
     .centered .list-item {
       width: 90%;
       margin: 5% 0;
-      -ms-flex-flow: row;
-          flex-flow: row; } }
+      flex-flow: row; } }
   .centered .list-item:first-child {
     margin-top: 10rem; }
   .centered .list-item img {
@@ -730,21 +718,17 @@ form {
   top: 0px;
   width: 100%;
   margin: 0px;
-  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px dotted #fa6400;
   margin-bottom: 2; }
   .fixed-header + * {
     margin-top: 8rem; }
   .fixed-header form {
-    -ms-flex-pack: center;
-        justify-content: center;
+    justify-content: center;
     padding: 15px;
     width: 100%;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap; }
+    flex-flow: row wrap; }
     .fixed-header form input {
       margin: 1%;
       width: 40%;
@@ -799,21 +783,15 @@ form {
           height: 50px; } }
 
 .courses {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+  flex-direction: column;
+  flex-wrap: wrap; }
 
 @media (min-width: 600px) {
   .courses {
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -ms-flex-pack: center;
-        justify-content: center; }
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center; }
     .courses .course-list {
       max-width: 30%; }
     .courses .cal-display {
@@ -836,5 +814,3 @@ form {
 
 .course-list .drpdwn-student-cal {
   margin: 15px; }
-
-/*# sourceMappingURL=styles.css.map */
