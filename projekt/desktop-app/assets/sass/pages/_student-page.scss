@@ -1,23 +1,23 @@
 // Calender site
 
-// .courseCal {
-  // display: flex;
-  // justify-content: center;
-  // flex-flow: column nowrap;
+.courseCal {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
 
-  // .container {
-  //   display:flex;
-  //   justify-content: center;
-  //   margin-bottom: 40px;
-  // }
-//   @media screen and (min-width: 600px) {
-//     flex-flow: row nowrap;
-//   }
-// }
+  .container {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 600px) {
+    flex-flow: row nowrap;
+  }
+}
 
 .courseList {
   margin-bottom: 40px;
-  @extend .container;
+  // @extend .container;
 
   ul {
     list-style: none;

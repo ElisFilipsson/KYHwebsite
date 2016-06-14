@@ -1,12 +1,21 @@
-<main class="courseCal">
+<main class="courseCa container">
 
   <aside class='courseList'>
     <ul>
-      <li ng-repeat="course in courses"><a ui-sref="/student({id: course.name})"> {{ course.content.name }} </a></li>
+      <li ng-repeat="cor in course">
+        <!-- <a ui-sref="/student({id: course.name})"> -->
+          {{ console.log(cor) }}
+        <!-- </a> -->
+      </li>
+      <!-- <li ng-repeat="course in courses">
+        <a ui-sref="/student({id: course.name})">
+          {{ course.content.name }}
+        </a>
+      </li> -->
     </ul>
   </aside>
 
-  <section class="container">
+  <section class="c.ontainer">
       <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
   </section>
 </main>

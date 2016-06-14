@@ -450,12 +450,12 @@ h1, h2, h3, h4 {
   font-weight: 600;
   letter-spacing: -0.03rem; }
 
-.container, .banner > *:not(.splash), .courseList {
+.container, .banner > *:not(.splash) {
   padding-left: 1rem;
   padding-right: 1rem;
   margin: auto;
   width: 100vw;
-  max-width: 50rem;
+  max-width: 60rem;
   margin-left: auto;
   margin-right: auto; }
 
@@ -496,6 +496,9 @@ h1, h2, h3, h4 {
 
 .fc-toolbar .fc-right {
   width: 40%; }
+
+#calendar {
+  margin-bottom: 4rem; }
 
 button, .fc-state-default,
 .fc .fc-button-group > *,
@@ -690,6 +693,18 @@ form {
         min-width: 150px !important;
         margin: 10px;
         height: 50px; }
+
+.courseCal {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap; }
+  .courseCal .container, .courseCal .banner > *:not(.splash) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; }
+  @media screen and (min-width: 600px) {
+    .courseCal {
+      flex-flow: row nowrap; } }
 
 .courseList {
   margin-bottom: 40px; }

@@ -9,24 +9,6 @@
 .fc button,
 .fc-state-default {
   float: unset;
-  // border: unset;
-  // margin: unset;
-  // margin-left: unset;
-  // border-top-right-radius: unset;
-  // border-bottom-right-radius: unset;
-  // border-top-left-radius: unset;
-  // border-bottom-left-radius: unset;
-  // position: unset;
-  // -moz-box-sizing: unset;
-  // -webkit-box-sizing: unset;
-  // box-sizing: unset;
-  // height: unset;
-  // padding: unset;
-  // font-size: unset;
-  // white-space: unset;
-  // cursor: unset;
-  // background: unset;
-  // color: unset;
   @extend button;
 }
 
@@ -51,4 +33,8 @@
     @extend .fc-toolbar;
     width: 40%;
   }
+}
+
+#calendar {
+  margin-bottom: 4rem;
 }
