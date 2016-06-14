@@ -58,6 +58,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
               }
            });
             $('#calendar').fullCalendar('gotoDate', date); 
+
         });
     };
 
@@ -72,8 +73,6 @@ $scope.eventsF = function (start, end, timezone, callback) {
             right: viewflag+' today prev,next',
           },
           dayClick: $scope.goToRootScopeDate,
-          
-
         },
       };
 
