@@ -1,4 +1,5 @@
 {
+
     "MWD":{ 
             "name": "Mobile Web Developer",
             "img": "assets/img/icons/frontend_icon_neg.png",
@@ -128,28 +129,72 @@
                         ] 
           },
     "LK":{
+
         "name": "Lönekonsult",
         "img": "assets/img/icons/lonekonsult_icon_neg.png",
         "info": "Löneadministratören har utvecklats från mycket administrationsarbete med inslag av rådgivning till ett alltmer konsultativt arbetssätt. Den moderna löneprocessen i kombination med allt mer komplexa lagar och regler, self-service och ökad globalisering ställer ökade krav på löneyrket, vilket även tydliggör rollens mångsidighet. Den framtida lönekonsulten arbetar processinriktat och tar en nyckelroll i företagen, då lönesystemen innehåller viktig information om de flesta företags största resurs, de anställda.",
         "start-year": 2016,
         "length": 1.5,
-        "content": [{"title":"Teambuilding","start":"2016-08-22","end":"2016-08-26"},
-                    {"title":"Lönehantering","start":"2016-08-29","end":"2016-10-21"},
-                    {"title":"Excel för lönekonsulter","start":"2016-10-24","end":"2016-11-04"},
-                    {"title":"LIA preparand","start":"2016-11-07","end":"2016-11-11"},
-                    {"title":"Redovisning","start":"2016-11-14","end":"2016-12-09"},
-                    {"title":"Arbetsrätt","start":"2016-12-12","end":"2016-12-16"},
-                    {"title":"Arbetsrätt","start":"2017-01-09","end":"2017-02-10"},
-                    {"title":"LIA 1","start":"2017-02-13","end":"2017-03-24"},
-                    {"title":"Personalekonomi","start":"2017-03-27","end":"2017-04-21"},
-                    {"title":"Lönehantering fördjupning","start":"2017-04-24","end":"2017-06-16"},
-                    {"title":"Konsultrollen","start":"2017-08-21","end":"2017-09-08"},
-                    {"title":"Affärsengelska med yrkesinriktning","start":"2017-09-11","end":"2017-09-29"},
-                    {"title":"Projektarbete","start":"2017-10-02","end":"2017-11-10"},
-                    {"title":"LIA 2","start":"2017-11-13","end":"2017-12-15"},
-                    {"title":"LIA 2","start":"2018-01-08","end":"20178-01-26"}
-                ]
-        }
+        "content": [{
+            "title": "Teambuilding",
+            "start": "2016-08-22",
+            "end": "2016-08-26"
+        }, {
+            "title": "Lönehantering",
+            "start": "2016-08-29",
+            "end": "2016-10-21"
+        }, {
+            "title": "Excel för lönekonsulter",
+            "start": "2016-10-24",
+            "end": "2016-11-04"
+        }, {
+            "title": "LIA preparand",
+            "start": "2016-11-07",
+            "end": "2016-11-11"
+        }, {
+            "title": "Redovisning",
+            "start": "2016-11-14",
+            "end": "2016-12-09"
+        }, {
+            "title": "Arbetsrätt",
+            "start": "2016-12-12",
+            "end": "2016-12-16"
+        }, {
+            "title": "Arbetsrätt",
+            "start": "2017-01-09",
+            "end": "2017-02-10"
+        }, {
+            "title": "LIA 1",
+            "start": "2017-02-13",
+            "end": "2017-03-24"
+        }, {
+            "title": "Personalekonomi",
+            "start": "2017-03-27",
+            "end": "2017-04-21"
+        }, {
+            "title": "Lönehantering fördjupning",
+            "start": "2017-04-24",
+            "end": "2017-06-16"
+        }, {
+            "title": "Konsultrollen",
+            "start": "2017-08-21",
+            "end": "2017-09-08"
+        }, {
+            "title": "Affärsengelska med yrkesinriktning",
+            "start": "2017-09-11",
+            "end": "2017-09-29"
+        }, {
+            "title": "Projektarbete",
+            "start": "2017-10-02",
+            "end": "2017-11-10"
+        }, {
+            "title": "LIA 2",
+            "start": "2017-11-13",
+            "end": "2017-12-15"
+        }, {
+            "title": "LIA 2",
+            "start": "2018-01-08",
+            "end": "20178-01-26"
+        }]
+    }
 }
-
-

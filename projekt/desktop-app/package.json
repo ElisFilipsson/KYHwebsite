@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "angular-mocks": "^1.5.6",
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.13.0",
     "chai": "^3.5.0",
@@ -18,7 +19,6 @@
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-sass": "^2.3.1",
     "karma": "^0.13.22",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^1.0.1",

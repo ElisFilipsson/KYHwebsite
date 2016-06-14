@@ -1,8 +1,17 @@
 footer {
   background-color: rgba(68, 48, 73, 1.00);
-  height: 200px;
+  height: 300px;
   color: white;
-  padding-top: 30px;
+
+  .contact-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
 
   h4 {
     margin-top: 0px;

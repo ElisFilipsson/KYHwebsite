@@ -6,3 +6,11 @@ app.factory('$calendar', ['$http', function($http) {
     }
   };
 }]);
+
+app.factory('email', ['$http', function($http) {
+  return {
+    sendEmail: function(options) {
+      return $http.post('http://localhost:4000/email/', options);
+    }
+  };
+}]);

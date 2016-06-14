@@ -1,4 +1,4 @@
-app.controller('student', ['$timeout', '$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($timeout, $scope, $state, $stateParams, $calendar, uiCalendarConfig) {
+app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($scope, $state, $stateParams, $calendar, uiCalendarConfig) {
 
 var id = $stateParams.id;
 
@@ -18,9 +18,6 @@ $calendar.getSchedule(id).then(function (result) {
     $scope.events.push(val);
     $scope.tempevents.push(val);
   });
-  $timeout(function () {
-    colorizeCalendar();
-  });
 });
 
 $scope.changeView = function(view,calendar) {
@@ -32,21 +29,9 @@ $scope.eventsF = function (start, end, timezone, callback) {
   var e = new Date(end).getTime() / 1000;
   var m = new Date(start).getMonth();
   callback($scope.events);
+  colorizeCalendar();
 };
 
- 
-    var viewflag = 'agendaWeek';
-    $('.cal-display').find('.fc-right').first().on('click', function() {
-        console.log(this);
-    });
-
-    function changeView() {
-        if(viewflag === 'month') {
-            viewflag = 'agendaWeek';
-        } else {
-            viewflag = 'month';
-        }
-    }
 
     $scope.getNextCourseDate = function() {
         $calendar.getSchedule(id).then(function (result) {
@@ -59,10 +44,12 @@ $scope.eventsF = function (start, end, timezone, callback) {
                 }
               }
            });
+
            $scope.events = [];
            $scope.events = angular.copy($scope.tempevents);
            $('#calendar').fullCalendar('gotoDate', date); 
            
+
         });
     };
 
@@ -74,7 +61,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
           header: {
             left: 'title',
             center: '',
-            right: viewflag+' today prev,next',
+            right: 'today prev,next',
           },
           dayClick: $scope.goToRootScopeDate,
           defaultDate: $scope.selectStartDate
@@ -82,7 +69,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
       };
 
 
-$scope.eventSources = [$scope.events, $scope.eventsF];
+$scope.eventSources = [$scope.eventsF];
 
 
 
@@ -98,6 +85,7 @@ $calendar.getSchedule(id)
       $scope.classes.push({id: key, title: val.title});
     });
   });
+
 
 $scope.courses = [];
 $calendar.getSchedule()
