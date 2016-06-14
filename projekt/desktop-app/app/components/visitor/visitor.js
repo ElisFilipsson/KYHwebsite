@@ -1,7 +1,5 @@
 app.controller('visitorCtrl', ['$scope', '$calendar', 'toaster', 'email', function($scope, $calendar, toaster, email) {
     $scope.list = [];
-    $scope.text = 'Förnamn Efternamn';
-    $scope.email = 'email@adress.se';
     $scope.showMessage = false;
     $scope.emailMessage = '';
     $scope.education = 'MWD';
@@ -33,11 +31,11 @@ app.controller('visitorCtrl', ['$scope', '$calendar', 'toaster', 'email', functi
         // function for sending email here please!
         // setup e-mail data with unicode symbols
         var mailOptions = {
-            from: '"Fred Man Guy 👥" <foo@blurdybloop.com>', // sender address
-            to: 'finne_no1@hotmail.com, alexanderdeste+spam@gmail.com, ardnassandra13@gmail.com', // list of receivers
-            subject: 'Hello ✔', // Subject line
+            from: '"KYH 👥" <foo@blurdybloop.com>', // sender address
+            to: $scope.email, // list of receivers
+            subject: 'Hello ' + $scope.text + ' ✔', // Subject line
             text: 'Hello world 🐴', // plaintext body
-            html: '<b>Hello world, 🐴</b>' // html body
+            html: '<b>Hello world, 🐴</b><br>Här är infon om ' + $scope.education + ' utbildningen.' // html body
         };
 
         email
