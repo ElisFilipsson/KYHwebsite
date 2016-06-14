@@ -1,12 +1,25 @@
-<main class="courseCal">
+<main class="courses">
 
-  <aside class='courseList'>
+  <aside class='course-list'>
+    <div class="drpdwn-student-cal">
+      <select ng-change="getParam(course.content.name)" ng-model="course.content.name">
+        <option value="" selected>-- Välj utbildning --</option>
+        <option ng-repeat="course in courses">{{course.content.name}}</option>
+      </select>
+    </div>
+
     <ul>
-      <li ng-repeat="course in courses"><a ui-sref="/student({id: course.name})"> {{ course.content.name }} </a></li>
+      <li ng-repeat="class in classes">
+        <a ui-sref="/student({id: class.id})">
+          {{ class.title }}
+        </a>
+      </li>
     </ul>
+
+
   </aside>
 
-  <section class="container">
-      <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+  <section class="cal-display">
+    <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
   </section>
 </main>

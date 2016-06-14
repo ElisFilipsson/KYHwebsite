@@ -19,13 +19,7 @@ function stringToColor(s) {
 
 function colorizeCalendar() {
   var el = document.getElementsByClassName('fc-content');
-
   for (var i = 0; i < el.length; i++) {
-    console.log(el[i].querySelector('.fc-title'));
     el[i].style.backgroundColor = stringToColor(el[i].querySelector('.fc-title').innerHTML);
-    console.log('Running function on ' + el[i]);
   }
-
-  console.log('colorizeCalendar() is running!!!');
-  console.log(el);
 }
