@@ -30,20 +30,6 @@ $scope.eventsF = function (start, end, timezone, callback) {
   colorizeCalendar();
 };
 
-
-    var viewflag = 'agendaWeek';
-    $('.fc-right:nth-child(0) ').on('click', function() {
-        console.log(this);
-    });
-
-    function changeView() {
-        if(viewflag === 'month') {
-            viewflag = 'agendaWeek';
-        } else {
-            viewflag = 'month';
-        }
-    }
-
     $scope.getNextCourseDate = function() {
         $calendar.getSchedule(id).then(function (result) {
            var date = '';
@@ -87,7 +73,7 @@ $calendar.getSchedule(id)
       $scope.classes.push({id: key, title: val.title});
     });
   });
-  
+
 
 $scope.courses = [];
 $calendar.getSchedule()
