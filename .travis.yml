@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "6.1"
+branches:
+  only:
+    - development
+install:
+  - npm --prefix ./projekt/desktop-app install ./projekt/desktop-app
+script:
+  - npm --prefix ./projekt/desktop-app test
