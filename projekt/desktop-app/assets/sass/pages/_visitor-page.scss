@@ -1,65 +1,132 @@
 .centered {
   margin-top: 100px;
-  align-content: center;
-  margin-left: 10vw;
-  margin-right: 10vw;
-
-.message{
-  margin-top: 120px;
-}
-
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  
 .list-item {
     display: flex;
+    padding: 30px;
+    flex-flow: column;
     color:#fff;
-    width: 60vw;
-    padding: 20px;
-    margin: 30px;
-    margin-bottom: 50px;
+    width: 80%;
+    margin: 10%;
+    margin-bottom: 20px;
     background: $main-color;
+    @media screen and (min-width: 700px) {
+      width: 90%;
+      margin: 5%;
+      flex-flow: row;
+    }
     img {
+      margin-left: 10%;
+      width: 80%;
+      height: 80%;
+      
+      @media screen and (min-width: 700px) {
       margin-left: -80px;
       width: 50%;
       height: 50%;
-      display: block;
-    }
-    .list-container { 
-       margin-top: 0px; 
-       margin-left: -70px; 
-       max-width: 70%;
-       padding: 10px;
-       
-       div:nth-child(1) { 
-       font-weight: 600;
-       max-height: 50px;
       }
     }
+    .list-container { 
+       margin-top: -50px;
+       margin-left: 0px; 
+       max-width: 100%;
+       padding: 10px;
+       @media screen and (min-width: 700px) {
+          margin-left: -70px; 
+          margin-top: 0px;
+          max-width: 70%;
+       }
+       
+       div:nth-child(1) { 
+       margin-top: -30px;
+       font-weight: 600;
+       max-height: 50px;
+       padding-top: 30px;
+       border-top: 1px dotted white;
+       @media screen and (min-width: 700px) {
+         border-top: none;
+       }
+      }
+      div:nth-child(2) { 
+       padding-top: 30px;
+      }
+    }
+  }
   }
 .fixed-header {
   position: fixed;
   background: white;
   top: 0px;
   width: 100%;
-form {
-    padding: 20px;
-    width: 40vw;
-    display: flex;
-    align-items: center;
+  margin:0px;
+  display: flex;
+  border-bottom: 1px dotted $main-color;
 
-    input {
-      margin: 10px;
-      width: 250px;
-      height: 50px;
+form {
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    
+    input{
+      margin: 1%;
+      width: 40%;
+      height: 40px;
+      @media screen and (min-width: 500px) {
+        width: 20%;
+      }
+      @media screen and (min-width: 700px) {
+        width: 22%;
+      }
+      @media screen and (min-width: 1000px) {
+        width: 25%;
+        height: 50px;
+      }
+    }
+    input[type="submit"]{
+      width: 30%;
+      @media screen and (min-width: 500px) {
+        width: 20%;
+      }
+      @media screen and (min-width: 700px) {
+        width: 15%;
+      }
+      @media screen and (min-width: 1000px) {
+        width: 10%;
+      }
     }
     input:nth-child(2) {
-      margin: 10px;
-      width: 250px;
-      height: 50px;
+      width: 50%;
+      height: 40px;
+      @media screen and (min-width: 500px) {
+        width: 25%;
+      }
+      @media screen and (min-width: 700px) {
+        width: 22%;
+      }
+      @media screen and (min-width: 1000px) {
+        width: 25%;
+        height: 50px;
+      }
     }
     select {
-      min-width: 150px !important;
-      margin: 10px;
-      height: 50px;
+      width: 40%;
+      margin: 1%;
+      height: 40px;
+      @media screen and (min-width: 500px) {
+        width: 20%;
+      }
+      @media screen and (min-width: 700px) {
+        width: 15%;
+      }
+      @media screen and (min-width: 1000px) {
+        width: 10%;
+        height: 50px;
+      }
     }
   }
-}
 }

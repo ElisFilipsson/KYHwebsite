@@ -14,13 +14,11 @@ $scope.selectStartDate = '1499-09-09';
 $calendar.getSchedule(id).then(function (result) {
   $scope.course = result.data;
   angular.forEach(result.data.content, function(val, index) {
-    
-    
     if ($scope.selectStartDate === '1499-09-09'){
       if(val.start <= moment().format('YYYY-MM-DD')){
         $scope.selectStartDate = angular.copy(val.start);
       }
-    } 
+    }
     $scope.events.push(val);
   });
   $timeout(function () {
@@ -53,7 +51,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
         }
     }
 
-    
+
 
     $scope.uiConfig = {
         calendar: {
@@ -73,11 +71,9 @@ $scope.eventsF = function (start, end, timezone, callback) {
 
 
 
-   
+
 
   $scope.eventSources = [$scope.events, $scope.eventsF];
-
-
 
 $scope.courses = [];
 $calendar.getSchedule()
