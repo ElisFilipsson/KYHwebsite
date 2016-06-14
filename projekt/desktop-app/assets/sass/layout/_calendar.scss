@@ -35,6 +35,26 @@
   }
 }
 
+.fc-event {
+  border: unset;
+  background: unset;
+}
+
+.fc-content {
+  padding: .2em .4em;
+}
+
 #calendar {
   margin-bottom: 4rem;
+}
+.fc-unthemed .fc-today {
+  background: rgba($accent-color, .1);
+}
+
+.fc-ltr .fc-h-event.fc-not-start,
+.fc-event-container,
+.fc-ltr .fc-h-event.fc-not-end,
+.fc-row .fc-content-skeleton tbody td {
+  padding: 0;
+  margin: 0;
 }
