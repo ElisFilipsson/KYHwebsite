@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ElisFilipsson/kyh-website.svg?branch=development)](https://travis-ci.org/ElisFilipsson/kyh-website)
+[![Build Status](https://travis-ci.org/ElisFilipsson/kyh-website.svg?branch=development)](https://travis-ci.org/ElisFilipsson/kyh-website) [![Coverage Status](https://coveralls.io/repos/github/ElisFilipsson/kyh-website/badge.svg?branch=master)](https://coveralls.io/github/ElisFilipsson/kyh-website?branch=master)
 
 # kyh-website
 
