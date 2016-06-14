@@ -9,16 +9,11 @@ var date = new Date(),
 
 $scope.events = [];
 $scope.firstCourse = '';
-$scope.selectStartDate = '2015-09-09';
+
 
 $calendar.getSchedule(id).then(function (result) {
   $scope.course = result.data;
   angular.forEach(result.data.content, function(val, index) {
-    if ($scope.selectStartDate === '1499-09-09'){
-      if(val.start <= moment().format('YYYY-MM-DD')){
-        $scope.selectStartDate = angular.copy(val.start);
-      }
-    }
     $scope.events.push(val);
   });
   $timeout(function () {
@@ -37,34 +32,54 @@ $scope.eventsF = function (start, end, timezone, callback) {
   callback($scope.events);
 };
 
-var viewflag = 'agendaWeek';
-$('.fc-right:nth-child(0) ').on('click', function() {
-  console.log(this);
-});
 
-function changeView() {
-  if(viewflag === 'month') {
-      viewflag = 'agendaWeek';
-  } else {
-      viewflag = 'month';
-  }
-}
+    var viewflag = 'agendaWeek';
+    $('.fc-right:nth-child(0) ').on('click', function() {
+        console.log(this);
+    });
 
-$scope.uiConfig = {
-  calendar: {
-    defaultView: "month",
-    editable: true,
-    header: {
-      left: 'title',
-      center: '',
-      right: viewflag+' today prev,next',
-    },
-    dayClick: $scope.goToRootScopeDate,
-    defaultDate: $scope.selectStartDate
-  },
-};
+    function changeView() {
+        if(viewflag === 'month') {
+            viewflag = 'agendaWeek';
+        } else {
+            viewflag = 'month';
+        }
+    }
+
+    $scope.getNextCourseDate = function() {
+        $calendar.getSchedule(id).then(function (result) {
+           var date = '';
+           angular.forEach(result.data.content, function(val, index){
+              if (date === '') {
+                if ( moment().format('YYYY-MM-DD') <= val.start ){
+                   date = val.start;
+                   $scope.selectStartDate = val.start;
+                }
+              }
+           });
+            $('#calendar').fullCalendar('gotoDate', date); 
+        });
+    };
+
+    $scope.getNextCourseDate();
+    $scope.uiConfig = {
+        calendar: {
+          defaultView: "month",
+          editable: true,
+          header: {
+            left: 'title',
+            center: '',
+            right: viewflag+' today prev,next',
+          },
+          dayClick: $scope.goToRootScopeDate,
+          
+
+        },
+      };
+
 
 $scope.eventSources = [$scope.events, $scope.eventsF];
+
 
 $scope.courses = [];
 $calendar.getSchedule()
@@ -73,7 +88,6 @@ $calendar.getSchedule()
     angular.forEach(data, function(val, key) {
       $scope.courses.push({name: key, content: val});
     });
-    console.log($scope.courses);
   });
 
 }]);
