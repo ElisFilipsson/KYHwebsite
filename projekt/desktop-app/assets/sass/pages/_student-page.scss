@@ -1,27 +1,32 @@
 // Calender site
-
-.courseCal {
+.courses {
   display: flex;
-  justify-content: center;
-  flex-flow: column nowrap;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
-  .container {
-    display:flex;
+@media (min-width: 600px) {
+  .courses {
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: 600px) {
-    flex-flow: row nowrap;
+
+    .course-list {
+      max-width: 30%;
+    }
+
+    .cal-display {
+      max-width: 50%;
+    }
   }
 }
 
-.courseList {
-  margin-bottom: 40px;
-  // @extend .container;
+.course-list {
 
   ul {
     list-style: none;
-    margin-top: 10vh;
+    width: 100vw;
+    margin-bottom: 70px;
 
     li:hover{
       background: #ffa500;
@@ -38,10 +43,5 @@
       font-size: 13px;
       padding: 15px;
     }
-  }
-
-  @media screen and (min-width: 600px) {
-    max-width: 26vw;
-    min-width: 270px;
   }
 }

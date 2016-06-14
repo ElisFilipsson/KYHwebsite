@@ -3,13 +3,13 @@ app.controller('student', ['$timeout', '$scope', '$state', '$stateParams', '$cal
 var id = $stateParams.id;
 
 var date = new Date(),
-    d = date.getDate(),
-    m = date.getMonth(),
-    y = date.getFullYear();
+  d = date.getDate(),
+  m = date.getMonth(),
+  y = date.getFullYear();
 
 $scope.events = [];
 $scope.firstCourse = '';
-$scope.selectStartDate = '1499-09-09';
+$scope.selectStartDate = '2015-09-09';
 
 $calendar.getSchedule(id).then(function (result) {
   $scope.course = result.data;
@@ -20,7 +20,6 @@ $calendar.getSchedule(id).then(function (result) {
     colorizeCalendar();
   });
 });
-
 
 $scope.changeView = function(view,calendar) {
   uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
@@ -33,6 +32,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
   callback($scope.events);
 };
 
+<<<<<<< HEAD
     var viewflag = 'agendaWeek';
     $('.fc-right:nth-child(0) ').on('click', function() {
         console.log(this);
@@ -79,7 +79,8 @@ $scope.eventsF = function (start, end, timezone, callback) {
       };
 
 
-  $scope.eventSources = [$scope.events, $scope.eventsF];
+$scope.eventSources = [$scope.events, $scope.eventsF];
+
 
 $scope.courses = [];
 $calendar.getSchedule()
