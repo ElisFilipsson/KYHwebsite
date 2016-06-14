@@ -497,8 +497,25 @@ h1, h2, h3, h4 {
 .fc-toolbar .fc-right {
   width: 40%; }
 
+.fc-event {
+  border: unset;
+  background: unset; }
+
+.fc-content {
+  padding: .2em .4em; }
+
 #calendar {
   margin-bottom: 4rem; }
+
+.fc-unthemed .fc-today {
+  background: rgba(0, 74, 123, 0.1); }
+
+.fc-ltr .fc-h-event.fc-not-start,
+.fc-event-container,
+.fc-ltr .fc-h-event.fc-not-end,
+.fc-row .fc-content-skeleton tbody td {
+  padding: 0;
+  margin: 0; }
 
 button, .fc-state-default,
 .fc .fc-button-group > *,

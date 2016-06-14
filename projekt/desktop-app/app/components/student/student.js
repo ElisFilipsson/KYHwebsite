@@ -9,7 +9,7 @@ var date = new Date(),
 
 $scope.events = [];
 $scope.firstCourse = '';
-$scope.selectStartDate = '1499-09-09';
+$scope.selectStartDate = '2015-09-09';
 
 $calendar.getSchedule(id).then(function (result) {
   $scope.course = result.data;
@@ -75,6 +75,20 @@ $scope.eventsF = function (start, end, timezone, callback) {
 
   $scope.eventSources = [$scope.events, $scope.eventsF];
 
+
+
+// $scope.courseClasses = [];
+// $calendar.getSchedule(id)
+//   .then(function(res) {
+//     var data = res.data;
+//     console.log(data);
+//     // angular.forEach(data, function(val, key) {
+//     //   $scope.courseClasses.push({name: key, content: val});
+//     // });
+//     console.log($scope.courseClasses);
+//   });
+//
+// }]);
 $scope.courses = [];
 $calendar.getSchedule()
   .then(function(res) {
