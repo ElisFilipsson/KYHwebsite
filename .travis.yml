@@ -6,6 +6,7 @@ branches:
     - development
 install:
   - npm --prefix ./projekt/desktop-app install ./projekt/desktop-app
+  - npm --prefix ./projekt/node-api install ./projekt/node-api
 before_script:
   - npm install -g bower
   - bower install
