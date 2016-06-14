@@ -66,20 +66,6 @@ $scope.uiConfig = {
 
 $scope.eventSources = [$scope.events, $scope.eventsF];
 
-
-
-// $scope.courseClasses = [];
-// $calendar.getSchedule(id)
-//   .then(function(res) {
-//     var data = res.data;
-//     console.log(data);
-//     // angular.forEach(data, function(val, key) {
-//     //   $scope.courseClasses.push({name: key, content: val});
-//     // });
-//     console.log($scope.courseClasses);
-//   });
-//
-// }]);
 $scope.courses = [];
 $calendar.getSchedule()
   .then(function(res) {
