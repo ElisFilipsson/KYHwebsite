@@ -587,7 +587,7 @@ button, .fc-state-default,
 footer {
   background-color: #443049;
   height: 300px;
-  color: white; }
+  color: rgba(255, 255, 255, 0.6); }
   footer .contact-container {
     padding-top: 30px;
     padding-bottom: 30px; }
@@ -595,9 +595,9 @@ footer {
     color: currentColor;
     text-decoration: none; }
   footer h4 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 0px; }
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0; }
   footer .small {
     font-size: 14px; }
 
