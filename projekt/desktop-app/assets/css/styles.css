@@ -450,7 +450,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
   letter-spacing: -0.03rem; }
 
-.container, .banner > *:not(.splash) {
+.container, .banner > *:not(.splash), .centered {
   padding-left: 1rem;
   padding-right: 1rem;
   margin: auto;
@@ -643,55 +643,52 @@ form {
   display: flex;
   flex-flow: column; }
 
-.centered {
-  margin-top: 100px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto; }
-  .centered .list-item {
-    display: flex;
-    padding: 30px;
-    flex-flow: column;
-    color: #fff;
+.centered .list-item {
+  display: flex;
+  padding: 30px;
+  flex-flow: column;
+  color: #fff;
+  width: 80%;
+  margin: 10% 0;
+  margin-bottom: 20px;
+  background: #fa6400; }
+  @media screen and (min-width: 700px) {
+    .centered .list-item {
+      width: 90%;
+      margin: 5% 0;
+      flex-flow: row; } }
+  .centered .list-item:first-child {
+    margin-top: 10rem; }
+  .centered .list-item img {
+    margin-left: 10%;
     width: 80%;
-    margin: 10%;
-    margin-bottom: 20px;
-    background: #fa6400; }
+    height: 80%; }
     @media screen and (min-width: 700px) {
-      .centered .list-item {
-        width: 90%;
-        margin: 5%;
-        flex-flow: row; } }
-    .centered .list-item img {
-      margin-left: 10%;
-      width: 80%;
-      height: 80%; }
+      .centered .list-item img {
+        margin-left: -80px;
+        width: 50%;
+        height: 50%; } }
+  .centered .list-item .list-container {
+    margin-top: -50px;
+    margin-left: 0px;
+    max-width: 100%;
+    padding: 10px; }
+    @media screen and (min-width: 700px) {
+      .centered .list-item .list-container {
+        margin-left: -70px;
+        margin-top: 0px;
+        max-width: 70%; } }
+    .centered .list-item .list-container div:nth-child(1) {
+      margin-top: -30px;
+      font-weight: 600;
+      max-height: 50px;
+      padding-top: 30px;
+      border-top: 1px dotted white; }
       @media screen and (min-width: 700px) {
-        .centered .list-item img {
-          margin-left: -80px;
-          width: 50%;
-          height: 50%; } }
-    .centered .list-item .list-container {
-      margin-top: -50px;
-      margin-left: 0px;
-      max-width: 100%;
-      padding: 10px; }
-      @media screen and (min-width: 700px) {
-        .centered .list-item .list-container {
-          margin-left: -70px;
-          margin-top: 0px;
-          max-width: 70%; } }
-      .centered .list-item .list-container div:nth-child(1) {
-        margin-top: -30px;
-        font-weight: 600;
-        max-height: 50px;
-        padding-top: 30px;
-        border-top: 1px dotted white; }
-        @media screen and (min-width: 700px) {
-          .centered .list-item .list-container div:nth-child(1) {
-            border-top: none; } }
-      .centered .list-item .list-container div:nth-child(2) {
-        padding-top: 30px; }
+        .centered .list-item .list-container div:nth-child(1) {
+          border-top: none; } }
+    .centered .list-item .list-container div:nth-child(2) {
+      padding-top: 30px; }
 
 .fixed-header {
   position: fixed;
@@ -700,7 +697,10 @@ form {
   width: 100%;
   margin: 0px;
   display: flex;
-  border-bottom: 1px dotted #fa6400; }
+  border-bottom: 1px dotted #fa6400;
+  margin-bottom: 2; }
+  .fixed-header + * {
+    margin-top: 8rem; }
   .fixed-header form {
     justify-content: center;
     padding: 15px;
@@ -764,7 +764,7 @@ form {
   display: flex;
   justify-content: center;
   flex-flow: column nowrap; }
-  .courseCal .container, .courseCal .banner > *:not(.splash) {
+  .courseCal .container, .courseCal .banner > *:not(.splash), .courseCal .centered {
     display: flex;
     justify-content: center;
     margin-bottom: 40px; }
