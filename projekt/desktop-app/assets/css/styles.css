@@ -597,7 +597,7 @@ footer {
     font-size: 14px; }
 
 .background {
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
@@ -795,42 +795,40 @@ form {
           width: 10%;
           height: 50px; } }
 
-.courseCal {
+.courses {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap; }
-  .courseCal .container, .courseCal .banner > *:not(.splash), .courseCal .centered {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    margin-bottom: 40px; }
-  @media screen and (min-width: 600px) {
-    .courseCal {
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap; } }
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
-.courseList {
-  margin-bottom: 40px; }
-  .courseList ul {
-    list-style: none;
-    margin-top: 10vh; }
-    .courseList ul li:hover {
-      background: #ffa500;
-      border-radius: 3px; }
-    .courseList ul li:active {
-      background: #fa6400; }
-    .courseList ul a {
-      color: black;
-      text-decoration: none;
-      font-size: 13px;
-      padding: 15px; }
-  @media screen and (min-width: 600px) {
-    .courseList {
-      max-width: 26vw;
-      min-width: 270px; } }
+@media (min-width: 600px) {
+  .courses {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    .courses .course-list {
+      max-width: 30%; }
+    .courses .cal-display {
+      max-width: 50%; } }
+
+.course-list ul {
+  list-style: none;
+  width: 100vw;
+  margin-bottom: 70px; }
+  .course-list ul li:hover {
+    background: #ffa500;
+    border-radius: 3px; }
+  .course-list ul li:active {
+    background: #fa6400; }
+  .course-list ul a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 15px; }
 
 /*# sourceMappingURL=styles.css.map */
