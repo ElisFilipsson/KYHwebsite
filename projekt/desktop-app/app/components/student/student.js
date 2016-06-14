@@ -71,7 +71,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
           header: {
             left: 'title',
             center: '',
-            right: viewflag+',month prev,next',
+            right: 'today,'+viewflag+',month prev,next',
           },
           dayClick: $scope.goToRootScopeDate,
 
