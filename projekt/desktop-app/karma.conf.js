@@ -15,8 +15,18 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/**/*.spec.js',
-      'app/shared/ba.js'
+      'assets/libs/angular/angular.js',
+      'assets/libs/angular-mocks/angular-mocks.js',
+      'assets/libs/angular-animate/angular-animate.js',
+      'assets/libs/angular-ui-router/release/angular-ui-router.js',
+      'assets/libs/angular-route/angular-route.js',
+      'assets/libs/angular-ui-calendar/src/calendar.js',
+      'assets/libs/AngularJS-Toaster/toaster.js',
+      'app/module.js',
+      'app/components/**/*.js',
+      'app/shared/**/*.js',
+      'app/shared/ba.js',
+      'test/**/*.spec.js'
     ],
 
 
