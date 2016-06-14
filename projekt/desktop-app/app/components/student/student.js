@@ -1,4 +1,4 @@
-app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($scope, $state, $stateParams, $calendar, uiCalendarConfig) {
+app.controller('student', ['$timeout', '$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($timeout, $scope, $state, $stateParams, $calendar, uiCalendarConfig) {
 
 var id = $stateParams.id;
 
@@ -16,6 +16,9 @@ $calendar.getSchedule(id).then(function (result) {
   angular.forEach(result.data.content, function(val, index) {
     $scope.events.push(val);
   });
+  $timeout(function () {
+    colorizeCalendar();
+  });
 });
 
 $scope.changeView = function(view,calendar) {
@@ -27,7 +30,6 @@ $scope.eventsF = function (start, end, timezone, callback) {
   var e = new Date(end).getTime() / 1000;
   var m = new Date(start).getMonth();
   callback($scope.events);
-  colorizeCalendar();
 };
 
 
@@ -56,7 +58,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
               }
            });
 
-            $('#calendar').fullCalendar('gotoDate', date); 
+            $('#calendar').fullCalendar('gotoDate', date);
 
         });
     };
@@ -69,7 +71,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
           header: {
             left: 'title',
             center: '',
-            right: viewflag+' today prev,next',
+            right: viewflag+',month prev,next',
           },
           dayClick: $scope.goToRootScopeDate,
 
@@ -77,7 +79,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
       };
 
 
-$scope.eventSources = [$scope.eventsF];
+$scope.eventSources = [$scope.events, $scope.eventsF];
 
 $scope.classes = [];
 $calendar.getSchedule(id)
