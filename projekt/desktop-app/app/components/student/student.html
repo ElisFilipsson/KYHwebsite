@@ -1,6 +1,6 @@
-<main class="courseCa container">
+<main class="courses">
 
-  <aside class='courseList'>
+  <aside class='course-list'>
     <ul>
       <li ng-repeat="course in courses">
         <a ui-sref="/student({id: course.name})">
@@ -10,7 +10,7 @@
     </ul>
   </aside>
 
-  <section class="c.ontainer">
+  <section class="cal-display">
       <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
   </section>
 </main>

@@ -3,9 +3,9 @@ app.controller('student', ['$timeout', '$scope', '$state', '$stateParams', '$cal
 var id = $stateParams.id;
 
 var date = new Date(),
-    d = date.getDate(),
-    m = date.getMonth(),
-    y = date.getFullYear();
+  d = date.getDate(),
+  m = date.getMonth(),
+  y = date.getFullYear();
 
 $scope.events = [];
 $scope.firstCourse = '';
@@ -26,7 +26,6 @@ $calendar.getSchedule(id).then(function (result) {
   });
 });
 
-
 $scope.changeView = function(view,calendar) {
   uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
 };
@@ -38,42 +37,34 @@ $scope.eventsF = function (start, end, timezone, callback) {
   callback($scope.events);
 };
 
-    var viewflag = 'agendaWeek';
-    $('.fc-right:nth-child(0) ').on('click', function() {
-        console.log(this);
-    });
+var viewflag = 'agendaWeek';
+$('.fc-right:nth-child(0) ').on('click', function() {
+  console.log(this);
+});
 
-    function changeView() {
-        if(viewflag === 'month') {
-            viewflag = 'agendaWeek';
-        } else {
-            viewflag = 'month';
-        }
-    }
+function changeView() {
+  if(viewflag === 'month') {
+      viewflag = 'agendaWeek';
+  } else {
+      viewflag = 'month';
+  }
+}
 
+$scope.uiConfig = {
+  calendar: {
+    defaultView: "month",
+    editable: true,
+    header: {
+      left: 'title',
+      center: '',
+      right: viewflag+' today prev,next',
+    },
+    dayClick: $scope.goToRootScopeDate,
+    defaultDate: $scope.selectStartDate
+  },
+};
 
-
-    $scope.uiConfig = {
-        calendar: {
-          defaultView: "month",
-          editable: true,
-          header: {
-            left: 'title',
-            center: '',
-            right: viewflag+' today prev,next',
-          },
-          dayClick: $scope.goToRootScopeDate,
-          defaultDate: $scope.selectStartDate
-
-        },
-      };
-
-
-
-
-
-
-  $scope.eventSources = [$scope.events, $scope.eventsF];
+$scope.eventSources = [$scope.events, $scope.eventsF];
 
 $scope.courses = [];
 $calendar.getSchedule()
