@@ -16,33 +16,9 @@ app.use(cors());
 var transporter = nodemailer.createTransport({
      service: 'gmail', // no need to set host or port etc.
      auth: {
-         user: 'ardnassandra13@gmail.com',
-         pass: '1q2w3e4R5T6Y'}
+         user: 'kyhschool@gmail.com',
+         pass: 'kyh123456'}
 });
-/*
-var smtpConfig = {
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // use SSL
-    auth: {
-        user: 'ardnassandra13@gmail.com',
-        pass: '1q2w3e4R5T6Y'
-    }
-};*/
-// create reusable transporter object using the default SMTP transport
-//var transporter = nodemailer.createTransport(options[defaults]);
-//var transporter = nodemailer.createTransport(smtpConfig);
-/*var transporter = nodemailer.createTransport({
-    transport: 'ses', // loads nodemailer-ses-transport
-    accessKeyId: 'AWSACCESSKEY',
-    secretAccessKey: 'AWS/Secret/key'
-});
-var transporter = nodemailer.createTransport(sesTransport({
-    accessKeyId: "AWSACCESSKEY",
-    secretAccessKey: "AWS/Secret/key",
-    rateLimit: 5 // do not send more than 5 messages in a second
-}));
-var transporter = nodemailer.createTransport(sesTransport(options));*/
 
 // Require and get json object with all the data
 var obj = require('./data/data.json');
