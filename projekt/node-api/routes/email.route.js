@@ -8,10 +8,10 @@ module.exports = function(app, transporter) {
       transporter.sendMail(req.body, function(error, info){
         if(error){
             console.log(error);
-            res.send(error);
+            res.json('400');
         }
-        console.log('Message sent: ' + info.response);
-        res.send('Status 200');
+        console.log(info);
+        res.json('200');
       });
   });
 

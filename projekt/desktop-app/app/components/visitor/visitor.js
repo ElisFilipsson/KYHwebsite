@@ -16,9 +16,9 @@ app.controller('visitorCtrl', ['$scope', '$calendar', 'toaster', 'email', functi
       if (text.test($scope.text) === false) {
         toaster.error('Namn', 'Du har inte skrivit in ett giltigt namn!');
       }
-      else if ($scope.education === '') {
+      if ($scope.education === '') {
         toaster.info('Utbildning', 'Du måste välja en utbildning du vill ha information om.');
-      }  else {
+      } else if ($scope.education !== '' && regMail.test($scope.email) === true && text.test($scope.text) === true) {
         // adding toaster-alert on success
         toaster.success($scope.text + '.', 'Ett email skickas snart till ' + $scope.email + '.' + ' Där får du information om ' + $scope.education + ' utbildningen.');
         temp = true;
@@ -27,17 +27,17 @@ app.controller('visitorCtrl', ['$scope', '$calendar', 'toaster', 'email', functi
     };
 
     $scope.submit = function() {
-      if($scope.validateForm()) {
-        // function for sending email here please!
+      if($scope.validateForm() === true) {
+        // function for sending email
         // setup e-mail data with unicode symbols
         var mailOptions = {
-            from: '"KYH 👥" <foo@blurdybloop.com>', // sender address
+            from: '"KYH 👥" <kyhschool@gmail.com>', // sender address
             to: $scope.email, // list of receivers
-            subject: 'Hello ' + $scope.text + ' ✔', // Subject line
-            text: 'Hello world 🐴', // plaintext body
-            html: '<b>Hello world, 🐴</b><br>Här är infon om ' + $scope.education + ' utbildningen.' // html body
+            subject: 'Hej ' + $scope.text + ' ✔', // Subject line
+            text: '🐴 Information om ' + $scope.education, // plaintext body
+            html: '<b>Hej ' + $scope.text + '🐴</b><br>Här är informationen om ' + $scope.utbildningslista[$scope.education].name + ' utbildningen.<br><br> ' +  $scope.utbildningslista[$scope.education].info + '<br><br><b>Vänliga Hälsningar</b><br><b>KYH</b>'// html body
         };
-
+        console.log($scope.utbildningslista[$scope.education]);
         email
           .sendEmail(mailOptions)
           .then(function (result) {

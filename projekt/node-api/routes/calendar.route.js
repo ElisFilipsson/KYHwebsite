@@ -14,7 +14,7 @@ module.exports = function(app, obj) {
     if (value) {
       res.json(value);
     } else {
-      res.send(' Did not find the education ' + educationType);
+      res.send('Did not find the education ' + educationType);
     }
   });
 
