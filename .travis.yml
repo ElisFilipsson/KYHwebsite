@@ -10,6 +10,6 @@ install:
 before_script:
   - npm install -g bower
   - bower install
-  - node projekt/node-api/server.js
+  - node projekt/node-api/server.js &
 script:
   - npm --prefix ./projekt/desktop-app test
