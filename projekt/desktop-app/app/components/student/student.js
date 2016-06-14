@@ -87,6 +87,7 @@ $calendar.getSchedule(id)
       $scope.classes.push({id: key, title: val.title});
     });
   });
+  
 
 $scope.courses = [];
 $calendar.getSchedule()
