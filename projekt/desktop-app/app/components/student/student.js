@@ -1,4 +1,4 @@
-app.controller('student', ['$timeout', '$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($timeout, $scope, $state, $stateParams, $calendar, uiCalendarConfig) {
+app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($scope, $state, $stateParams, $calendar, uiCalendarConfig) {
 
 var id = $stateParams.id;
 
@@ -8,21 +8,20 @@ var date = new Date(),
   y = date.getFullYear();
 
 $scope.events = [];
+$scope.tempevents = [];
 $scope.firstCourse = '';
-
+$scope.selectStartDate = '2016-06-06';
 
 $calendar.getSchedule(id).then(function (result) {
   $scope.course = result.data;
   angular.forEach(result.data.content, function(val, index) {
     $scope.events.push(val);
-  });
-  $timeout(function () {
-    colorizeCalendar();
+    $scope.tempevents.push(val);
   });
 });
 
 $scope.changeView = function(view,calendar) {
-  uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
+  $('#calendar').fullCalendar('changeView',view);
 };
 
 $scope.eventsF = function (start, end, timezone, callback) {
@@ -30,21 +29,9 @@ $scope.eventsF = function (start, end, timezone, callback) {
   var e = new Date(end).getTime() / 1000;
   var m = new Date(start).getMonth();
   callback($scope.events);
+  colorizeCalendar();
 };
 
-
-    var viewflag = 'agendaWeek';
-    $('.fc-right:nth-child(0) ').on('click', function() {
-        console.log(this);
-    });
-
-    function changeView() {
-        if(viewflag === 'month') {
-            viewflag = 'agendaWeek';
-        } else {
-            viewflag = 'month';
-        }
-    }
 
     $scope.getNextCourseDate = function() {
         $calendar.getSchedule(id).then(function (result) {
@@ -58,7 +45,10 @@ $scope.eventsF = function (start, end, timezone, callback) {
               }
            });
 
-            $('#calendar').fullCalendar('gotoDate', date);
+           $scope.events = [];
+           $scope.events = angular.copy($scope.tempevents);
+           $('#calendar').fullCalendar('gotoDate', date); 
+           
 
         });
     };
@@ -71,15 +61,21 @@ $scope.eventsF = function (start, end, timezone, callback) {
           header: {
             left: 'title',
             center: '',
-            right: 'today,'+viewflag+',month prev,next',
+            right: 'today prev,next',
           },
           dayClick: $scope.goToRootScopeDate,
-
+          defaultDate: $scope.selectStartDate
         },
       };
 
 
-$scope.eventSources = [$scope.events, $scope.eventsF];
+$scope.eventSources = [$scope.eventsF];
+
+
+
+
+
+
 
 $scope.classes = [];
 $calendar.getSchedule(id)
@@ -89,6 +85,7 @@ $calendar.getSchedule(id)
       $scope.classes.push({id: key, title: val.title});
     });
   });
+
 
 $scope.courses = [];
 $calendar.getSchedule()
