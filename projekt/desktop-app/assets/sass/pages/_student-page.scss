@@ -26,6 +26,7 @@
   ul {
     list-style: none;
     margin-bottom: 70px;
+    padding: 0;
 
     li:hover{
       background: #ffa500;
@@ -42,5 +43,9 @@
       font-size: 13px;
       padding: 15px;
     }
+  }
+
+  .drpdwn-student-cal {
+    margin: 15px;
   }
 }

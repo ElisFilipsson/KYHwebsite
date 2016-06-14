@@ -57,6 +57,7 @@ $scope.eventsF = function (start, end, timezone, callback) {
                 }
               }
            });
+
             $('#calendar').fullCalendar('gotoDate', date); 
 
         });
@@ -73,20 +74,19 @@ $scope.eventsF = function (start, end, timezone, callback) {
             right: viewflag+' today prev,next',
           },
           dayClick: $scope.goToRootScopeDate,
+
         },
       };
 
 
 $scope.eventSources = [$scope.events, $scope.eventsF];
 
-
 $scope.courses = [];
-$calendar.getSchedule()
+$calendar.getSchedule(id)
   .then(function(res) {
     var data = res.data;
-    angular.forEach(data, function(val, key) {
-      $scope.courses.push({name: key, content: val});
+    angular.forEach(data.content, function(val, key) {
+      $scope.courses.push({id: key, title: val.title});
     });
   });
-
 }]);
