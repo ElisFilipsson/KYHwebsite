@@ -1,15 +1,15 @@
-<div class="centered">   
+<div class="fixed-header">
+    <form ng-submit="submit()">
+            <input type="text" ng-model="text" name="text" />
+            <input type="email" ng-model="email" name="email" />
+            <select name="utbildningar" ng-model="education">
+                <option ng-repeat="(key, value) in utbildningslista" value="{{key}}">{{key}}</option>
+            </select>
+            <input type="submit" id="submit" value="Submit" />
+    </form>
+</div>
 
-    <div class="fixed-header">
-        <form ng-submit="submit()">
-                <input type="text" ng-model="text" name="text" />
-                <input type="email" ng-model="email" name="email" />
-                <select name="utbildningar" ng-model="education">
-                    <option ng-repeat="(key, value) in utbildningslista" value="{{key}}">{{key}}</option>
-                </select>
-                <input type="submit" id="submit" value="Submit" />
-        </form>
-    </div>
+<div class="centered"> 
     <div ng-show="showMessage" class="message">{{emailMessage}}</div>
 
     <div class="list-item" ng-repeat="utb in utbildningslista">
@@ -20,3 +20,5 @@
         </div>
     </div>    
 </div>
+
+<toaster-container toaster-options="{'position-class': 'toast-bottom-right', 'close-button': true}"></toaster-container>
