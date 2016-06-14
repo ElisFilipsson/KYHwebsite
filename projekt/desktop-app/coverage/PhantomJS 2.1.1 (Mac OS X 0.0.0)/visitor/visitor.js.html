@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for visitor/visitor.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">visitor/</a> visitor.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">3.7% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">3.7% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/27</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">app.controller('visitorCtrl', ['$scope', '$calendar', 'toaster', 'email', <span class="fstat-no" title="function not covered" >function($scope, $calendar, toaster, email) {</span>
+<span class="cstat-no" title="statement not covered" >    $scope.list = [];</span>
+<span class="cstat-no" title="statement not covered" >    $scope.showMessage = false;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.emailMessage = '';</span>
+<span class="cstat-no" title="statement not covered" >    $scope.education = 'MWD';</span>
+&nbsp;
+    // func for verifiying email, name and that an education is choosen
+<span class="cstat-no" title="statement not covered" >    $scope.validateForm = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      var regMail = /.{1,}[@]{1}.{1,}\.{1}.{1,}/;</span>
+<span class="cstat-no" title="statement not covered" >      var text = /^[a-zA-ZåäöüßÄÖÜ]{3,}([\s]?)([a-zA-ZåäöüßÄÖÜ]{3,})?$/;</span>
+<span class="cstat-no" title="statement not covered" >      var temp = false;</span>
+      // adding toaster-alert on error
+<span class="cstat-no" title="statement not covered" >      if(regMail.test($scope.email) === false) {</span>
+<span class="cstat-no" title="statement not covered" >        toaster.error('Email', 'Du har inte skrivit in en giltig emailadress!');</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if (text.test($scope.text) === false) {</span>
+<span class="cstat-no" title="statement not covered" >        toaster.error('Namn', 'Du har inte skrivit in ett giltigt namn!');</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if ($scope.education === '') {</span>
+<span class="cstat-no" title="statement not covered" >        toaster.info('Utbildning', 'Du måste välja en utbildning du vill ha information om.');</span>
+      } else <span class="cstat-no" title="statement not covered" >if ($scope.education !== '' &amp;&amp; regMail.test($scope.email) === true &amp;&amp; text.test($scope.text) === true) {</span>
+        // adding toaster-alert on success
+<span class="cstat-no" title="statement not covered" >        toaster.success($scope.text + '.', 'Ett email skickas snart till ' + $scope.email + '.' + ' Där får du information om ' + $scope.education + ' utbildningen.');</span>
+<span class="cstat-no" title="statement not covered" >        temp = true;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      return temp;</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.submit = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      if($scope.validateForm() === true) {</span>
+        // function for sending email
+        // setup e-mail data with unicode symbols
+<span class="cstat-no" title="statement not covered" >        var mailOptions = {</span>
+            from: '"KYH 👥" &lt;kyhschool@gmail.com&gt;', // sender address
+            to: $scope.email, // list of receivers
+            subject: 'Hej ' + $scope.text + ' ✔', // Subject line
+            text: '🐴 Information om ' + $scope.education, // plaintext body
+            html: '&lt;b&gt;Hej ' + $scope.text + '🐴&lt;/b&gt;&lt;br&gt;Här är informationen om ' + $scope.utbildningslista[$scope.education].name + ' utbildningen.&lt;br&gt;&lt;br&gt; ' +  $scope.utbildningslista[$scope.education].info + '&lt;br&gt;&lt;br&gt;&lt;b&gt;Vänliga Hälsningar&lt;/b&gt;&lt;br&gt;&lt;b&gt;KYH&lt;/b&gt;'// html body
+        };
+        
+<span class="cstat-no" title="statement not covered" >        email</span>
+          .sendEmail(mailOptions)
+          .then(<span class="fstat-no" title="function not covered" >function (result) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log(result);</span>
+          });
+      }
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $calendar.getSchedule().then(<span class="fstat-no" title="function not covered" >function (result) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.utbildningslista = result.data;</span>
+<span class="cstat-no" title="statement not covered" >        console.log(result.data);</span>
+    });
+&nbsp;
+}]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 14 2016 22:54:31 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

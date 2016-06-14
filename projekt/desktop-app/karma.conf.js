@@ -38,14 +38,37 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'app/components/**/*.js': ['coverage']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['verbose', 'progress'],
+    reporters: ['nyan', 'coverage'],
 
+    nyanReporter: {
+      // suppress the error report at the end of the test run
+      suppressErrorReport: false, // default is false
+
+      // suppress the red background on errors in the error
+      // report at the end of the test run
+      suppressErrorHighlighting: false, // default is false
+
+      // increase the number of rainbow lines displayed
+      // enforced min = 4, enforced max = terminal height - 1
+      numberOfRainbowLines: 4, // default is 4
+
+      // only render the graphic after all tests have finished.
+      // This is ideal for using this reporter in a continuous
+      // integration environment.
+      renderOnRunCompleteOnly: true // default is false
+    },
+
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+    },
 
     // web server port
     port: 9876,
