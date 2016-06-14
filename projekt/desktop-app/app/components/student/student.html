@@ -10,8 +10,8 @@
 
     <ul>
       <li ng-repeat="course in courses">
-        <a ui-sref="/student({id: course.name})">
-          {{ course.content.name }}
+        <a ui-sref="/student({id: course.id})">
+          {{ course.title }}
         </a>
       </li>
     </ul>
