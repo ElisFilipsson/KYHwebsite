@@ -37,7 +37,7 @@ app.controller('visitorCtrl', ['$scope', '$calendar', 'toaster', 'email', functi
             text: '🐴 Information om ' + $scope.education, // plaintext body
             html: '<b>Hej ' + $scope.text + '🐴</b><br>Här är informationen om ' + $scope.utbildningslista[$scope.education].name + ' utbildningen.<br><br> ' +  $scope.utbildningslista[$scope.education].info + '<br><br><b>Vänliga Hälsningar</b><br><b>KYH</b>'// html body
         };
-        console.log($scope.utbildningslista[$scope.education]);
+        
         email
           .sendEmail(mailOptions)
           .then(function (result) {
