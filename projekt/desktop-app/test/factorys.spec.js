@@ -10,7 +10,7 @@ describe("Factorys", function() {
     $httpBackend = _$httpBackend_;
   }));
 
-  describe("CalenderApi", function() {
+  describe("CalenderFactory", function() {
     it('should GET schedule by education param ', function() {
       $httpBackend.expect('GET', url + param).respond(200);
       $calendar.getSchedule(param);
