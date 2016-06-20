@@ -114,8 +114,7 @@ function stringToColor(s) {
       return "00000".substring(0, 6 - c.length) + c;
   }
 
-  return '#';
-  // return '#' + intToRGB(hashCode(s.trim()));
+  return '#' + intToRGB(hashCode(s.trim()));
 }
 
 /**
