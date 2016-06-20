@@ -44,26 +44,30 @@ module.exports = function(app, file, fs, fileName) {
 
   app.delete('/educations/delete/:type/:title', function(req, res){
       var key = req.params.type,
-          title = req.params.title;
+          title = req.params.title,
+          boo = false;
           
-
           for(var index in file) {
-            
               if(index === key) {
-                  file[key].content.forEach(function (value,index) {
-                    
-                     if (value.title === title){ 
-                        file[key].content.splice(index, 1);
-                        
-                        fs.writeFile(fileName, JSON.stringify(file, null, 2), function (err) {
-                            if (err) {
-                              res.send(err);
-                            }
-                        });
-                        res.send('200');
-                     }
-                  });  
+                boo = true;
+                file[key].content.forEach(function (value,index) {
+                  if (value.title === title){ 
+                      file[key].content.splice(index, 1);
+                      
+                      fs.writeFile(fileName, JSON.stringify(file, null, 2), function (err) {
+                          if (err) {
+                            res.send(err);
+                          }
+                      });
+                      res.send('200');
+                  } else {
+                    boo = false;
+                  }
+                });  
               }
+          }
+          if(boo === false) {
+            res.send('Education or title does not exist! Not deleted.');
           }
 
           

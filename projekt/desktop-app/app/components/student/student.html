@@ -2,9 +2,9 @@
 
   <aside class="course-list">
     <div class="drpdwn-student-cal">
-      <select ng-change="getParam(course.content.name)" ng-model="course.content.name">
+      <select ng-change="goToCourse(course.name)" ng-model="course.name">
         <option value="" selected>-- Välj utbildning --</option>
-        <option ng-repeat="course in courses">{{course.content.name}}</option>
+        <option ng-value="course.name" ng-repeat="course in courses">{{course.content.name}}</option>
       </select>
     </div>
 
