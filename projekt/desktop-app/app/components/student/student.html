@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <main class="courses container">
 
   <aside class="course-list">
@@ -10,7 +8,7 @@
       </select>
     </div>
 
-    <button role="button">Lägga till ny kurs</button>
+    <button role="button" ng-click="eventModule()">Lägga till ny kurs</button>
     <ul>
       <li ng-repeat="class in classes">
         <a ui-sref="/student({id: class.id})" style="border-color: {{stringToColor(class.title)}}; changeToColorIfBackgroundColorInsteadOfBorderColor:{{getReadableColor(stringToColor(class.title))}}">
@@ -23,7 +21,7 @@
   <section class="cal-display">
     <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
   </section>
-
-  <section ng-include="'app/components/student/form.html'">
-  </section>
 </main>
+
+<section ng-if="showForm" ng-include="'app/components/student/form.html'" class="modal">
+</section>

@@ -1,17 +1,12 @@
-<form action="post">
-  <label for=""></label>
-  <input type="text">
+<form action="post" >
+  <label for="title">Kurs navn</label>
+  <input type="text" id="title" ng-model="courseData.title">
 
-  <label for=""></label>
-  <input type="text">
+  <label for="start">Startdatum</label>
+  <input type="text" id="start" ng-model="courseData.start._i">
 
-  <label for=""></label>
-  <input type="text">
+  <label for="end">Slutdatum</label>
+  <input type="text" id="end" ng-model="courseData.end._i">
 
-  <label for=""></label>
-  <input type="text">
-
-  <label for=""></label>
-  <input type="text">
   <button type="button" name="button">Send</button>
 </form>

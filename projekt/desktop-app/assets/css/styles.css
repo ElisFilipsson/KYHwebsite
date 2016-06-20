@@ -450,7 +450,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
   letter-spacing: -0.03rem; }
 
-.container, .banner > *:not(.splash), .centered {
+.container, .banner > *:not(.splash), .modal form, .centered {
   padding-left: 1rem;
   padding-right: 1rem;
   margin: auto;
@@ -608,6 +608,26 @@ footer {
     padding-bottom: 0; }
   footer .small {
     font-size: 14px; }
+
+.modal {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .modal form {
+    background: white;
+    padding: 3rem; }
+    .modal form * + * {
+      margin-top: 1rem; }
 
 .background {
   height: 80vh;

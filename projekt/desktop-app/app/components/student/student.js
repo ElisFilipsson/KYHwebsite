@@ -53,9 +53,13 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         });
     };
 
+    $scope.eventModule = function(opts) {
+      $scope.showForm = true;
+      $scope.courseData = opts || '';
+    };
+
     $scope.alertOnEventClick = function( date, jsEvent, view){
-        // $scope.alertMessage = (date.title + ' was clicked ');
-        console.log(date.title + 'was clicked')
+      $scope.eventModule(date);
     };
 
     $scope.getNextCourseDate();
