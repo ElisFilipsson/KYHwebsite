@@ -10,8 +10,8 @@
 
     <button role="button" ng-click="eventModule()">Lägga till ny kurs</button>
     <ul>
-      <li ng-repeat="class in classes">
-        <a ui-sref="/student({id: class.id})" style="border-color: {{stringToColor(class.title)}}; changeToColorIfBackgroundColorInsteadOfBorderColor:{{getReadableColor(stringToColor(class.title))}}">
+      <li ng-repeat="class in events">
+        <a ui-sref="/student({id: class.start})" style="border-color: {{stringToColor(class.title)}}; changeToColorIfBackgroundColorInsteadOfBorderColor:{{getReadableColor(stringToColor(class.title))}}">
           {{ class.title }}
         </a>
       </li>
