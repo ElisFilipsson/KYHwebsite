@@ -53,17 +53,23 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         });
     };
 
+    $scope.alertOnEventClick = function( date, jsEvent, view){
+        // $scope.alertMessage = (date.title + ' was clicked ');
+        console.log(date.title + 'was clicked')
+    };
+
     $scope.getNextCourseDate();
     $scope.uiConfig = {
         calendar: {
             lang: 'sv',
-            defaultView: "month",
-            editable: true,
+            defaultView: 'month',
+            editable: false,
             header: {
                 left: 'title',
                 center: '',
                 right: 'today prev,next',
             },
+            eventClick: $scope.alertOnEventClick,
             dayClick: $scope.goToRootScopeDate,
             defaultDate: $scope.selectStartDate
         },
@@ -71,12 +77,6 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
 
 
     $scope.eventSources = [$scope.eventsF];
-
-
-
-
-
-
 
     $scope.classes = [];
     $calendar.getSchedule(id)

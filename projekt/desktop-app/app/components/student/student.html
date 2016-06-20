@@ -10,6 +10,7 @@
       </select>
     </div>
 
+    <button role="button">Lägga till ny kurs</button>
     <ul>
       <li ng-repeat="class in classes">
         <a ui-sref="/student({id: class.id})" style="border-color: {{stringToColor(class.title)}}; changeToColorIfBackgroundColorInsteadOfBorderColor:{{getReadableColor(stringToColor(class.title))}}">
@@ -17,11 +18,12 @@
         </a>
       </li>
     </ul>
-
-
   </aside>
 
   <section class="cal-display">
     <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+  </section>
+
+  <section ng-include="'app/components/student/form.html'">
   </section>
 </main>
