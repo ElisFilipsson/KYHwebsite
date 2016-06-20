@@ -3,6 +3,12 @@ app.factory('$calendar', ['$http', function($http) {
     getSchedule: function(education) {
       var ed = education || '';
       return $http.get('http://localhost:4000/educations/' + ed);
+    },
+    deleteCourse: function(o) {
+      return $http.get('http://localhost:4000/educations/delete/' + o.type + '/' + o.title);
+    },
+    addCourse: function(o) {
+      return $http.get('http://localhost:4000/educations/delete/' + o.type, o.content);
     }
   };
 }]);

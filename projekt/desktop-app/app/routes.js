@@ -31,6 +31,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($s
     templateUrl: 'app/components/visitor/visitor.html',
     pageTitle: 'KYH - Hej och välkommen'
   });
-  
-  
+
+
 }]);

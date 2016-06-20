@@ -5,12 +5,12 @@
         <form ng-submit="submit(course.content.name)">
         <div class="buttons">
 
-            <input ng-model="login.username" type="text" name="username" placeholder="Användarnamn">
-            <input ng-model="login.password" type="password" name="password" placeholder="Lösenord">
+            <input ng-class="{ 'error': error.username.state }" ng-model="login.username" type="text" name="username" placeholder="Användarnamn">
+            <input ng-class="{ 'error': error.password.state }" ng-model="login.password" type="password" name="password" placeholder="Lösenord">
             
 
           </div>
-          <div class="select-style">
+          <div class="select-style" ng-class="{ 'error': error.select.state }">
             <select ng-change="getParam(course.content.name)" ng-model="course.content.name">
               <option value="" selected>-- Välj utbildning --</option>
               <option ng-repeat="course in courses">{{course.content.name}}</option>

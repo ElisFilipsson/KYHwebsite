@@ -450,7 +450,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
   letter-spacing: -0.03rem; }
 
-.container, .banner > *:not(.splash), .centered {
+.container, .banner > *:not(.splash), .modal form, .centered {
   padding-left: 1rem;
   padding-right: 1rem;
   margin: auto;
@@ -609,6 +609,25 @@ footer {
   footer .small {
     font-size: 14px; }
 
+.modal {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .modal form label {
+    color: white; }
+  .modal form input {
+    margin-bottom: 1rem; }
+
 input {
   border-radius: 3px;
   border: 0px;
@@ -620,6 +639,9 @@ input {
   font-size: 14px; }
   input:focus {
     outline: 0; }
+
+label {
+  font-weight: 400; }
 
 .background {
   height: 80vh;
@@ -658,7 +680,7 @@ input {
   border-radius: 3px;
   overflow: hidden;
   background-color: #fff;
-  background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 97% 50%; }
+  background: #fff url("../img/ic_arrow_drop_down_black_24dp_1x.png") no-repeat 97% 50%; }
 
 .select-style select {
   padding: 18px 0 0 18px;
@@ -693,6 +715,10 @@ form {
 
 .buttons input {
   margin-bottom: 10px; }
+
+.error {
+  background: pink;
+  color: red; }
 
 .centered .list-item {
   display: -ms-flexbox;

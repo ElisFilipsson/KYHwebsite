@@ -1,6 +1,7 @@
 app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($scope, $state, $stateParams, $calendar, uiCalendarConfig) {
 
     var id = $stateParams.id;
+    if(id === ''){ $state.go('/student', {id: 'MWD'}); }
 
     var date = new Date(),
         d = date.getDate(),
@@ -11,6 +12,10 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.tempevents = [];
     $scope.firstCourse = '';
     $scope.selectStartDate = '2016-06-06';
+
+    $scope.courseId = id;
+    $scope.stringToColor = stringToColor;
+    $scope.getReadableColor = getReadableColor;
 
     $calendar.getSchedule(id).then(function(result) {
         $scope.course = result.data;
@@ -37,10 +42,6 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         $calendar.getSchedule(id).then(function(result) {
             var date = '';
             angular.forEach(result.data.content, function(val, index) {
-                if (moment().format('YYYY-MM-DD') >= val.start && moment().format('YYYY-MM-DD') <= val.end){
-                    date = val.start;
-                    $scope.selectStartDate = val.start;
-                } 
                 if (date === '') {
                     if (moment().format('YYYY-MM-DD') <= val.start) {
                         date = val.start;
@@ -57,17 +58,46 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         });
     };
 
+    $scope.eventModule = function(opts) {
+      $scope.showForm = true;
+      $scope.courseData = opts || '';
+      $scope.today = new Date();
+    };
+
+    $scope.eventModuleHide = function(opts) {
+      $scope.showForm = false;
+    };
+
+    $scope.eventDelete = function() {
+      var o = {
+        type: $scope.courseId,
+        title: $scope.courseData.title
+      };
+
+      $calendar.deleteCourse(o).then(
+        function(res) {
+          console.log(res);
+          eventModuleHide();
+        }
+      );
+    };
+
+    $scope.alertOnEventClick = function( date, jsEvent, view){
+      $scope.eventModule(date);
+    };
+
     $scope.getNextCourseDate();
     $scope.uiConfig = {
         calendar: {
             lang: 'sv',
-            defaultView: "month",
-            editable: true,
+            defaultView: 'month',
+            editable: false,
             header: {
                 left: 'title',
                 center: '',
                 right: 'today prev,next',
             },
+            eventClick: $scope.alertOnEventClick,
             dayClick: $scope.goToRootScopeDate,
             defaultDate: $scope.selectStartDate
         },
@@ -79,8 +109,9 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
 
 
 
-
-
+    $scope.goToCourse = function(name){
+        $state.go('/student', {id: name});
+    };
 
     $scope.classes = [];
     $calendar.getSchedule(id)
@@ -106,8 +137,5 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
                 });
             });
         });
-
-    $scope.stringToColor = stringToColor;
-    $scope.getReadableColor = getReadableColor;
 
 }]);
