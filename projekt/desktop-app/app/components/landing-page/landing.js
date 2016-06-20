@@ -3,17 +3,30 @@ app.controller('landing', ['$state', '$scope', '$calendar', function($state, $sc
     username: '',
     password: ''
   };
+  $scope.error = {
+    username: {
+      msg: 'Fel användarnamn',
+      state: false
+    },
+    password: {
+      msg: 'Fel lösenord',
+      state: false
+    },
+    select: {
+      state: false
+    }
+  };
 
-  var login = {
-    student: {
+  var login = [
+    {
       username: 'student',
       password: '123'
     },
-    teacher: {
+    {
       username: 'lärare',
       password: '123'
     }
-  }
+  ];
 
   var paramId;
   $scope.courses = [];
@@ -36,12 +49,36 @@ app.controller('landing', ['$state', '$scope', '$calendar', function($state, $sc
   };
 
   $scope.submit = function(name) {
-    if(name && $scope.login.username !== '' && $scope.login.password !== '') {
-      if($scope.login.username !== login.student.username && $scope.login.password !== login.student.password) return false;
-      if($scope.login.username !== login.teacher.username && $scope.login.password !== login.teacher.password) return false;
-      $scope.login.username = '';
-      $scope.login.password = '';
-      $state.go('/student', {id: paramId});
+
+    var index;
+    $scope.error.username.state = false;
+    $scope.error.password.state = false;
+    $scope.error.select.state = false;
+
+
+    for(var i = 0; i < login.length; i++) {
+      if(login[i].username === $scope.login.username) {
+        $scope.error.username.state = false;
+        index = i;
+        break;
+      } else {
+        $scope.error.username.state = true;
+      }
+    }
+
+    if(!$scope.error.username.state) {
+      if(login[index].password === $scope.login.password) {
+        if(name) {
+          $state.go('/student', {id: paramId});
+        } else {
+          $scope.error.select.state = true;
+        }
+      } else {
+        $scope.login.password = $scope.error.password.msg;
+        $scope.error.password.state = true;
+      }
+    } else {
+      $scope.login.username = $scope.error.username.msg;
     }
   };
 
