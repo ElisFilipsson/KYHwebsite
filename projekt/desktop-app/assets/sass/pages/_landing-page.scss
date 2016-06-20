@@ -35,7 +35,7 @@
     border-radius: 3px;
     overflow: hidden;
     background-color: #fff;
-    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 97% 50%;
+    background: #fff url('../img/ic_arrow_drop_down_black_24dp_1x.png') no-repeat 97% 50%;
 }
 
 .select-style select {
@@ -75,4 +75,9 @@ form {
 
 .buttons input {
   margin-bottom: 10px;
+}
+
+.error {
+  background: pink;
+  color: red;
 }
