@@ -17,6 +17,7 @@
         "end": "2015-09-11"
       },
       {
+<<<<<<< HEAD
         "title": "Gränssnitt och grafik",
         "start": "2015-09-14",
         "end": "2015-10-02"
@@ -32,6 +33,8 @@
         "end": "2015-10-23"
       },
       {
+=======
+>>>>>>> d40c9138ccec2ad6df719c41693b141a952603e1
         "title": "Responsiv Webb Design 1",
         "start": "2015-10-26",
         "end": "2015-11-27"
