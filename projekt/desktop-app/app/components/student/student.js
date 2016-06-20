@@ -37,6 +37,10 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         $calendar.getSchedule(id).then(function(result) {
             var date = '';
             angular.forEach(result.data.content, function(val, index) {
+                if (moment().format('YYYY-MM-DD') >= val.start && moment().format('YYYY-MM-DD') <= val.end){
+                    date = val.start;
+                    $scope.selectStartDate = val.start;
+                } 
                 if (date === '') {
                     if (moment().format('YYYY-MM-DD') <= val.start) {
                         date = val.start;
