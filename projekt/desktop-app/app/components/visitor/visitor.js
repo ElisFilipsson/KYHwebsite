@@ -48,7 +48,6 @@ app.controller('visitorCtrl', ['$scope', '$calendar', 'toaster', 'email', functi
 
     $calendar.getSchedule().then(function (result) {
         $scope.utbildningslista = result.data;
-        console.log(result.data);
     });
 
 }]);

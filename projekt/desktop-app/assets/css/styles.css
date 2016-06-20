@@ -795,9 +795,9 @@ form {
     .fixed-header form input:nth-child(2) {
       width: 45%;
       height: 40px; }
-      @media screen and (min-width: 1000px) {
-        .fixed-header form input:nth-child(2) {
-          width: 25%; } }
+    @media screen and (min-width: 1000px) {
+      .fixed-header form input[type="submit"] {
+        width: 25%; } }
     .fixed-header form select {
       width: 45%;
       margin: 1%;
