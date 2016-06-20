@@ -5,10 +5,10 @@ app.factory('$calendar', ['$http', function($http) {
       return $http.get('http://localhost:4000/educations/' + ed);
     },
     deleteCourse: function(o) {
-      return $http.get('http://localhost:4000/educations/delete/' + o.type + '/' + o.title);
+      return $http.delete('http://localhost:4000/educations/delete/' + o.type + '/' + o.title);
     },
     addCourse: function(o) {
-      return $http.get('http://localhost:4000/educations/delete/' + o.type, o.content);
+      return $http.post('http://localhost:4000/educations/add/' + o.type, o.content);
     }
   };
 }]);

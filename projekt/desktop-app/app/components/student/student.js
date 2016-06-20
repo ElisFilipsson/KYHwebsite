@@ -56,6 +56,12 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         });
     };
 
+    $scope.refreshCalendar = function() {
+      uiCalendarConfig.calendars.myCalendar.fullCalendar('removeEvents');
+      uiCalendarConfig.calendars.myCalendar.fullCalendar('addEventSource', $scope.events);
+      colorizeCalendar();
+    };
+
     $scope.eventModule = function(opts) {
       $scope.showForm = true;
       $scope.courseData = opts || '';
@@ -75,7 +81,8 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
       $calendar.deleteCourse(o).then(
         function(res) {
           console.log(res);
-          eventModuleHide();
+          $scope.eventModuleHide();
+          $scope.refreshCalendar();
         }
       );
     };
