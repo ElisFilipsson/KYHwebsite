@@ -10,13 +10,11 @@
     padding: 30px;
     flex-flow: column;
     color:#fff;
-    width: 80%;
-    margin: 10% 0;
+    width: 90%;
+    margin: 5%;
     margin-bottom: 20px;
     background: $main-color;
     @media screen and (min-width: 700px) {
-      width: 90%;
-      margin: 5% 0;
       flex-flow: row;
     }
     &:first-child {
@@ -41,7 +39,6 @@
        @media screen and (min-width: 700px) {
           margin-left: -70px;
           margin-top: 0px;
-          max-width: 70%;
        }
 
        div:nth-child(1) {
@@ -83,58 +80,24 @@ form {
 
     input{
       margin: 1%;
-      width: 40%;
+      width: 45%;
       height: 40px;
-      @media screen and (min-width: 500px) {
-        width: 20%;
-      }
-      @media screen and (min-width: 700px) {
-        width: 22%;
-      }
-      @media screen and (min-width: 1000px) {
-        width: 25%;
-        height: 50px;
-      }
-    }
-    input[type="submit"]{
-      width: 30%;
-      @media screen and (min-width: 500px) {
-        width: 20%;
-      }
-      @media screen and (min-width: 700px) {
-        width: 15%;
-      }
-      @media screen and (min-width: 1000px) {
-        width: 10%;
-      }
     }
     input:nth-child(2) {
-      width: 50%;
+      width: 45%;
       height: 40px;
-      @media screen and (min-width: 500px) {
-        width: 25%;
-      }
-      @media screen and (min-width: 700px) {
-        width: 22%;
-      }
       @media screen and (min-width: 1000px) {
         width: 25%;
-        height: 50px;
       }
     }
     select {
-      width: 40%;
+      width: 45%;
       margin: 1%;
       height: 40px;
-      @media screen and (min-width: 500px) {
-        width: 20%;
-      }
-      @media screen and (min-width: 700px) {
-        width: 15%;
-      }
+      border: none;
+      font-size:10pt;
       @media screen and (min-width: 1000px) {
-        width: 10%;
-        height: 50px;
+        width: 65%;
       }
     }
   }
