@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-
 <main class="courses container">
 
   <aside class="course-list">
     <div class="drpdwn-student-cal">
-      <select ng-change="goToCourse(course.content.name)" ng-model="course.content.name">
+      <select ng-change="goToCourse(course.name)" ng-model="course.name">
         <option value="" selected>-- Välj utbildning --</option>
-        <option ng-repeat="course in courses">{{course.content.name}}</option>
+        <option ng-value="course.name" ng-repeat="course in courses">{{course.content.name}}</option>
       </select>
     </div>
 
+    <button role="button" ng-click="eventModule()">Lägga till ny kurs</button>
     <ul>
       <li ng-repeat="class in classes">
         <a ui-sref="/student({id: class.id})" style="border-color: {{stringToColor(class.title)}}; changeToColorIfBackgroundColorInsteadOfBorderColor:{{getReadableColor(stringToColor(class.title))}}">
@@ -17,11 +16,12 @@
         </a>
       </li>
     </ul>
-
-
   </aside>
 
   <section class="cal-display">
     <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
   </section>
 </main>
+
+<section ng-if="showForm" ng-include="'app/components/student/form.html'" class="modal">
+</section>

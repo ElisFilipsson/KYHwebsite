@@ -1,0 +1,17 @@
+<form action="post" class="login-group">
+  <label for="title">Kurs navn</label>
+  <input type="text" id="title" name="title" ng-model="courseData.title" placeholder="Kursens namn">
+
+  <label for="start">Startdatum</label>
+  <input type="text" id="start" name="start" ng-model="courseData.start._i" placeholder="{{ today | date:'yyyy-MM-dd' }}">
+
+  <label for="end">Slutdatum</label>
+  <input type="text" id="end" name="end" ng-model="courseData.end._i" placeholder="{{ today | date:'yyyy-MM-dd' }}">
+
+  <input type="hidden" name=type ng-model="courseId">
+  <div class="button-group">
+    <button type="button" name="button">Send</button>
+    <button type="button" name="cancel" ng-click="eventModuleHide()">Cancel</button>
+    <button type="button" name="delete" ng-click="eventDelete()">Delete</button>
+  </div>
+</form>
