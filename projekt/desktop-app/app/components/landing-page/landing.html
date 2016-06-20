@@ -2,7 +2,14 @@
   <div class="container landing">
     <div class="login-container">
       <div class="login-group">
-        <form ng-submit="submitStudent(course.content.name)">
+        <form ng-submit="submit(course.content.name)">
+        <div class="buttons">
+
+            <input ng-model="login.username" type="text" name="username" placeholder="Användarnamn">
+            <input ng-model="login.password" type="password" name="password" placeholder="Lösenord">
+            
+
+          </div>
           <div class="select-style">
             <select ng-change="getParam(course.content.name)" ng-model="course.content.name">
               <option value="" selected>-- Välj utbildning --</option>
@@ -10,11 +17,7 @@
             </select>
           </div>
           <span class="padding"></span>
-          <div class="buttons">
-            <button class="fw" type="submit" name="button">Student</button>
-            <span class="padding"></span>
-            <a class="fw" ui-sref="/student({id: paramId})"><button class="fw" type="button" name="button">Lärare</button></a>
-          </div>
+          <button class="fw" type="submit" name="button">Login</button>
         </form>
       </div>   
       <span class="padding"></span>

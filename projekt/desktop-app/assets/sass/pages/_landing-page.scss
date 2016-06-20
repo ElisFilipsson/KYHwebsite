@@ -54,11 +54,6 @@
   outline: none;
 }
 
-.buttons {
-  display: flex;
-  width: 100%;
-}
-
 .padding {
   width: 20px;
 }
@@ -78,3 +73,6 @@ form {
   flex-flow: column;
 }
 
+.buttons input {
+  margin-bottom: 10px;
+}
