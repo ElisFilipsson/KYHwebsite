@@ -66,25 +66,32 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
             $scope.events = [];
             $scope.events = angular.copy($scope.tempevents);
             $('#calendar').fullCalendar('gotoDate', date);
-            
 
         });
     };
 
-    $scope.refreshCalendar = function() {
-      uiCalendarConfig.calendars.myCalendar.fullCalendar('removeEvents');
-      uiCalendarConfig.calendars.myCalendar.fullCalendar('addEventSource', $scope.events);
-      colorizeCalendar();
-    };
-
-    $scope.eventModule = function(opts) {
+    $scope.eventModule = function(data) {
       $scope.showForm = true;
-      $scope.courseData = opts || '';
+      $scope.courseData = data || '';
       $scope.today = new Date();
     };
 
     $scope.eventModuleHide = function(opts) {
       $scope.showForm = false;
+    };
+
+    $scope.getCurrentEventId = function(event) {
+      var i = 0;
+      var length = $scope.events.length;
+      var id;
+
+      for (i; i < length; i++) {
+        if($scope.events[i].title === event.title) {
+          id = i;
+        }
+      }
+
+      return id;
     };
 
     $scope.eventDelete = function() {
@@ -95,15 +102,22 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
 
       $calendar.deleteCourse(o).then(
         function(res) {
-          console.log(res);
+          // uiCalendarConfig.calendars.myCalendar.fullCalendar('removeEvents');
+          $scope.events.splice($scope.getCurrentEventId($scope.courseData), 1);
+          console.log($scope.eventsF.callback);
+          // uiCalendarConfig.calendars.myCalendar.fullCalendar('addEventSource', $scope.scope);
+          colorizeCalendar();
           $scope.eventModuleHide();
-          $scope.refreshCalendar();
         }
       );
     };
 
-    $scope.alertOnEventClick = function( date, jsEvent, view){
-      $scope.eventModule(date);
+    $scope.eventAdd = function() {
+
+    };
+
+    $scope.alertOnEventClick = function(data, jsEvent, view){
+      $scope.eventModule(data);
     };
 
     $scope.getNextCourseDate();
@@ -127,11 +141,10 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.eventSources = [$scope.eventsF];
 
 
-
-
     $scope.goToCourse = function(name){
         $state.go('/student', {id: name});
     };
+
 
     $scope.courses = [];
     $calendar.getSchedule()

@@ -1,11 +1,15 @@
 <div class="fixed-header">
     <form ng-submit="submit()">
+        <div>
             <input type="text" ng-model="text" name="text" placeholder="Förnamn Efternamn"/>
             <input type="email" ng-model="email" name="email" placeholder="email@adress.se"/>
+        </div>
+        <div>
             <select name="utbildningar" ng-model="education">
-                <option ng-repeat="(key, value) in utbildningslista" value="{{key}}">{{key}}</option>
+                <option ng-repeat="(key, value) in utbildningslista" value="{{key}}">{{value.name}}</option>
             </select>
             <input type="submit" id="submit" value="Submit" />
+        </div>
     </form>
 </div>
 
