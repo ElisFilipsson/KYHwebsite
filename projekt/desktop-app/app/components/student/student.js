@@ -1,6 +1,7 @@
 app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($scope, $state, $stateParams, $calendar, uiCalendarConfig) {
 
     var id = $stateParams.id;
+    if(id === ''){ $state.go('/student', {id: 'MWD'}); }
 
     var date = new Date(),
         d = date.getDate(),
@@ -11,7 +12,8 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.tempevents = [];
     $scope.firstCourse = '';
     $scope.selectStartDate = '2016-06-06';
-
+    
+    
     $calendar.getSchedule(id).then(function(result) {
         $scope.course = result.data;
         angular.forEach(result.data.content, function(val, index) {
@@ -81,6 +83,9 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
 
 
 
+    $scope.goToCourse = function(name){
+        $state.go('/student', {id: name});
+    }
 
     $scope.classes = [];
     $calendar.getSchedule(id)
