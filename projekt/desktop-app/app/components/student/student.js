@@ -15,9 +15,14 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.courseId = id;
     $scope.stringToColor = stringToColor;
     $scope.getReadableColor = getReadableColor;
+    $scope.course = id;
+    $scope.courseName = id;
+    console.log(id);
 
     $calendar.getSchedule(id).then(function(result) {
-        $scope.course = result.data;
+        //$scope.course = result.data;
+        //$scope.selectName = result.data.name;
+        console.log(result.data.name);
         
         angular.forEach(result.data.content, function(val, index) {
             $scope.events.push(val);
@@ -49,7 +54,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.getNextCourseDate = function() {
         $calendar.getSchedule(id).then(function(result) {
             var date = '';
-            $scope.course.name = result.data.name;
+            $scope.courseName = id;
             angular.forEach(result.data.content, function(val, index) {
                 if (moment().format('YYYY-MM-DD') >= val.start && moment().format('YYYY-MM-DD') <= val.end) {
                         date = val.start;
