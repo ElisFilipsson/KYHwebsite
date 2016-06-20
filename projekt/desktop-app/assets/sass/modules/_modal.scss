@@ -12,11 +12,11 @@
 
   form {
     @extend .container;
-    background: white;
-    padding: 3rem;
-
-    * + * {
-      margin-top: 1rem;
+    label {
+      color: white;
+    }
+    input {
+      margin-bottom: 1rem;
     }
   }
 }

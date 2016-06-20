@@ -11,6 +11,9 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.tempevents = [];
     $scope.firstCourse = '';
     $scope.selectStartDate = '2016-06-06';
+    $scope.courseId = id;
+    $scope.stringToColor = stringToColor;
+    $scope.getReadableColor = getReadableColor;
 
     $calendar.getSchedule(id).then(function(result) {
         $scope.course = result.data;
@@ -56,6 +59,25 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.eventModule = function(opts) {
       $scope.showForm = true;
       $scope.courseData = opts || '';
+      $scope.today = new Date();
+    };
+
+    $scope.eventModuleHide = function(opts) {
+      $scope.showForm = false;
+    };
+
+    $scope.eventDelete = function() {
+      var o = {
+        type: $scope.courseId,
+        title: $scope.courseData.title
+      };
+
+      $calendar.deleteCourse(o).then(
+        function(res) {
+          console.log(res);
+          eventModuleHide();
+        }
+      );
     };
 
     $scope.alertOnEventClick = function( date, jsEvent, view){
@@ -106,8 +128,5 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
                 });
             });
         });
-
-    $scope.stringToColor = stringToColor;
-    $scope.getReadableColor = getReadableColor;
 
 }]);

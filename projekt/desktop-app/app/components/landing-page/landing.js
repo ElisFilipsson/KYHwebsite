@@ -1,4 +1,19 @@
 app.controller('landing', ['$state', '$scope', '$calendar', function($state, $scope, $calendar) {
+  $scope.login = {
+    username: '',
+    password: ''
+  };
+
+  var login = {
+    student: {
+      username: 'student',
+      password: '123'
+    },
+    teacher: {
+      username: 'lärare',
+      password: '123'
+    }
+  }
 
   var paramId;
   $scope.courses = [];
@@ -20,8 +35,12 @@ app.controller('landing', ['$state', '$scope', '$calendar', function($state, $sc
     });
   };
 
-  $scope.submitStudent = function(name) {
-    if(name) {
+  $scope.submit = function(name) {
+    if(name && $scope.login.username !== '' && $scope.login.password !== '') {
+      if($scope.login.username !== login.student.username && $scope.login.password !== login.student.password) return false;
+      if($scope.login.username !== login.teacher.username && $scope.login.password !== login.teacher.password) return false;
+      $scope.login.username = '';
+      $scope.login.password = '';
       $state.go('/student', {id: paramId});
     }
   };
