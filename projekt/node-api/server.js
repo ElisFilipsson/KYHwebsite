@@ -29,7 +29,6 @@ var file = require(fileName);
 // Requires routes
 var routeDesktop  = require('./routes/calendar.route')(app, file, fs, fileName);
 var routeEmail = require('./routes/email.route')(app, transporter);
-var routeEmail = require('./routes/email.route')(app, transporter);
 
 // Start server
 app.listen(port);
