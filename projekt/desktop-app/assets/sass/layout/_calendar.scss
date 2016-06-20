@@ -9,7 +9,14 @@
 .fc button,
 .fc-state-default {
   float: unset;
+  height: unset;
+  padding-top: .5em;
+  padding-bottom: .5em;
   @extend button;
+}
+
+.fc-day-grid-container.fc-scroller {
+  height: unset !important;
 }
 
 .fc .fc-toolbar > * > * {
@@ -21,6 +28,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  h2 {
+    text-transform: capitalize;
+  }
 }
 
 .fc-toolbar {

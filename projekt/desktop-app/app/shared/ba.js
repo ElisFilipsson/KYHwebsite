@@ -1,22 +1,3 @@
-function stringToColor(s) {
-  function hashCode(str) { // java String#hashCode
-      var hash = 0;
-      for (var i = 0; i < str.length; i++) {
-         hash = str.charCodeAt(i) + ((hash << 5) - hash);
-      }
-      return hash;
-  }
-
-  function intToRGB(i) {
-      var c = (i & 0x00FFFFFF)
-          .toString(16);
-
-      return "00000".substring(0, 6 - c.length) + c;
-  }
-
-  return '#' + intToRGB(hashCode(s));
-}
-
 function Color(c) {
   'use strict';
   this.color = c;
@@ -106,8 +87,8 @@ function Color(c) {
   };
 }
 
-function getReadabeColor(color) {
-  var c = new Color(stringToColor(color));
+function getReadableColor(color) {
+  var c = new Color(color);
   c.splitChannels();
 
   if (c.getLuminance() < 0.5) {
@@ -117,18 +98,33 @@ function getReadabeColor(color) {
   }
 }
 
+function stringToColor(s) {
+  function hashCode(str) { // java String#hashCode
+      var hash = 0;
+      for (var i = 0; i < str.length; i++) {
+         hash = str.charCodeAt(i) + ((hash << 5) - hash);
+      }
+      return hash;
+  }
+
+  function intToRGB(i) {
+      var c = (i & 0x00FFFFFF)
+          .toString(16);
+
+      return "00000".substring(0, 6 - c.length) + c;
+  }
+
+  return '#' + intToRGB(hashCode(s.trim()));
+}
+
 /**
  * UNPURE FUNCTIONS
  */
 function colorizeCalendar() {
   var el = document.getElementsByClassName('fc-content');
-  var color = stringToColor('shartman');
-  var col = new Color(color);
-  col.splitChannels();
-  col.getLuminance();
 
   for (var i = 0; i < el.length; i++) {
-    el[i].style.backgroundColor = stringToColor(el[i].querySelector('.fc-title').innerHTML);
-    el[i].style.color = getReadabeColor(el[i].querySelector('.fc-title').innerHTML);
+    el[i].style.backgroundColor = stringToColor(el[i].textContent);
+    el[i].style.color = getReadableColor(stringToColor(el[i].textContent));
   }
 }

@@ -16,7 +16,8 @@
     }
 
     .cal-display {
-      max-width: 50%;
+      flex: 2 0 70%;
+      padding: 1em;
     }
   }
 }
@@ -28,24 +29,31 @@
     margin-bottom: 70px;
     padding: 0;
 
-    li:hover{
-      background: #ffa500;
-      border-radius: 3px;
+    a:hover{
+      background: lighten($main-color, 10%);
     }
 
-    li:active{
+    a:active{
       background: $main-color;
     }
 
     a {
-      color: black;
+      color: inherit;
       text-decoration: none;
-      font-size: 13px;
-      padding: 15px;
+      font-size: 14px;
+      padding: .2em .6em;
+      width: 100%;
+      display: inline-block;
+      border-left: .5em solid;
     }
   }
 
   .drpdwn-student-cal {
     margin: 15px;
+    align-self: center;
+
+    select {
+      width: 100%;
+    }
   }
 }
