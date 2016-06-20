@@ -6,7 +6,8 @@ var express = require('express'),
     port = process.env.PORT || 4000,
     bodyParser = require('body-parser'),
     app = express(),
-    nodemailer = require('nodemailer');
+    nodemailer = require('nodemailer'),
+    fs = require('fs');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -21,10 +22,13 @@ var transporter = nodemailer.createTransport({
 });
 
 // Require and get json object with all the data
-var obj = require('./data/data.json');
+var fileName = './data/data.json';
+var file = require(fileName);
+
 
 // Requires routes
-var routeDesktop  = require('./routes/calendar.route')(app, obj);
+var routeDesktop  = require('./routes/calendar.route')(app, file, fs, fileName);
+var routeEmail = require('./routes/email.route')(app, transporter);
 var routeEmail = require('./routes/email.route')(app, transporter);
 
 // Start server

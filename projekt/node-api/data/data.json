@@ -1,200 +1,585 @@
 {
-
-    "MWD":{ 
-            "name": "Mobile Web Developer",
-            "img": "assets/img/icons/frontend_icon_neg.png",
-            "info": "Har du någon gång funderat på hur alla webbtjänser du använder fungerar? Hur skulle man egentligen bygga ett eget Facebook, en internetbank eller Gmail? Vi lever ett otroligt digitalt liv idag och det är webben som står i centrum. Idag jobbar hundra tusentals människor med just webben på olika sätt och fler kommer det bli de kommande åren. Inom hela EU förutspår man att det redan om fyra år kommer saknas en miljon programmerare. Så om du vill vara en del av framtiden och skapa nästa Facebook eller en bättre internetbank då ska du söka till vår utbildning som för att du redan om två år kan ha en anställning som webbutvecklare!",
-            "start-year": 2016,
-            "length": 2,
-            "content": [
-                        {"title": "Teambuilding", "start": "2015-08-24", "end": "2015-08-28"},
-                        {"title": "Branschkunskap för webbutvecklare", "start": "2015-08-31", "end": "2015-09-11"},
-                        {"title": "Gränssnitt och grafik", "start": "2015-09-14", "end": "2015-10-02"},
-                        {"title": "HTML & CSS", "start": "2015-10-05 ", "end": "2015-10-16"},
-                        {"title": "LIA preparand", "start": "2015-10-19", "end": "2015-10-23"},
-                        {"title": "Responsiv Webb Design 1", "start": "2015-10-26", "end": "2015-11-27"},
-                        {"title": "User experience design UX", "start": "2015-11-30", "end": "2015-12-18"},
-                        {"title": "Javascript och programmeringsmetodik", "start": "2016-01-11", "end": "2016-04-01"},
-                        {"title": "LIA1", "start": "2016-04-04", "end": "2016-06-03"},
-                        {"title": "Utvecklingsmetodik och agila metoder ", "start": "2016-06-06", "end": "2016-06-24"},
-                        {"title": "Responsiv Webb Design 2", "start": "2016-08-22", "end": "2016-09-23"},
-                        {"title": "PHP, SQL och servertjänster", "start": "2016-09-26", "end": "2016-11-18"},
-                        {"title": "CMS och integration", "start": "2016-11-21", "end": "2016-12-16"},
-                        {"title": "Hybridapplikationer", "start": "2017-01-09", "end": "2017-02-03"},
-                        {"title": "LIA2", "start": "2017-02-06", "end": "2017-04-14"},
-                        {"title": "Examensarbete", "start": "2017-04-17", "end": "2017-06-09"}
-                        ]
-          },
-    "FWD":{
-            "name": "Frontend Web Developer",
-            "img": "assets/img/icons/frontend_icon_neg.png",
-            "info": "Har du någon gång funderat på hur alla webbtjänser du använder fungerar? Hur skulle man egentligen bygga ett eget Facebook, en internetbank eller Gmail? Vi lever ett otroligt digitalt liv idag och det är webben som står i centrum. Idag jobbar hundra tusentals människor med just webben på olika sätt och fler kommer det bli de kommande åren. Inom hela EU förutspår man att det redan om fyra år kommer saknas en miljon programmerare. Så om du vill vara en del av framtiden och skapa nästa Facebook eller en bättre internetbank då ska du söka till vår utbildning som gör att du redan om två år kan ha en anställning som webbutvecklare!",
-            "start-year": 2015,
-            "length": 2,
-            "content": [
-                {"title": "Teambuilding", "start": "2015-08-24", "end": "2015-08-28"},
-                {"title": "Branschkunskap för webbutvecklare", "start": "2015-08-31", "end": "2015-09-11"},
-                {"title": "Gränssnitt och grafik", "start": "2015-09-14", "end": "2015-10-02"},
-                {"title": "HTML & CSS", "start": "2015-10-05 ", "end": "2015-10-16"},
-                {"title": "LIA preparand", "start": "2015-10-19", "end": "2015-10-23"},
-                {"title": "Responsiv Webb Design 1", "start": "2015-10-26", "end": "2015-11-27"},
-                {"title": "User experience design UX", "start": "2015-11-30", "end": "2015-12-18"},
-                {"title": "Javascript och programmeringsmetodik", "start": "2016-01-11", "end": "2016-04-01"},
-                {"title": "LIA1", "start": "2016-04-04", "end": "2016-06-03"},
-                {"title": "Utvecklingsmetodik och agila metoder ", "start": "2016-06-06", "end": "2016-06-24"},
-                {"title": "Responsiv Webb Design 2", "start": "2016-08-22", "end": "2016-09-23"},
-                {"title": "PHP, SQL och servertjänster", "start": "2016-09-26", "end": "2016-11-18"},
-                {"title": "CMS och integration", "start": "2016-11-21", "end": "2016-12-16"},
-                {"title": "Hybridapplikationer", "start": "2017-01-09", "end": "2017-02-03"},
-                {"title": "LIA2", "start": "2017-02-06", "end": "2017-04-14"},
-                {"title": "Examensarbete", "start": "2017-04-17", "end": "2017-06-09"}
-                ]
-            },
-    "ADH":{
-            "name": "Affärsutvecklare Digital Handel",
-            "img": "assets/img/icons/Ikon_Affarsutvecklare_Dig_Handel_BLUE_neg.png",
-            "info": "E-handeln växer kraftigt och den svenska detaljhandelns försäljning över internet ökade med 16 procent per år. E-handeln börjar ta andelar av den totala detaljhandeln och kundernas förändrade konsumtionsmönster innebär att handeln behöver anpassa sig. Behovet av kompete personal inom digital handel är därför mycket stort.",
-            "start-year": 2016,
-            "length": 2,
-            "content": [{"title":"Teambuilding","start":"2016-08-22","end":"2016-08-26"},
-                        {"title":"E-handel 1","start":"2016-08-29","end":"2016-09-02"},
-                        {"title":"Affärsekonomi","start":"2016-09-05","end":"2016-09-23"},
-                        {"title":"Affärsjuridik","start":"2016-09-26","end":"2016-10-07"},
-                        {"title":"Affärsmannaskap","start":"2016-10-10","end":"2016-11-11"},
-                        {"title":"Försäljning","start":"2016-11-14","end":"2016-12-02"},
-                        {"title":"Key account management","start":"2016-12-05","end":"2016-12-16"},
-                        {"title":"Key account management","start":"2017-01-09","end":"2017-02-03"},
-                        {"title":"E-handel 2","start":"2017-02-06","end":"2017-04-14"},
-                        {"title":"LIA1","start":"2017-04-17","end":"2017-06-16"},
-                        {"title":"Omvärldsanalys o marknadsföring","start":"2017-08-21","end":"2017-10-06"},
-                        {"title":"Projektledning","start":"2017-10-09","end":"2017-10-27"},
-                        {"title":"E-handel 3","start":"2017-10-30","end":"2017-12-22"},
-                        {"title":"LIA 2","start":"2018-01-08","end":"2018-03-30"},
-                        {"title":"Examensarbete","start":"2018-03-30","end":"2018-06-15"}]
-          },
-    "TFF":{
-            "name": "Teknisk Fastighetsförvaltare",
-            "img": "assets/img/icons/drift_icon_neg.png",
-            "info": "Behovet av kvalificerade fastighetstekniker är stort. Storstadsregionerna växer och både nya och gamla hus ska underhållas, samtidigt som många äldre tekniker går i pension. Det är ett yrke för dig som gillar energifrågor, problemlösning och att se till att saker fungerar som de ska. En kvalificerad drift- och fastighetstekniker medverkar i energieffektivisering, säkerställer inomhusklimatet och ansvarar för fastighetens tekniska system. Du kan också vara med och upphandla och arbetsleda underkonsulter och hantverkare.",
-            "start-year": 2016,
-            "length": 2,
-            "content": [{"title":"Teambuilding","start":"2016-08-22","end":"2016-08-26"},
-                        {"title":"Arbetsledning och kommunikation","start":"2016-08-29","end":"2016-09-02"},
-                        {"title":"Verksamhetsdokumentation","start":"2016-09-12","end":"2016-09-26"},
-                        {"title":"Byggnaders påverkan på den yttre miljön","start":"2016-09-26","end":"2016-10-09"},
-                        {"title":"Byggnaders påverkan på den inre miljön","start":"2016-10-10","end":"2016-10-23"},
-                        {"title":"Lia preparand","start":"2016-10-31","end":"2016-11-07"},
-                        {"title":"Byggnadskonstruktion energiaspekter","start":"2016-11-07","end":"2016-12-09"},
-                        {"title":"Fastighetens tekniska system 1","start":"2016-12-12","end":"2016-12-16"},
-                        {"title":"Fastighetens tekniska system 1","start":"2017-01-09","end":"2017-03-10"},
-                        {"title":"LIA 1","start":"2017-03-13","end":"2017-05-12"},
-                        {"title":"Fastighetens tekniska system 2","start":"2017-05-15","end":"2017-06-16"},
-                        {"title":"Fastighetens tekniska system 2","start":"2017-08-21","end":"2017-09-08"},
-                        {"title":"Drift och underhållsteknik","start":"2017-09-11","end":"2017-11-03"},
-                        {"title":"Fastighetsekonomi","start":"2017-11-06","end":"2017-11-17"},
-                        {"title":"Projektledning","start":"2017-11-20","end":"2017-12-01"},
-                        {"title":"Fastighetsägarens självkontroll","start":"2017-12-04","end":"2017-12-15"},
-                        {"title":"Energieffektivisering","start":"2018-01-08","end":"2018-01-26"},
-                        {"title":"Entreprenadjuridik","start":"2018-01-29","end":"2018-02-09"},
-                        {"title":"LIA 2","start":"2018-02-12","end":"2018-04-20"},
-                        {"title":"Examensarbete","start":"2018-04-23","end":"2018-06-15"}
-                        ]
-          },
-    "ESB":{
-            "name": "Energispecialist Byggnader",
-            "img": "assets/img/icons/icon_energi_BLUE_neg.png",
-            "info": "Utbildningen Energispecialist Byggnader tillgodoser behovet! KYH har sedan år 2007 utbildat ett 100-tal studenter till Energispecialist Byggnader. EU:s och Sveriges krav på att samtliga bostäder fram till 2020 i princip skall vara s.k. lågenergihus, tillsammans med den tidigare lagen om energideklarationer, ställer helt nya krav på den kompetens som blivande energispecialister behöver.",
-            "start-year": 2016,
-            "length": 2,
-            "content": [{"title":"Teambuilding","start":"2016-08-22","end":"2016-08-26"},
-                        {"title":"Projektkunskap","start":"2016-08-29","end":"2016-09-09"},
-                        {"title":"Byggnaders påverkan på yttre miljön","start":"2016-09-12","end":"2016-09-23"},
-                        {"title":"Energiförsörjningssystem","start":"2016-09-26","end":"2016-10-14"},
-                        {"title":"LIA preparand","start":"2016-09-26","end":"2016-10-14"},
-                        {"title":"Inneklimat och innemiljö","start":"2016-10-17","end":"2016-10-21"},
-                        {"title":"Byggnadsteknik ","start":"2016-10-24","end":"2016-11-11"},
-                        {"title":"Byggnadsteknik ","start":"2016-11-14","end":"2016-12-16"},
-                        {"title":"Värmesystem + Tappvatten","start":"2017-01-09","end":"2017-01-27"},
-                        {"title":"Ventilationssystem och elsäkerhet","start":"2017-01-30","end":"2017-03-24"},
-                        {"title":"LIA1","start":"2017-03-27","end":"2017-04-28"},
-                        {"title":"Komfortkyla","start":"2017-05-01","end":"2017-06-23"},
-                        {"title":"Styr o regler ","start":"2017-08-21","end":"2017-09-08"},
-                        {"title":"Energieffektiviseringsteknik","start":"2017-09-11","end":"2017-09-22"},
-                        {"title":"Kulturhistoriska miljöer","start":"2017-09-25","end":"2017-10-06"},
-                        {"title":"Fastighetsekonomi","start":"2017-10-09","end":"2017-10-13"},
-                        {"title":"Entreprenadjuridik","start":"2017-10-16","end":"2017-11-03"},
-                        {"title":"LIA 2","start":"2017-11-06","end":"2017-11-10"},
-                        {"title":"LIA 2","start":"2017-11-13","end":"2017-12-29"},
-                        {"title":"Examensarbete","start":"2018-01-01","end":"2018-03-16"}
-                        ] 
-          },
-    "LK":{
-
-        "name": "Lönekonsult",
-        "img": "assets/img/icons/lonekonsult_icon_neg.png",
-        "info": "Löneadministratören har utvecklats från mycket administrationsarbete med inslag av rådgivning till ett alltmer konsultativt arbetssätt. Den moderna löneprocessen i kombination med allt mer komplexa lagar och regler, self-service och ökad globalisering ställer ökade krav på löneyrket, vilket även tydliggör rollens mångsidighet. Den framtida lönekonsulten arbetar processinriktat och tar en nyckelroll i företagen, då lönesystemen innehåller viktig information om de flesta företags största resurs, de anställda.",
-        "start-year": 2016,
-        "length": 1.5,
-        "content": [{
-            "title": "Teambuilding",
-            "start": "2016-08-22",
-            "end": "2016-08-26"
-        }, {
-            "title": "Lönehantering",
-            "start": "2016-08-29",
-            "end": "2016-10-21"
-        }, {
-            "title": "Excel för lönekonsulter",
-            "start": "2016-10-24",
-            "end": "2016-11-04"
-        }, {
-            "title": "LIA preparand",
-            "start": "2016-11-07",
-            "end": "2016-11-11"
-        }, {
-            "title": "Redovisning",
-            "start": "2016-11-14",
-            "end": "2016-12-09"
-        }, {
-            "title": "Arbetsrätt",
-            "start": "2016-12-12",
-            "end": "2016-12-16"
-        }, {
-            "title": "Arbetsrätt",
-            "start": "2017-01-09",
-            "end": "2017-02-10"
-        }, {
-            "title": "LIA 1",
-            "start": "2017-02-13",
-            "end": "2017-03-24"
-        }, {
-            "title": "Personalekonomi",
-            "start": "2017-03-27",
-            "end": "2017-04-21"
-        }, {
-            "title": "Lönehantering fördjupning",
-            "start": "2017-04-24",
-            "end": "2017-06-16"
-        }, {
-            "title": "Konsultrollen",
-            "start": "2017-08-21",
-            "end": "2017-09-08"
-        }, {
-            "title": "Affärsengelska med yrkesinriktning",
-            "start": "2017-09-11",
-            "end": "2017-09-29"
-        }, {
-            "title": "Projektarbete",
-            "start": "2017-10-02",
-            "end": "2017-11-10"
-        }, {
-            "title": "LIA 2",
-            "start": "2017-11-13",
-            "end": "2017-12-15"
-        }, {
-            "title": "LIA 2",
-            "start": "2018-01-08",
-            "end": "20178-01-26"
-        }]
-    }
+  "MWD": {
+    "name": "Mobile Web Developer",
+    "img": "assets/img/icons/frontend_icon_neg.png",
+    "info": "Har du någon gång funderat på hur alla webbtjänser du använder fungerar? Hur skulle man egentligen bygga ett eget Facebook, en internetbank eller Gmail? Vi lever ett otroligt digitalt liv idag och det är webben som står i centrum. Idag jobbar hundra tusentals människor med just webben på olika sätt och fler kommer det bli de kommande åren. Inom hela EU förutspår man att det redan om fyra år kommer saknas en miljon programmerare. Så om du vill vara en del av framtiden och skapa nästa Facebook eller en bättre internetbank då ska du söka till vår utbildning som för att du redan om två år kan ha en anställning som webbutvecklare!",
+    "start-year": 2016,
+    "length": 2,
+    "content": [
+      {
+        "title": "Teambuilding",
+        "start": "2015-08-24",
+        "end": "2015-08-28"
+      },
+      {
+        "title": "Branschkunskap för webbutvecklare",
+        "start": "2015-08-31",
+        "end": "2015-09-11"
+      },
+      {
+        "title": "Gränssnitt och grafik",
+        "start": "2015-09-14",
+        "end": "2015-10-02"
+      },
+      {
+        "title": "HTML & CSS",
+        "start": "2015-10-05 ",
+        "end": "2015-10-16"
+      },
+      {
+        "title": "LIA preparand",
+        "start": "2015-10-19",
+        "end": "2015-10-23"
+      },
+      {
+        "title": "Responsiv Webb Design 1",
+        "start": "2015-10-26",
+        "end": "2015-11-27"
+      },
+      {
+        "title": "User experience design UX",
+        "start": "2015-11-30",
+        "end": "2015-12-18"
+      },
+      {
+        "title": "Javascript och programmeringsmetodik",
+        "start": "2016-01-11",
+        "end": "2016-04-01"
+      },
+      {
+        "title": "LIA1",
+        "start": "2016-04-04",
+        "end": "2016-06-03"
+      },
+      {
+        "title": "Utvecklingsmetodik och agila metoder ",
+        "start": "2016-06-06",
+        "end": "2016-06-24"
+      },
+      {
+        "title": "Responsiv Webb Design 2",
+        "start": "2016-08-22",
+        "end": "2016-09-23"
+      },
+      {
+        "title": "PHP, SQL och servertjänster",
+        "start": "2016-09-26",
+        "end": "2016-11-18"
+      },
+      {
+        "title": "CMS och integration",
+        "start": "2016-11-21",
+        "end": "2016-12-16"
+      },
+      {
+        "title": "Hybridapplikationer",
+        "start": "2017-01-09",
+        "end": "2017-02-03"
+      },
+      {
+        "title": "LIA2",
+        "start": "2017-02-06",
+        "end": "2017-04-14"
+      },
+      {
+        "title": "Examensarbete",
+        "start": "2017-04-17",
+        "end": "2017-06-09"
+      }
+    ]
+  },
+  "FWD": {
+    "name": "Frontend Web Developer",
+    "img": "assets/img/icons/frontend_icon_neg.png",
+    "info": "Har du någon gång funderat på hur alla webbtjänser du använder fungerar? Hur skulle man egentligen bygga ett eget Facebook, en internetbank eller Gmail? Vi lever ett otroligt digitalt liv idag och det är webben som står i centrum. Idag jobbar hundra tusentals människor med just webben på olika sätt och fler kommer det bli de kommande åren. Inom hela EU förutspår man att det redan om fyra år kommer saknas en miljon programmerare. Så om du vill vara en del av framtiden och skapa nästa Facebook eller en bättre internetbank då ska du söka till vår utbildning som gör att du redan om två år kan ha en anställning som webbutvecklare!",
+    "start-year": 2015,
+    "length": 2,
+    "content": [
+      {
+        "title": "Teambuilding",
+        "start": "2015-08-24",
+        "end": "2015-08-28"
+      },
+      {
+        "title": "Branschkunskap för webbutvecklare",
+        "start": "2015-08-31",
+        "end": "2015-09-11"
+      },
+      {
+        "title": "Gränssnitt och grafik",
+        "start": "2015-09-14",
+        "end": "2015-10-02"
+      },
+      {
+        "title": "HTML & CSS",
+        "start": "2015-10-05 ",
+        "end": "2015-10-16"
+      },
+      {
+        "title": "LIA preparand",
+        "start": "2015-10-19",
+        "end": "2015-10-23"
+      },
+      {
+        "title": "Responsiv Webb Design 1",
+        "start": "2015-10-26",
+        "end": "2015-11-27"
+      },
+      {
+        "title": "User experience design UX",
+        "start": "2015-11-30",
+        "end": "2015-12-18"
+      },
+      {
+        "title": "Javascript och programmeringsmetodik",
+        "start": "2016-01-11",
+        "end": "2016-04-01"
+      },
+      {
+        "title": "LIA1",
+        "start": "2016-04-04",
+        "end": "2016-06-03"
+      },
+      {
+        "title": "Utvecklingsmetodik och agila metoder ",
+        "start": "2016-06-06",
+        "end": "2016-06-24"
+      },
+      {
+        "title": "Responsiv Webb Design 2",
+        "start": "2016-08-22",
+        "end": "2016-09-23"
+      },
+      {
+        "title": "PHP, SQL och servertjänster",
+        "start": "2016-09-26",
+        "end": "2016-11-18"
+      },
+      {
+        "title": "CMS och integration",
+        "start": "2016-11-21",
+        "end": "2016-12-16"
+      },
+      {
+        "title": "Hybridapplikationer",
+        "start": "2017-01-09",
+        "end": "2017-02-03"
+      },
+      {
+        "title": "LIA2",
+        "start": "2017-02-06",
+        "end": "2017-04-14"
+      },
+      {
+        "title": "Examensarbete",
+        "start": "2017-04-17",
+        "end": "2017-06-09"
+      }
+    ]
+  },
+  "ADH": {
+    "name": "Affärsutvecklare Digital Handel",
+    "img": "assets/img/icons/Ikon_Affarsutvecklare_Dig_Handel_BLUE_neg.png",
+    "info": "E-handeln växer kraftigt och den svenska detaljhandelns försäljning över internet ökade med 16 procent per år. E-handeln börjar ta andelar av den totala detaljhandeln och kundernas förändrade konsumtionsmönster innebär att handeln behöver anpassa sig. Behovet av kompete personal inom digital handel är därför mycket stort.",
+    "start-year": 2016,
+    "length": 2,
+    "content": [
+      {
+        "title": "Teambuilding",
+        "start": "2016-08-22",
+        "end": "2016-08-26"
+      },
+      {
+        "title": "E-handel 1",
+        "start": "2016-08-29",
+        "end": "2016-09-02"
+      },
+      {
+        "title": "Affärsekonomi",
+        "start": "2016-09-05",
+        "end": "2016-09-23"
+      },
+      {
+        "title": "Affärsjuridik",
+        "start": "2016-09-26",
+        "end": "2016-10-07"
+      },
+      {
+        "title": "Affärsmannaskap",
+        "start": "2016-10-10",
+        "end": "2016-11-11"
+      },
+      {
+        "title": "Försäljning",
+        "start": "2016-11-14",
+        "end": "2016-12-02"
+      },
+      {
+        "title": "Key account management",
+        "start": "2016-12-05",
+        "end": "2016-12-16"
+      },
+      {
+        "title": "Key account management",
+        "start": "2017-01-09",
+        "end": "2017-02-03"
+      },
+      {
+        "title": "E-handel 2",
+        "start": "2017-02-06",
+        "end": "2017-04-14"
+      },
+      {
+        "title": "LIA1",
+        "start": "2017-04-17",
+        "end": "2017-06-16"
+      },
+      {
+        "title": "Omvärldsanalys o marknadsföring",
+        "start": "2017-08-21",
+        "end": "2017-10-06"
+      },
+      {
+        "title": "Projektledning",
+        "start": "2017-10-09",
+        "end": "2017-10-27"
+      },
+      {
+        "title": "E-handel 3",
+        "start": "2017-10-30",
+        "end": "2017-12-22"
+      },
+      {
+        "title": "LIA 2",
+        "start": "2018-01-08",
+        "end": "2018-03-30"
+      },
+      {
+        "title": "Examensarbete",
+        "start": "2018-03-30",
+        "end": "2018-06-15"
+      }
+    ]
+  },
+  "TFF": {
+    "name": "Teknisk Fastighetsförvaltare",
+    "img": "assets/img/icons/drift_icon_neg.png",
+    "info": "Behovet av kvalificerade fastighetstekniker är stort. Storstadsregionerna växer och både nya och gamla hus ska underhållas, samtidigt som många äldre tekniker går i pension. Det är ett yrke för dig som gillar energifrågor, problemlösning och att se till att saker fungerar som de ska. En kvalificerad drift- och fastighetstekniker medverkar i energieffektivisering, säkerställer inomhusklimatet och ansvarar för fastighetens tekniska system. Du kan också vara med och upphandla och arbetsleda underkonsulter och hantverkare.",
+    "start-year": 2016,
+    "length": 2,
+    "content": [
+      {
+        "title": "Teambuilding",
+        "start": "2016-08-22",
+        "end": "2016-08-26"
+      },
+      {
+        "title": "Arbetsledning och kommunikation",
+        "start": "2016-08-29",
+        "end": "2016-09-02"
+      },
+      {
+        "title": "Verksamhetsdokumentation",
+        "start": "2016-09-12",
+        "end": "2016-09-26"
+      },
+      {
+        "title": "Byggnaders påverkan på den yttre miljön",
+        "start": "2016-09-26",
+        "end": "2016-10-09"
+      },
+      {
+        "title": "Byggnaders påverkan på den inre miljön",
+        "start": "2016-10-10",
+        "end": "2016-10-23"
+      },
+      {
+        "title": "Lia preparand",
+        "start": "2016-10-31",
+        "end": "2016-11-07"
+      },
+      {
+        "title": "Byggnadskonstruktion energiaspekter",
+        "start": "2016-11-07",
+        "end": "2016-12-09"
+      },
+      {
+        "title": "Fastighetens tekniska system 1",
+        "start": "2016-12-12",
+        "end": "2016-12-16"
+      },
+      {
+        "title": "Fastighetens tekniska system 1",
+        "start": "2017-01-09",
+        "end": "2017-03-10"
+      },
+      {
+        "title": "LIA 1",
+        "start": "2017-03-13",
+        "end": "2017-05-12"
+      },
+      {
+        "title": "Fastighetens tekniska system 2",
+        "start": "2017-05-15",
+        "end": "2017-06-16"
+      },
+      {
+        "title": "Fastighetens tekniska system 2",
+        "start": "2017-08-21",
+        "end": "2017-09-08"
+      },
+      {
+        "title": "Drift och underhållsteknik",
+        "start": "2017-09-11",
+        "end": "2017-11-03"
+      },
+      {
+        "title": "Fastighetsekonomi",
+        "start": "2017-11-06",
+        "end": "2017-11-17"
+      },
+      {
+        "title": "Projektledning",
+        "start": "2017-11-20",
+        "end": "2017-12-01"
+      },
+      {
+        "title": "Fastighetsägarens självkontroll",
+        "start": "2017-12-04",
+        "end": "2017-12-15"
+      },
+      {
+        "title": "Energieffektivisering",
+        "start": "2018-01-08",
+        "end": "2018-01-26"
+      },
+      {
+        "title": "Entreprenadjuridik",
+        "start": "2018-01-29",
+        "end": "2018-02-09"
+      },
+      {
+        "title": "LIA 2",
+        "start": "2018-02-12",
+        "end": "2018-04-20"
+      },
+      {
+        "title": "Examensarbete",
+        "start": "2018-04-23",
+        "end": "2018-06-15"
+      }
+    ]
+  },
+  "ESB": {
+    "name": "Energispecialist Byggnader",
+    "img": "assets/img/icons/icon_energi_BLUE_neg.png",
+    "info": "Utbildningen Energispecialist Byggnader tillgodoser behovet! KYH har sedan år 2007 utbildat ett 100-tal studenter till Energispecialist Byggnader. EU:s och Sveriges krav på att samtliga bostäder fram till 2020 i princip skall vara s.k. lågenergihus, tillsammans med den tidigare lagen om energideklarationer, ställer helt nya krav på den kompetens som blivande energispecialister behöver.",
+    "start-year": 2016,
+    "length": 2,
+    "content": [
+      {
+        "title": "Teambuilding",
+        "start": "2016-08-22",
+        "end": "2016-08-26"
+      },
+      {
+        "title": "Projektkunskap",
+        "start": "2016-08-29",
+        "end": "2016-09-09"
+      },
+      {
+        "title": "Byggnaders påverkan på yttre miljön",
+        "start": "2016-09-12",
+        "end": "2016-09-23"
+      },
+      {
+        "title": "Energiförsörjningssystem",
+        "start": "2016-09-26",
+        "end": "2016-10-14"
+      },
+      {
+        "title": "LIA preparand",
+        "start": "2016-09-26",
+        "end": "2016-10-14"
+      },
+      {
+        "title": "Inneklimat och innemiljö",
+        "start": "2016-10-17",
+        "end": "2016-10-21"
+      },
+      {
+        "title": "Byggnadsteknik ",
+        "start": "2016-10-24",
+        "end": "2016-11-11"
+      },
+      {
+        "title": "Byggnadsteknik ",
+        "start": "2016-11-14",
+        "end": "2016-12-16"
+      },
+      {
+        "title": "Värmesystem + Tappvatten",
+        "start": "2017-01-09",
+        "end": "2017-01-27"
+      },
+      {
+        "title": "Ventilationssystem och elsäkerhet",
+        "start": "2017-01-30",
+        "end": "2017-03-24"
+      },
+      {
+        "title": "LIA1",
+        "start": "2017-03-27",
+        "end": "2017-04-28"
+      },
+      {
+        "title": "Komfortkyla",
+        "start": "2017-05-01",
+        "end": "2017-06-23"
+      },
+      {
+        "title": "Styr o regler ",
+        "start": "2017-08-21",
+        "end": "2017-09-08"
+      },
+      {
+        "title": "Energieffektiviseringsteknik",
+        "start": "2017-09-11",
+        "end": "2017-09-22"
+      },
+      {
+        "title": "Kulturhistoriska miljöer",
+        "start": "2017-09-25",
+        "end": "2017-10-06"
+      },
+      {
+        "title": "Fastighetsekonomi",
+        "start": "2017-10-09",
+        "end": "2017-10-13"
+      },
+      {
+        "title": "Entreprenadjuridik",
+        "start": "2017-10-16",
+        "end": "2017-11-03"
+      },
+      {
+        "title": "LIA 2",
+        "start": "2017-11-06",
+        "end": "2017-11-10"
+      },
+      {
+        "title": "LIA 2",
+        "start": "2017-11-13",
+        "end": "2017-12-29"
+      },
+      {
+        "title": "Examensarbete",
+        "start": "2018-01-01",
+        "end": "2018-03-16"
+      }
+    ]
+  },
+  "LK": {
+    "name": "Lönekonsult",
+    "img": "assets/img/icons/lonekonsult_icon_neg.png",
+    "info": "Löneadministratören har utvecklats från mycket administrationsarbete med inslag av rådgivning till ett alltmer konsultativt arbetssätt. Den moderna löneprocessen i kombination med allt mer komplexa lagar och regler, self-service och ökad globalisering ställer ökade krav på löneyrket, vilket även tydliggör rollens mångsidighet. Den framtida lönekonsulten arbetar processinriktat och tar en nyckelroll i företagen, då lönesystemen innehåller viktig information om de flesta företags största resurs, de anställda.",
+    "start-year": 2016,
+    "length": 1.5,
+    "content": [
+      {
+        "title": "Teambuilding",
+        "start": "2016-08-22",
+        "end": "2016-08-26"
+      },
+      {
+        "title": "Lönehantering",
+        "start": "2016-08-29",
+        "end": "2016-10-21"
+      },
+      {
+        "title": "Excel för lönekonsulter",
+        "start": "2016-10-24",
+        "end": "2016-11-04"
+      },
+      {
+        "title": "LIA preparand",
+        "start": "2016-11-07",
+        "end": "2016-11-11"
+      },
+      {
+        "title": "Redovisning",
+        "start": "2016-11-14",
+        "end": "2016-12-09"
+      },
+      {
+        "title": "Arbetsrätt",
+        "start": "2016-12-12",
+        "end": "2016-12-16"
+      },
+      {
+        "title": "Arbetsrätt",
+        "start": "2017-01-09",
+        "end": "2017-02-10"
+      },
+      {
+        "title": "LIA 1",
+        "start": "2017-02-13",
+        "end": "2017-03-24"
+      },
+      {
+        "title": "Personalekonomi",
+        "start": "2017-03-27",
+        "end": "2017-04-21"
+      },
+      {
+        "title": "Lönehantering fördjupning",
+        "start": "2017-04-24",
+        "end": "2017-06-16"
+      },
+      {
+        "title": "Konsultrollen",
+        "start": "2017-08-21",
+        "end": "2017-09-08"
+      },
+      {
+        "title": "Affärsengelska med yrkesinriktning",
+        "start": "2017-09-11",
+        "end": "2017-09-29"
+      },
+      {
+        "title": "Projektarbete",
+        "start": "2017-10-02",
+        "end": "2017-11-10"
+      },
+      {
+        "title": "LIA 2",
+        "start": "2017-11-13",
+        "end": "2017-12-15"
+      },
+      {
+        "title": "LIA 2",
+        "start": "2018-01-08",
+        "end": "20178-01-26"
+      }
+    ]
+  },
+  "TEST01": {
+    "name": "Testutbildning",
+    "img": "assets/img/icons/frontend_icon_neg.png",
+    "info": "Har du någon gång funderat på hur alla webbtjänser",
+    "start-year": 2016,
+    "length": 2,
+    "content": [
+      {
+        "title": "Branschkunskap för hittepåutvecklare",
+        "start": "2015-08-31",
+        "end": "2015-09-11"
+      },
+      {
+        "title": "Hemkunskap för lata utvecklare med Patric",
+        "start": "2015-08-11",
+        "end": "2015-09-17"
+      }
+    ]
+  }
 }
