@@ -12,13 +12,13 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.tempevents = [];
     $scope.firstCourse = '';
     $scope.selectStartDate = '2016-06-06';
-
     $scope.courseId = id;
     $scope.stringToColor = stringToColor;
     $scope.getReadableColor = getReadableColor;
 
     $calendar.getSchedule(id).then(function(result) {
         $scope.course = result.data;
+        
         angular.forEach(result.data.content, function(val, index) {
             $scope.events.push(val);
             $scope.tempevents.push(val);
@@ -36,12 +36,25 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         callback($scope.events);
         colorizeCalendar();
     };
-
+    $scope.goToClass = function (info){
+        
+        angular.forEach($scope.events, function(val, index){
+            if (val.title === info){
+                $('#calendar').fullCalendar('gotoDate', val.start);
+            }
+        });
+        
+    };
 
     $scope.getNextCourseDate = function() {
         $calendar.getSchedule(id).then(function(result) {
             var date = '';
+            $scope.course.name = result.data.name;
             angular.forEach(result.data.content, function(val, index) {
+                if (moment().format('YYYY-MM-DD') >= val.start && moment().format('YYYY-MM-DD') <= val.end) {
+                        date = val.start;
+                        $scope.selectStartDate = val.start;
+                    }
                 if (date === '') {
                     if (moment().format('YYYY-MM-DD') <= val.start) {
                         date = val.start;
@@ -53,7 +66,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
             $scope.events = [];
             $scope.events = angular.copy($scope.tempevents);
             $('#calendar').fullCalendar('gotoDate', date);
-
+            
 
         });
     };
@@ -119,19 +132,6 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.goToCourse = function(name){
         $state.go('/student', {id: name});
     };
-
-    $scope.classes = [];
-    $calendar.getSchedule(id)
-        .then(function(res) {
-            var data = res.data;
-            angular.forEach(data.content, function(val, key) {
-                $scope.classes.push({
-                    id: key,
-                    title: val.title
-                });
-            });
-        });
-
 
     $scope.courses = [];
     $calendar.getSchedule()

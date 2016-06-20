@@ -2,16 +2,15 @@
 
   <aside class="course-list">
     <div class="drpdwn-student-cal">
-      <select ng-change="goToCourse(course.name)" ng-model="course.name">
-        <option value="" selected>-- Välj utbildning --</option>
-        <option ng-value="course.name" ng-repeat="course in courses">{{course.content.name}}</option>
+      <select ng-change="goToCourse(course.name)" ng-model="course.name" ng-options="course.name as course.content.name for course in courses">
+            <option></option>
       </select>
     </div>
 
     <button role="button" ng-click="eventModule()">Lägga till ny kurs</button>
     <ul>
-      <li ng-repeat="class in classes">
-        <a ui-sref="/student({id: class.id})" style="border-color: {{stringToColor(class.title)}}; changeToColorIfBackgroundColorInsteadOfBorderColor:{{getReadableColor(stringToColor(class.title))}}">
+      <li ng-repeat="class in events">
+        <a ng-click="goToClass(class.title)" style="border-color: {{stringToColor(class.title)}}; changeToColorIfBackgroundColorInsteadOfBorderColor:{{getReadableColor(stringToColor(class.title))}}">
           {{ class.title }}
         </a>
       </li>
