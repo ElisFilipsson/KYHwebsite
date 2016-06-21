@@ -1,5 +1,5 @@
 app.controller('landing', ['$state', '$scope', '$calendar', function($state, $scope, $calendar) {
-  
+
   $scope.login = {
     username: '',
     password: ''
@@ -24,6 +24,11 @@ app.controller('landing', ['$state', '$scope', '$calendar', function($state, $sc
       username: 'student',
       password: '123',
       role: 'student'
+    },
+    {
+      username: 'batman',
+      password: '123',
+      role: 'batman'
     },
     {
       username: 'lärare',
@@ -76,6 +81,7 @@ app.controller('landing', ['$state', '$scope', '$calendar', function($state, $sc
           localStorage.removeItem("role");
           if(login[index].role === 'teacher') localStorage.setItem("role", "teacher");
           if(login[index].role === 'student') localStorage.setItem("role", "student");
+          if(login[index].role === 'batman') window.location.href = 'https://www.youtube.com/watch?v=gegyKtYPRsw';
           $state.go('/student', {id: paramId});
         } else {
           $scope.error.select.state = true;
