@@ -7,7 +7,7 @@
       </select>
     </div>
 
-    <button role="button" ng-click="eventModule()">Lägga till ny kurs</button>
+    <button role="button" ng-click="eventModule()" ng-if="admin">Lägga till ny kurs</button>
     <ul>
       <li ng-repeat="class in events">
         <a ng-click="goToClass(class.title)" style="border-color: {{stringToColor(class.title)}}; changeToColorIfBackgroundColorInsteadOfBorderColor:{{getReadableColor(stringToColor(class.title))}}">
@@ -22,5 +22,8 @@
   </section>
 </main>
 
-<section ng-if="showForm" ng-include="'app/components/student/form.html'" class="modal">
+<section ng-if="showForm && admin" ng-include="'app/components/student/form.html'" class="modal">
+</section>
+
+<section ng-if="showForm && !admin" ng-include="'app/components/student/form.html'" class="modal">
 </section>

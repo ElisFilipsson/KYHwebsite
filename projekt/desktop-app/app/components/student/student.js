@@ -17,13 +17,14 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.getReadableColor = getReadableColor;
     $scope.course = id;
     $scope.courseName = id;
-    console.log(id);
+    $scope.userRole = localStorage.role || 'student';
+    $scope.admin = $scope.userRole === 'teacher';
 
     $calendar.getSchedule(id).then(function(result) {
         //$scope.course = result.data;
         //$scope.selectName = result.data.name;
         console.log(result.data.name);
-        
+
         angular.forEach(result.data.content, function(val, index) {
             $scope.events.push(val);
             $scope.tempevents.push(val);
@@ -32,7 +33,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
 
     $scope.changeView = function(view, calendar) {
         $('#calendar').fullCalendar('changeView', view);
-        
+
     };
 
     $scope.eventsF = function(start, end, timezone, callback) {
@@ -43,7 +44,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         colorizeCalendar();
     };
     $scope.goToClass = function (info){
-        
+
         angular.forEach($scope.events, function(val, index){
             if (val.title === info){
                 $('#calendar').fullCalendar('gotoDate', val.start);
@@ -51,7 +52,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
                 colorizeCalendar();
             }
         });
-        
+
     };
     function resetCalendar(){
     $('#calendar').fullCalendar( 'rerenderEvents' );
