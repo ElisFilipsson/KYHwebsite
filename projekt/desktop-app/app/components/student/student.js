@@ -126,9 +126,10 @@ app.controller('student', ['toaster', '$scope', '$state', '$stateParams', '$cale
         }
 
         function checkIfDateExist() {
+            var range2 = moment.range(moment($scope.courseData2.start), moment($scope.courseData2.end));
             for(var i = 0; i < $scope.events.length; i++) {
                 var range = moment.range(moment($scope.events[i].start), moment($scope.events[i].end));
-                if(range.contains(moment($scope.courseData2.start)) && range.contains(moment($scope.courseData2.end))) return false;
+                if(range.overlaps(range2)) return false;
             } return true;
         }
         if(!$scope.events.find(checkIfCourseExist) && $scope.courseData2.title !== '') {
