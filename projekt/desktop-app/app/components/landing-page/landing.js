@@ -59,9 +59,9 @@ app.controller('landing', ['$state', '$scope', '$calendar', function($state, $sc
     $scope.error.password.state = false;
     $scope.error.select.state = false;
 
-
+    var temp = $scope.login.username.toLowerCase();
     for(var i = 0; i < login.length; i++) {
-      if(login[i].username === $scope.login.username) {
+      if(login[i].username === temp) {
         $scope.error.username.state = false;
         index = i;
         break;
