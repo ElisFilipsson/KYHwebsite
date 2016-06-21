@@ -17,20 +17,10 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.getReadableColor = getReadableColor;
     $scope.course = id;
     $scope.courseName = id;
-<<<<<<< HEAD
     $scope.userRole = localStorage.role || 'student';
     $scope.admin = $scope.userRole === 'teacher';
 
     $calendar.getSchedule(id).then(function(result) {
-        //$scope.course = result.data;
-        //$scope.selectName = result.data.name;
-        console.log(result.data.name);
-
-=======
-   
-
-    $calendar.getSchedule(id).then(function(result) {
->>>>>>> c40f4410d5f10ada1ae67a261cdca51eb4f92175
         angular.forEach(result.data.content, function(val, index) {
             $scope.events.push(val);
             $scope.tempevents.push(val);
