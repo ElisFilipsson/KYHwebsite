@@ -10,7 +10,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['mocha', 'chai', 'sinon'],
 
 
     // list of files / patterns to load in the browser
@@ -47,7 +47,7 @@ module.exports = function(config) {
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['mocha', 'coverage', 'coveralls'],
 
-    plugins: ['karma-mocha-reporter', 'karma-coverage', 'karma-coveralls', 'karma-mocha', 'karma-chai', 'karma-phantomjs-launcher'],
+    plugins: ['karma-sinon', 'karma-mocha-reporter', 'karma-coverage', 'karma-coveralls', 'karma-mocha', 'karma-chai', 'karma-phantomjs-launcher'],
 
     coverageReporter: {
       type : 'lcov',
