@@ -50,11 +50,18 @@
   }
 
   .drpdwn-student-cal {
-    margin: 15px;
+    margin: 15px 15px 15px 0px;
     align-self: center;
 
     select {
-      width: 100%;
+    height: 50px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0px 15px 0px 15px;
+    border: 0px;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
     }
   }
 }
