@@ -101,6 +101,27 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
 
       return id;
     };
+   
+
+    $scope.addEvent = function() {
+
+        console.log($scope.courseData.start._i);
+        // var newCourse = {
+        //         title: $scope.courseData.title,
+        //         start: $scope.courseData.start._i,
+        //         end: $scope.courseData.end._i
+        //     };
+        // function checkIfCourseExist(event) {
+        //     return event.title === $scope.courseData.title;
+        // }
+
+        // if($scope.events.find(checkIfCourseExist) && $scope.courseData.title !== '') {
+        //     $scope.events.push(newCourse);
+        //     $calendar.addCourse($scope.courseId, $scope.events).then(function() {
+
+        //     });
+        // }
+    };
 
     $scope.eventDelete = function() {
       var o = {

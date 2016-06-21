@@ -10,7 +10,7 @@
 
   <input type="hidden" name=type ng-model="courseId">
   <div class="button-group">
-    <button type="button" name="button">Send</button>
+    <button type="button" name="button" ng-click="addEvent()">Send</button>
     <button type="button" name="cancel" ng-click="eventModuleHide()">Cancel</button>
     <button type="button" name="delete" ng-if="courseData" ng-click="eventDelete()">Delete</button>
   </div>
