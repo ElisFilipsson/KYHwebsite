@@ -32,6 +32,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
 
     $scope.changeView = function(view, calendar) {
         $('#calendar').fullCalendar('changeView', view);
+        
     };
 
     $scope.eventsF = function(start, end, timezone, callback) {
@@ -46,10 +47,16 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         angular.forEach($scope.events, function(val, index){
             if (val.title === info){
                 $('#calendar').fullCalendar('gotoDate', val.start);
+                resetCalendar();
+                colorizeCalendar();
             }
         });
         
     };
+    function resetCalendar(){
+    $('#calendar').fullCalendar( 'rerenderEvents' );
+    $('#calendar').fullCalendar( 'refetchEvents' );
+    }
 
     $scope.getNextCourseDate = function() {
         $calendar.getSchedule(id).then(function(result) {
@@ -71,7 +78,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
             $scope.events = [];
             $scope.events = angular.copy($scope.tempevents);
             $('#calendar').fullCalendar('gotoDate', date);
-
+            resetCalendar();
         });
     };
 
@@ -109,10 +116,10 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         function(res) {
           // uiCalendarConfig.calendars.myCalendar.fullCalendar('removeEvents');
           $scope.events.splice($scope.getCurrentEventId($scope.courseData), 1);
-          console.log($scope.eventsF.callback);
           // uiCalendarConfig.calendars.myCalendar.fullCalendar('addEventSource', $scope.scope);
           colorizeCalendar();
           $scope.eventModuleHide();
+          resetCalendar();
         }
       );
     };
@@ -154,7 +161,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.courses = [];
     $calendar.getSchedule()
         .then(function(res) {
-            var data 0= res.data;
+            var data = res.data;
             angular.forEach(data, function(val, key) {
                 $scope.courses.push({
                     name: key,
