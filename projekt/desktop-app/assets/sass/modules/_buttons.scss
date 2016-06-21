@@ -32,3 +32,9 @@ button, input[type="submit"], [role="button"] {
     border-bottom-left-radius: 0;
   }
 }
+
+a[role="button"] {
+  text-decoration: none;
+  display: inline-block;
+  padding: .8em 1em;
+}

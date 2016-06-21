@@ -585,6 +585,11 @@ button, .fc-state-default,
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
+a[role="button"] {
+  text-decoration: none;
+  display: inline-block;
+  padding: .8em 1em; }
+
 .banner {
   margin: 2rem;
   margin-left: calc(-50vw + 50%);
