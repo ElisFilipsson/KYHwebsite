@@ -12,13 +12,18 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.tempevents = [];
     $scope.firstCourse = '';
     $scope.selectStartDate = '2016-06-06';
-
     $scope.courseId = id;
     $scope.stringToColor = stringToColor;
     $scope.getReadableColor = getReadableColor;
+    $scope.course = id;
+    $scope.courseName = id;
+    console.log(id);
 
     $calendar.getSchedule(id).then(function(result) {
-        $scope.course = result.data;
+        //$scope.course = result.data;
+        //$scope.selectName = result.data.name;
+        console.log(result.data.name);
+        
         angular.forEach(result.data.content, function(val, index) {
             $scope.events.push(val);
             $scope.tempevents.push(val);
@@ -36,12 +41,25 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         callback($scope.events);
         colorizeCalendar();
     };
-
+    $scope.goToClass = function (info){
+        
+        angular.forEach($scope.events, function(val, index){
+            if (val.title === info){
+                $('#calendar').fullCalendar('gotoDate', val.start);
+            }
+        });
+        
+    };
 
     $scope.getNextCourseDate = function() {
         $calendar.getSchedule(id).then(function(result) {
             var date = '';
+            $scope.courseName = id;
             angular.forEach(result.data.content, function(val, index) {
+                if (moment().format('YYYY-MM-DD') >= val.start && moment().format('YYYY-MM-DD') <= val.end) {
+                        date = val.start;
+                        $scope.selectStartDate = val.start;
+                    }
                 if (date === '') {
                     if (moment().format('YYYY-MM-DD') <= val.start) {
                         date = val.start;
@@ -54,24 +72,31 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
             $scope.events = angular.copy($scope.tempevents);
             $('#calendar').fullCalendar('gotoDate', date);
 
-
         });
     };
 
-    $scope.refreshCalendar = function() {
-      uiCalendarConfig.calendars.myCalendar.fullCalendar('removeEvents');
-      uiCalendarConfig.calendars.myCalendar.fullCalendar('addEventSource', $scope.events);
-      colorizeCalendar();
-    };
-
-    $scope.eventModule = function(opts) {
+    $scope.eventModule = function(data) {
       $scope.showForm = true;
-      $scope.courseData = opts || '';
+      $scope.courseData = data || '';
       $scope.today = new Date();
     };
 
     $scope.eventModuleHide = function(opts) {
       $scope.showForm = false;
+    };
+
+    $scope.getCurrentEventId = function(event) {
+      var i = 0;
+      var length = $scope.events.length;
+      var id;
+
+      for (i; i < length; i++) {
+        if($scope.events[i].title === event.title) {
+          id = i;
+        }
+      }
+
+      return id;
     };
 
     $scope.eventDelete = function() {
@@ -82,15 +107,22 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
 
       $calendar.deleteCourse(o).then(
         function(res) {
-          console.log(res);
+          // uiCalendarConfig.calendars.myCalendar.fullCalendar('removeEvents');
+          $scope.events.splice($scope.getCurrentEventId($scope.courseData), 1);
+          console.log($scope.eventsF.callback);
+          // uiCalendarConfig.calendars.myCalendar.fullCalendar('addEventSource', $scope.scope);
+          colorizeCalendar();
           $scope.eventModuleHide();
-          $scope.refreshCalendar();
         }
       );
     };
 
-    $scope.alertOnEventClick = function( date, jsEvent, view){
-      $scope.eventModule(date);
+    $scope.eventAdd = function() {
+
+    };
+
+    $scope.alertOnEventClick = function(data, jsEvent, view){
+      $scope.eventModule(data);
     };
 
     $scope.getNextCourseDate();
@@ -114,23 +146,9 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.eventSources = [$scope.eventsF];
 
 
-
-
     $scope.goToCourse = function(name){
         $state.go('/student', {id: name});
     };
-
-    $scope.classes = [];
-    $calendar.getSchedule(id)
-        .then(function(res) {
-            var data = res.data;
-            angular.forEach(data.content, function(val, key) {
-                $scope.classes.push({
-                    id: key,
-                    title: val.title
-                });
-            });
-        });
 
 
     $scope.courses = [];
