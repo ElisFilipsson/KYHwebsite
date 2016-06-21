@@ -1,4 +1,4 @@
-app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function($scope, $state, $stateParams, $calendar, uiCalendarConfig) {
+app.controller('student', ['toaster', '$scope', '$state', '$stateParams', '$calendar', 'uiCalendarConfig', function(toaster, $scope, $state, $stateParams, $calendar, uiCalendarConfig) {
 
     var id = $stateParams.id;
     if(id === ''){ $state.go('/student', {id: 'MWD'}); }
@@ -115,7 +115,6 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     };
 
     $scope.addEvent = function() {
-
         var newCourse = {
                 title: $scope.courseData2.title,
                 start: $scope.courseData2.start,
@@ -126,12 +125,26 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
             return event.title === $scope.courseData2.title;
         }
 
+        function checkIfDateExist() {
+            for(var i = 0; i < $scope.events.length; i++) {
+                var range = moment.range(moment($scope.events[i].start), moment($scope.events[i].end));
+                if(range.contains(moment($scope.courseData2.start)) && range.contains(moment($scope.courseData2.end))) return false;
+            } return true;
+        }
         if(!$scope.events.find(checkIfCourseExist) && $scope.courseData2.title !== '') {
-            $scope.events.push(newCourse);
-            console.log($scope.events);
-            $calendar.addCourse($scope.courseId, JSON.stringify($scope.events)).then(function() {
-
-            });
+            if($scope.courseData2.start !== '' && $scope.courseData2.end !== '' && checkIfDateExist()) {
+                $scope.events.push(newCourse);
+            
+                $calendar.addCourse($scope.courseId, JSON.stringify($scope.events)).then(function() {
+                    $scope.showForm2 = false;
+                    toaster.success('Yay!', 'Kursen är nu tillagd.');
+                });
+            } else {
+                toaster.info('Info', 'Datumet kolliderar med en annan kurs.');
+            }
+            
+        } else {
+            toaster.info('Info', 'Kursen du vill lägga till finns redan.');
         }
 
     };
