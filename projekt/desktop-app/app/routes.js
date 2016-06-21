@@ -3,7 +3,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($s
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-  .state('/', {
+  .state('/home', {
     url: '/',
     templateUrl: 'app/components/landing-page/landing.html',
     pageTitle: 'KYH',

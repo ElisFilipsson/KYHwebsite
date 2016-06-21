@@ -6,6 +6,7 @@ button, input[type="submit"], [role="button"] {
   height: 3em;
   border: none;
   text-align: center;
+  cursor: pointer;
   font-weight: 400;
   transition: background 100ms ease-in-out;
 
@@ -30,4 +31,10 @@ button, input[type="submit"], [role="button"] {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+}
+
+a[role="button"] {
+  text-decoration: none;
+  display: inline-block;
+  padding: .8em 1em;
 }

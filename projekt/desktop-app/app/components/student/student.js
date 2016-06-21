@@ -17,7 +17,8 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.getReadableColor = getReadableColor;
     $scope.course = id;
     $scope.courseName = id;
-   
+    $scope.userRole = localStorage.role || 'student';
+    $scope.admin = $scope.userRole === 'teacher';
 
     $calendar.getSchedule(id).then(function(result) {
         angular.forEach(result.data.content, function(val, index) {
@@ -28,7 +29,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
 
     $scope.changeView = function(view, calendar) {
         $('#calendar').fullCalendar('changeView', view);
-        
+
     };
 
     $scope.eventsF = function(start, end, timezone, callback) {
@@ -39,7 +40,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
         colorizeCalendar();
     };
     $scope.goToClass = function (info){
-        
+
         angular.forEach($scope.events, function(val, index){
             if (val.title === info){
                 $('#calendar').fullCalendar('gotoDate', val.start);
@@ -47,7 +48,7 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
                 colorizeCalendar();
             }
         });
-        
+
     };
     function resetCalendar(){
     $('#calendar').fullCalendar( 'rerenderEvents' );

@@ -513,7 +513,8 @@ h1, h2, h3, h4 {
   background: unset; }
 
 .fc-content {
-  padding: .2em .4em; }
+  padding: .2em .4em;
+  cursor: pointer; }
 
 #calendar {
   margin-bottom: 4rem; }
@@ -543,6 +544,7 @@ button, .fc-state-default,
   height: 3em;
   border: none;
   text-align: center;
+  cursor: pointer;
   font-weight: 400;
   transition: background 100ms ease-in-out; }
   button:hover, .fc-state-default:hover,
@@ -582,6 +584,11 @@ button, .fc-state-default,
 .fc [class*="button-group"] > .fc-state-default:not(:first-of-type) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
+
+a[role="button"] {
+  text-decoration: none;
+  display: inline-block;
+  padding: .8em 1em; }
 
 .banner {
   margin: 2rem;
@@ -846,7 +853,8 @@ form {
     padding: .2em .6em;
     width: 100%;
     display: inline-block;
-    border-left: .5em solid; }
+    border-left: .5em solid;
+    cursor: pointer; }
 
 .course-list .drpdwn-student-cal {
   margin: 15px;
