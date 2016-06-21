@@ -11,7 +11,7 @@
 
           </div>
           <div class="select-style" ng-class="{ 'error': error.select.state }">
-            <select ng-change="getParam(course.content.name)" ng-model="course.content.name">
+            <select ng-change="getParam(course.content.name); error.select.state = false" ng-model="course.content.name">
               <option value="" selected>-- Välj utbildning --</option>
               <option ng-repeat="course in courses">{{course.content.name}}</option>
             </select>
