@@ -1,8 +1,10 @@
 app.controller('landing', ['$state', '$scope', '$calendar', function($state, $scope, $calendar) {
+  
   $scope.login = {
     username: '',
     password: ''
   };
+
   $scope.error = {
     username: {
       msg: 'Fel användarnamn',
@@ -20,11 +22,13 @@ app.controller('landing', ['$state', '$scope', '$calendar', function($state, $sc
   var login = [
     {
       username: 'student',
-      password: '123'
+      password: '123',
+      role: 'student'
     },
     {
       username: 'lärare',
-      password: '123'
+      password: '123',
+      role: 'teacher'
     }
   ];
 
@@ -69,6 +73,9 @@ app.controller('landing', ['$state', '$scope', '$calendar', function($state, $sc
     if(!$scope.error.username.state) {
       if(login[index].password === $scope.login.password) {
         if(name) {
+          localStorage.removeItem("role");
+          if(login[index].role === 'teacher') localStorage.setItem("role", "teacher");
+          if(login[index].role === 'student') localStorage.setItem("role", "student");
           $state.go('/student', {id: paramId});
         } else {
           $scope.error.select.state = true;
