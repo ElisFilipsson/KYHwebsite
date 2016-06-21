@@ -149,13 +149,14 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
     $scope.courses = [];
     $calendar.getSchedule()
         .then(function(res) {
-            var data = res.data;
+            var data 0= res.data;
             angular.forEach(data, function(val, key) {
                 $scope.courses.push({
                     name: key,
                     content: val
                 });
             });
+            console.log($scope.courses)
         });
 
 }]);
