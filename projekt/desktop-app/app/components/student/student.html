@@ -2,8 +2,8 @@
 
   <aside class="course-list">
     <div class="drpdwn-student-cal">
-      <select ng-change="goToCourse(course.name)" ng-model="course.name" ng-options="course.name as course.content.name for course in courses">
-            <option></option>
+      <select ng-change="goToCourse(courseName)" ng-model="courseName">
+            <option ng-repeat="(key, value) in courses" value="{{value.name}}">{{value.content.name}}</option>
       </select>
     </div>
 
