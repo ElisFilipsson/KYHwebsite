@@ -85,8 +85,19 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
       $scope.today = new Date();
     };
 
+    $scope.eventModule2 = function() {
+      $scope.showForm2 = true;
+      $scope.today = new Date();
+      $scope.courseData2 = {
+        title: '',
+        start: '',
+        end: ''
+      }
+    };
+
     $scope.eventModuleHide = function(opts) {
       $scope.showForm = false;
+      $scope.showForm2 = false;
     };
 
     $scope.getCurrentEventId = function(event) {
@@ -102,26 +113,27 @@ app.controller('student', ['$scope', '$state', '$stateParams', '$calendar', 'uiC
 
       return id;
     };
-   
 
     $scope.addEvent = function() {
 
-        console.log($scope.courseData.start._i);
-        // var newCourse = {
-        //         title: $scope.courseData.title,
-        //         start: $scope.courseData.start._i,
-        //         end: $scope.courseData.end._i
-        //     };
-        // function checkIfCourseExist(event) {
-        //     return event.title === $scope.courseData.title;
-        // }
+        var newCourse = {
+                title: $scope.courseData2.title,
+                start: $scope.courseData2.start,
+                end: $scope.courseData2.end
+            };
 
-        // if($scope.events.find(checkIfCourseExist) && $scope.courseData.title !== '') {
-        //     $scope.events.push(newCourse);
-        //     $calendar.addCourse($scope.courseId, $scope.events).then(function() {
+        function checkIfCourseExist(event) {
+            return event.title === $scope.courseData2.title;
+        }
 
-        //     });
-        // }
+        if(!$scope.events.find(checkIfCourseExist) && $scope.courseData2.title !== '') {
+            $scope.events.push(newCourse);
+            console.log($scope.events);
+            $calendar.addCourse($scope.courseId, JSON.stringify($scope.events)).then(function() {
+
+            });
+        }
+
     };
 
     $scope.eventDelete = function() {

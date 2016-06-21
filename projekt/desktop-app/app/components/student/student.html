@@ -7,7 +7,7 @@
       </select>
     </div>
 
-    <button role="button" ng-click="eventModule()" ng-if="admin">Lägga till ny kurs</button>
+    <button role="button" ng-click="eventModule2()" ng-if="admin">Lägga till ny kurs</button>
     <ul>
       <li ng-repeat="class in events">
         <a ng-click="goToClass(class.title)" style="border-color: {{stringToColor(class.title)}}; changeToColorIfBackgroundColorInsteadOfBorderColor:{{getReadableColor(stringToColor(class.title))}}">
@@ -25,3 +25,22 @@
 
 <section ng-if="showForm && admin" ng-include="'app/components/student/form.html'" class="modal">
 </section>
+
+<div ng-if="showForm2 && admin" class="modal">
+  <form action="post" class="login-group" >
+  <label for="title">Kurs namn</label>
+  <input type="text" id="title" name="title" ng-model="courseData2.title" placeholder="Kursens namn">
+
+  <label for="start">Startdatum</label>
+  <input type="text" id="start" name="start" ng-model="courseData2.start" placeholder="{{ today | date:'yyyy-MM-dd' }}">
+
+  <label for="end">Slutdatum</label>
+  <input type="text" id="end" name="end" ng-model="courseData2.end" placeholder="{{ today | date:'yyyy-MM-dd' }}">
+
+  <input type="hidden" name=type ng-model="courseId">
+  <div class="button-group">
+    <button type="button" name="button" ng-click="addEvent()">Send</button>
+    <button type="button" name="cancel" ng-click="eventModuleHide()">Cancel</button>
+  </div>
+</form>
+</div>

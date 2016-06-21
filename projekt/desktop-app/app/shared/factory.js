@@ -7,8 +7,8 @@ app.factory('$calendar', ['$http', function($http) {
     deleteCourse: function(o) {
       return $http.delete('http://localhost:4000/educations/delete/' + o.type + '/' + o.title);
     },
-    addCourse: function(o) {
-      return $http.patch('http://localhost:4000/educations/add/' + o.type, o.content);
+    addCourse: function(id, content) {
+      return $http.patch('http://localhost:4000/educations/add/' + id, content);
     },
   };
 }]);
