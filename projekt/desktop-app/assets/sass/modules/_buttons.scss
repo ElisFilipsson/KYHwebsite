@@ -1,0 +1,40 @@
+button, input[type="submit"], [role="button"] {
+  background: $button-color;
+  color: $button-text-color;
+  border-radius: $button-border-radius;
+  padding: 0 1em;
+  height: 3em;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 400;
+  transition: background 100ms ease-in-out;
+
+  &:hover {
+    background: lighten(saturate($button-color, 10%), 10%);
+  }
+}
+
+[class*="button-group"] {
+  > button {
+    background: $accent-color;
+
+    &:hover {
+      background: lighten(saturate($accent-color, 10%), 10%);
+    }
+  }
+  > button:not(:last-of-type) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  > button:not(:first-of-type) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+a[role="button"] {
+  text-decoration: none;
+  display: inline-block;
+  padding: .8em 1em;
+}

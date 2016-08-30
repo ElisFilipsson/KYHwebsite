@@ -1,0 +1,73 @@
+/**
+ * Buttons
+ */
+.fc-state-default,
+.fc .fc-button-group > *,
+.fc-state-default.fc-corner-right,
+.fc .fc-button-group > :first-child,
+.fc-toolbar button,
+.fc button,
+.fc-state-default {
+  float: unset;
+  height: unset;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  @extend button;
+}
+
+.fc-day-grid-container.fc-scroller {
+  height: unset !important;
+}
+
+.fc .fc-toolbar > * > * {
+  float: unset;
+  margin: unset;
+}
+
+.fc-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    text-transform: capitalize;
+  }
+}
+
+.fc-toolbar {
+  .fc-center,
+  .fc-clear {
+    display: none;
+  }
+
+  .fc-right {
+    @extend .fc-toolbar;
+    width: 40%;
+  }
+}
+
+.fc-event {
+  border: unset;
+  background: unset;
+}
+
+.fc-content {
+  padding: .2em .4em; 
+  cursor: pointer;
+}
+
+#calendar {
+  margin-bottom: 4rem;
+}
+
+.fc-unthemed .fc-today {
+  background: rgba($accent-color, .1);
+}
+
+.fc-ltr .fc-h-event.fc-not-start,
+.fc-event-container,
+.fc-ltr .fc-h-event.fc-not-end,
+.fc-row .fc-content-skeleton tbody td {
+  padding: 0;
+  margin: 0;
+}

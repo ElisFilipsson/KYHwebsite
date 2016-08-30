@@ -1,0 +1,28 @@
+<div class="fixed-header">
+    <form ng-submit="submit()">
+        <div>
+            <input type="text" ng-model="text" name="text" placeholder="Förnamn Efternamn"/>
+            <input type="email" ng-model="email" name="email" placeholder="email@adress.se"/>
+        </div>
+        <div>
+            <select name="utbildningar" ng-model="education">
+                <option ng-repeat="(key, value) in utbildningslista" value="{{key}}">{{value.name}}</option>
+            </select>
+            <input type="submit" id="submit" value="Submit" />
+        </div>
+    </form>
+</div>
+
+<div class="centered"> 
+    <div ng-show="showMessage" class="message">{{emailMessage}}</div>
+
+    <div class="list-item" ng-repeat="utb in utbildningslista">
+        <img src="{{utb.img}}"></img>
+        <div class="list-container">
+            <div>{{utb.name}}</div>
+            <div>{{utb.info}}</div>
+        </div>
+    </div>    
+</div>
+
+<toaster-container toaster-options="{'position-class': 'toast-bottom-right', 'close-button': true}"></toaster-container>

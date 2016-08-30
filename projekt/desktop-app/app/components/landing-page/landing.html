@@ -1,0 +1,30 @@
+<div class="background">
+  <div class="container landing">
+    <div class="login-container">
+      <div class="login-group">
+        <form ng-submit="submit(course.content.name)">
+        <div class="buttons">
+
+            <input ng-class="{ 'error': error.username.state }" ng-model="login.username" type="text" name="username" placeholder="Användarnamn">
+            <input ng-class="{ 'error': error.password.state }" ng-model="login.password" type="password" name="password" placeholder="Lösenord">
+            
+
+          </div>
+          <div class="select-style" ng-class="{ 'error': error.select.state }">
+            <select ng-change="getParam(course.content.name); error.select.state = false" ng-model="course.content.name">
+              <option value="" selected>-- Välj utbildning --</option>
+              <option ng-repeat="course in courses">{{course.content.name}}</option>
+            </select>
+          </div>
+          <span class="padding"></span>
+          <button class="fw" type="submit" name="button">Login</button>
+        </form>
+      </div>   
+      <span class="padding"></span>
+      <div class="login-group">
+        <a ui-sref="/visitor"><button class="fw" type="button" name="button">Ansökande</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+

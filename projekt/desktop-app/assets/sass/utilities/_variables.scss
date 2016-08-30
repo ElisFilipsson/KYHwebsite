@@ -1,0 +1,27 @@
+/**
+ * Colors
+ */
+$main-color: #fa6400;
+$accent-color: darken(complement($main-color), 25%);
+
+/**
+ * Layout
+ */
+$width: 60rem;
+
+/**
+ * Typography
+ */
+$root-font-size: 17px;
+
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700,500,600);
+$font-family-body: 'Work Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+$default-font-weight: 300;
+$text-color: rgba(0,0,0,.85);
+
+/**
+ * Elements
+ */
+$button-color: $main-color;
+$button-text-color: #ececec;
+$button-border-radius: 0.1em;

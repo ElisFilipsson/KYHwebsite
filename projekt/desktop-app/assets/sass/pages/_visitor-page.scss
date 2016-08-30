@@ -1,0 +1,106 @@
+.centered {
+  // margin-top: 100px;
+  // width: 90%;
+  // margin-left: auto;
+  // margin-right: auto;
+  @extend .container;
+
+.list-item {
+    display: flex;
+    padding: 30px;
+    flex-flow: column;
+    color:#fff;
+    width: 90%;
+    margin: 5%;
+    margin-bottom: 20px;
+    background: $main-color;
+    @media screen and (min-width: 700px) {
+      flex-flow: row;
+    }
+    &:first-child {
+      margin-top: 10rem;
+    }
+    img {
+      margin-left: 10%;
+      width: 80%;
+      height: 80%;
+
+      @media screen and (min-width: 700px) {
+      margin-left: -80px;
+      width: 50%;
+      height: 50%;
+      }
+    }
+    .list-container {
+       margin-top: -50px;
+       margin-left: 0px;
+       max-width: 100%;
+       padding: 10px;
+       @media screen and (min-width: 700px) {
+          margin-left: -70px;
+          margin-top: 0px;
+       }
+
+       div:nth-child(1) {
+       margin-top: -30px;
+       font-weight: 600;
+       max-height: 50px;
+       padding-top: 30px;
+       border-top: 1px dotted white;
+       @media screen and (min-width: 700px) {
+         border-top: none;
+       }
+      }
+      div:nth-child(2) {
+       padding-top: 30px;
+      }
+    }
+  }
+  }
+.fixed-header {
+  position: fixed;
+  background: white;
+  top: 0px;
+  width: 100%;
+  margin:0px;
+  display: flex;
+  border-bottom: 1px dotted $main-color;
+  margin-bottom: 2;
+
+  + * {
+    margin-top: 8rem;
+  }
+
+form {
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+
+    input{
+      margin: 1%;
+      width: 45%;
+      height: 40px;
+    }
+    input:nth-child(2) {
+      width: 45%;
+      height: 40px;
+    }
+    input[type="submit"] {
+      @media screen and (min-width: 1000px) {
+        width: 25%;
+      }
+    }
+    select {
+      width: 45%;
+      margin: 1%;
+      height: 40px;
+      border: none;
+      font-size:10pt;
+      @media screen and (min-width: 1000px) {
+        width: 65%;
+      }
+    }
+  }
+}
